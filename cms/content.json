@@ -395,27 +395,27 @@
       ]
     },
     {
-      "title": "Hant Sales Deck",
-      "slug": "hant-ai-travel-sales-deck",
+      "title": "Hant Motion Design",
+      "slug": "hant-motion-design",
       "category": "motion",
       "categories": [
         "motion"
       ],
       "meta": "Motion Design",
       "date": "2024 - Present",
-      "summary": "AI Travel App",
+      "summary": "AI Travel Product Motion",
       "scope": "AI Travel App",
       "service": "Motion Design",
-      "goal": "The objective was to make the AI experience feel responsive, understandable and more memorable through motion.",
-      "description": "I defined motion behavior for Hant across key product moments, including prototype transitions, interaction rhythm and lightweight storytelling details.",
+      "goal": "The goal was to make Hant's AI planning experience feel clear, responsive and memorable through purposeful motion.",
+      "description": "I defined the motion language for Hant across onboarding, itinerary-building, AI feedback and presentation moments, turning product flows into animated prototypes and sales-ready sequences.",
       "image": "assets/cms/kapak-1782755492230.gif",
       "media": [
         {
           "type": "image",
           "src": "assets/cms/kapak-1782755492230.gif",
           "poster": "",
-          "alt": "Hant Sales Deck",
-          "caption": "AI Travel App",
+          "alt": "Hant Motion Design",
+          "caption": "AI travel product motion",
           "width": "",
           "height": "",
           "aspectRatio": ""
@@ -424,8 +424,8 @@
           "type": "image",
           "src": "assets/cms/1-1782755492134.gif",
           "poster": "",
-          "alt": "Hant Sales Deck",
-          "caption": "AI Travel App",
+          "alt": "Hant Motion Design",
+          "caption": "Itinerary-building prototype motion",
           "width": "",
           "height": "",
           "aspectRatio": ""
@@ -435,7 +435,7 @@
           "src": "assets/cms/hant-deck-03.png",
           "poster": "",
           "alt": "Hant Motion Design",
-          "caption": "Motion / Deck Animation",
+          "caption": "Motion / deck animation",
           "width": "",
           "height": "",
           "aspectRatio": ""
@@ -445,7 +445,7 @@
           "src": "assets/cms/hant-deck-04.png",
           "poster": "",
           "alt": "Hant Motion Design",
-          "caption": "Sales Deck",
+          "caption": "Prototype transition system",
           "width": "",
           "height": "",
           "aspectRatio": ""
@@ -455,7 +455,7 @@
           "src": "assets/cms/hant-deck-05.png",
           "poster": "",
           "alt": "Hant Motion Design",
-          "caption": "Sales Deck",
+          "caption": "Product storytelling sequence",
           "width": "",
           "height": "",
           "aspectRatio": ""
@@ -465,7 +465,7 @@
           "src": "assets/cms/hant-deck-06.png",
           "poster": "",
           "alt": "Hant Motion Design",
-          "caption": "Sales Deck",
+          "caption": "Interaction rhythm study",
           "width": "",
           "height": "",
           "aspectRatio": ""
@@ -475,7 +475,7 @@
           "src": "assets/cms/hant-deck-08.png",
           "poster": "",
           "alt": "Hant Motion Design",
-          "caption": "Sales Deck",
+          "caption": "Sales-ready motion frame",
           "width": "",
           "height": "",
           "aspectRatio": ""
@@ -485,7 +485,7 @@
           "src": "assets/cms/hant-deck-09.png",
           "poster": "",
           "alt": "Hant Motion Design",
-          "caption": "Sales Deck",
+          "caption": "AI feedback motion direction",
           "width": "",
           "height": "",
           "aspectRatio": ""
@@ -495,7 +495,7 @@
           "src": "assets/cms/hant-deck-11.png",
           "poster": "",
           "alt": "Hant Motion Design",
-          "caption": "Sales Deck",
+          "caption": "Mobile UX motion detail",
           "width": "",
           "height": "",
           "aspectRatio": ""
@@ -504,8 +504,8 @@
           "type": "image",
           "src": "assets/cms/10-1782755492185.gif",
           "poster": "",
-          "alt": "Hant Sales Deck",
-          "caption": "AI Travel App",
+          "alt": "Hant Motion Design",
+          "caption": "Motion design showcase",
           "width": "",
           "height": "",
           "aspectRatio": ""
@@ -514,12 +514,13 @@
       "services": [
         "Motion Design",
         "Interaction Design",
-        "Prototype Motion"
+        "Prototype Motion",
+        "Product Storytelling"
       ],
       "techStack": [
         "Figma",
         "After Effects",
-        "Motion"
+        "Prototype Motion"
       ],
       "industry": [
         "AI Travel",
@@ -1202,72 +1203,97 @@
       ]
     },
     {
-      "title": "Vita",
-      "slug": "vita-product-design",
+      "title": "Vital Product Design",
+      "slug": "vital-product-design",
       "category": "product",
       "categories": [
         "product"
       ],
       "meta": "Product Design",
       "date": "2026",
-      "summary": "Project Type",
-      "scope": "Project Type",
+      "summary": "Health & Wellness App",
+      "scope": "Mobile Health Product",
       "service": "Product Design",
-      "goal": "",
-      "description": "Describe the work, the product context and what changed.",
+      "goal": "The goal was to shape a calmer, more trustworthy mobile product experience for tracking personal health signals and daily wellness routines.",
+      "description": "I designed the Vital product experience around clear onboarding, lightweight health tracking, progress visibility and practical daily guidance, balancing clinical trust with an approachable mobile interface.",
       "image": "assets/cms/3e30a472-35f4-4d72-87f1-8feb4c7c19e2-1783194590263.png",
       "media": [
         {
           "type": "image",
           "src": "assets/cms/2a37ceee-e31a-43ce-b7c7-119d89906d72-1783194590188.png",
           "poster": "",
-          "alt": "Vita",
-          "caption": "Project Type"
+          "alt": "Vital Product Design",
+          "caption": "Mobile health product concept",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
         },
         {
           "type": "image",
           "src": "assets/cms/3e30a472-35f4-4d72-87f1-8feb4c7c19e2-1783194590263.png",
           "poster": "",
-          "alt": "Vita",
-          "caption": "Project Type"
+          "alt": "Vital Product Design",
+          "caption": "Vital app dashboard and progress view",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
         },
         {
           "type": "image",
           "src": "assets/cms/4f31f7b8-c58d-466f-82bc-5ba2f09a4466-1783194590318.png",
           "poster": "",
-          "alt": "Vita",
-          "caption": "Project Type"
+          "alt": "Vital Product Design",
+          "caption": "Health tracking interface direction",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
         },
         {
           "type": "image",
           "src": "assets/cms/41eb2dba-7bcb-4073-bbf2-ec6628b4e9e5-1783194590382.png",
           "poster": "",
-          "alt": "Vita",
-          "caption": "Project Type"
+          "alt": "Vital Product Design",
+          "caption": "Wellness routine flow",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
         },
         {
           "type": "image",
           "src": "assets/cms/2365a1f1-9857-49ad-9143-9cb2f53c8e5f-1783194590445.png",
           "poster": "",
-          "alt": "Vita",
-          "caption": "Project Type"
+          "alt": "Vital Product Design",
+          "caption": "Mobile UI component system",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
         },
         {
           "type": "image",
           "src": "assets/cms/72345b5c-b21d-451b-a9d3-8fa6f974fd28-1783194590502.png",
           "poster": "",
-          "alt": "Vita",
-          "caption": "Project Type"
+          "alt": "Vital Product Design",
+          "caption": "Product experience detail",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
         }
       ],
       "services": [
-        "Product Design"
+        "Product Design",
+        "UX Strategy",
+        "Mobile UI Design",
+        "Design Systems"
       ],
       "techStack": [
-        "Figma"
+        "Figma",
+        "FigJam",
+        "Prototype Motion"
       ],
       "industry": [
-        "Digital Product"
+        "Health Tech",
+        "Wellness",
+        "Mobile App"
       ]
     }
   ],
@@ -1479,22 +1505,6 @@
               "Ürün Web Sitesi"
             ]
           },
-          "hant-ai-travel-sales-deck": {
-            "title": "Hant Motion Design",
-            "summary": "AI Seyahat Uygulaması",
-            "scope": "AI Seyahat Uygulaması",
-            "description": "Hant'ın önemli ürün anları için prototip geçişleri, etkileşim ritmi ve hafif hikaye anlatımı detaylarını kapsayan motion davranışını tanımladım.",
-            "services": [
-              "Motion Design",
-              "Etkileşim Tasarımı",
-              "Prototip Motion"
-            ],
-            "industry": [
-              "AI Seyahat",
-              "Ürün Motion",
-              "Mobil UX"
-            ]
-          },
           "en-kiymetlim-parenting-app": {
             "title": "En Kıymetlim Ürün Tasarımı",
             "summary": "Ebeveynlik Uygulaması",
@@ -1621,6 +1631,52 @@
               "Satış Eğitimi",
               "EdTech",
               "İnteraktif Öğrenme"
+            ]
+          },
+          "hant-motion-design": {
+            "title": "Hant Motion Design",
+            "summary": "AI Seyahat ?r?n Motion",
+            "scope": "AI Seyahat Uygulamas?",
+            "description": "Hant i?in onboarding, rota olu?turma, AI geri bildirimi ve sunum anlar?n? kapsayan motion dilini tan?mlad?m; ?r?n ak??lar?n? animasyonlu prototiplere ve sunuma haz?r sekanslara d?n??t?rd?m.",
+            "services": [
+              "Motion Design",
+              "Etkile?im Tasar?m?",
+              "Prototip Motion",
+              "?r?n Hikayele?tirme"
+            ],
+            "industry": [
+              "AI Seyahat",
+              "?r?n Motion",
+              "Mobil UX"
+            ],
+            "techStack": [
+              "Figma",
+              "After Effects",
+              "Prototype Motion"
+            ]
+          },
+          "vital-product-design": {
+            "title": "Vital ?r?n Tasar?m?",
+            "meta": "?r?n Tasar?m?",
+            "summary": "Sa?l?k ve Wellness Uygulamas?",
+            "scope": "Mobil Sa?l?k ?r?n?",
+            "service": "?r?n Tasar?m?",
+            "description": "Vital ?r?n deneyimini net onboarding, hafif sa?l?k takibi, ilerleme g?r?n?rl??? ve pratik g?nl?k y?nlendirme etraf?nda tasarlad?m; klinik g?ven hissini eri?ilebilir bir mobil aray?zle dengeledim.",
+            "services": [
+              "?r?n Tasar?m?",
+              "UX Stratejisi",
+              "Mobil UI Tasar?m?",
+              "Tasar?m Sistemleri"
+            ],
+            "techStack": [
+              "Figma",
+              "FigJam",
+              "Prototype Motion"
+            ],
+            "industry": [
+              "Health Tech",
+              "Wellness",
+              "Mobil Uygulama"
             ]
           }
         }
@@ -1768,29 +1824,6 @@
               "KI-Reisen",
               "SaaS",
               "Produktwebsite"
-            ]
-          },
-          "hant-ai-travel-sales-deck": {
-            "title": "Hant Motion Design",
-            "meta": "Motion Design",
-            "summary": "KI-Reise-App",
-            "scope": "KI-Reise-App",
-            "service": "Motion Design",
-            "description": "Ich definierte das Motion-Verhalten für zentrale Produktmomente von Hant, inklusive Prototyp-Übergängen, Interaktionsrhythmus und leichtem Storytelling.",
-            "services": [
-              "Motion Design",
-              "Interaktionsdesign",
-              "Prototype Motion"
-            ],
-            "techStack": [
-              "Figma",
-              "After Effects",
-              "Motion"
-            ],
-            "industry": [
-              "KI-Reisen",
-              "Produkt-Motion",
-              "Mobile UX"
             ]
           },
           "en-kiymetlim-parenting-app": {
@@ -1976,6 +2009,54 @@
               "EdTech",
               "Interaktives Lernen"
             ]
+          },
+          "hant-motion-design": {
+            "title": "Hant Motion Design",
+            "meta": "Motion Design",
+            "summary": "KI-Reise Product Motion",
+            "scope": "KI-Reise-App",
+            "service": "Motion Design",
+            "description": "Ich definierte die Motion-Sprache f?r Hant ?ber Onboarding, Reiseplanung, KI-Feedback und Pr?sentationsmomente hinweg und verwandelte Produktfl?sse in animierte Prototypen sowie pr?sentationsreife Sequenzen.",
+            "services": [
+              "Motion Design",
+              "Interaktionsdesign",
+              "Prototype Motion",
+              "Product Storytelling"
+            ],
+            "techStack": [
+              "Figma",
+              "After Effects",
+              "Prototype Motion"
+            ],
+            "industry": [
+              "KI-Reise",
+              "Product Motion",
+              "Mobile UX"
+            ]
+          },
+          "vital-product-design": {
+            "title": "Vital Produktdesign",
+            "meta": "Produktdesign",
+            "summary": "Health & Wellness App",
+            "scope": "Mobiles Gesundheitsprodukt",
+            "service": "Produktdesign",
+            "description": "Ich gestaltete die Vital-Produktexperience rund um klares Onboarding, leichtes Gesundheitstracking, Fortschrittstransparenz und praktische t?gliche Orientierung, mit einer Balance aus Vertrauen und zug?nglicher mobiler UI.",
+            "services": [
+              "Produktdesign",
+              "UX-Strategie",
+              "Mobile UI Design",
+              "Designsysteme"
+            ],
+            "techStack": [
+              "Figma",
+              "FigJam",
+              "Prototype Motion"
+            ],
+            "industry": [
+              "Health Tech",
+              "Wellness",
+              "Mobile App"
+            ]
           }
         }
       },
@@ -2122,29 +2203,6 @@
               "Viajes con IA",
               "SaaS",
               "Sitio de producto"
-            ]
-          },
-          "hant-ai-travel-sales-deck": {
-            "title": "Hant Motion Design",
-            "meta": "Motion Design",
-            "summary": "App de Viajes con IA",
-            "scope": "App de Viajes con IA",
-            "service": "Motion Design",
-            "description": "Definí el comportamiento motion de Hant en momentos clave del producto, incluyendo transiciones de prototipo, ritmo de interacción y detalles ligeros de storytelling.",
-            "services": [
-              "Motion Design",
-              "Diseño de Interacción",
-              "Prototype Motion"
-            ],
-            "techStack": [
-              "Figma",
-              "After Effects",
-              "Motion"
-            ],
-            "industry": [
-              "Viajes con IA",
-              "Product Motion",
-              "Mobile UX"
             ]
           },
           "en-kiymetlim-parenting-app": {
@@ -2329,6 +2387,54 @@
               "Entrenamiento de ventas",
               "EdTech",
               "Aprendizaje interactivo"
+            ]
+          },
+          "hant-motion-design": {
+            "title": "Hant Motion Design",
+            "meta": "Motion Design",
+            "summary": "Product Motion para viajes con IA",
+            "scope": "App de viajes con IA",
+            "service": "Motion Design",
+            "description": "Defin? el lenguaje motion de Hant en onboarding, creaci?n de itinerarios, feedback de IA y momentos de presentaci?n, convirtiendo flujos de producto en prototipos animados y secuencias listas para presentar.",
+            "services": [
+              "Motion Design",
+              "Dise?o de Interacci?n",
+              "Prototype Motion",
+              "Storytelling de Producto"
+            ],
+            "techStack": [
+              "Figma",
+              "After Effects",
+              "Prototype Motion"
+            ],
+            "industry": [
+              "Viajes con IA",
+              "Product Motion",
+              "Mobile UX"
+            ]
+          },
+          "vital-product-design": {
+            "title": "Vital Dise?o de Producto",
+            "meta": "Dise?o de Producto",
+            "summary": "App de salud y wellness",
+            "scope": "Producto m?vil de salud",
+            "service": "Dise?o de Producto",
+            "description": "Dise?? la experiencia de Vital alrededor de un onboarding claro, seguimiento ligero de salud, visibilidad del progreso y orientaci?n diaria pr?ctica, equilibrando confianza cl?nica con una interfaz m?vil accesible.",
+            "services": [
+              "Dise?o de Producto",
+              "Estrategia UX",
+              "Dise?o UI M?vil",
+              "Sistemas de Dise?o"
+            ],
+            "techStack": [
+              "Figma",
+              "FigJam",
+              "Prototype Motion"
+            ],
+            "industry": [
+              "Health Tech",
+              "Wellness",
+              "App m?vil"
             ]
           }
         }

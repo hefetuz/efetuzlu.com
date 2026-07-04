@@ -4,6 +4,28 @@
   "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/work/hant-ai-travel-sales-deck",
+      "destination": "/work/hant-motion-design/",
+      "permanent": true
+    },
+    {
+      "source": "/work/hant-ai-travel-sales-deck/",
+      "destination": "/work/hant-motion-design/",
+      "permanent": true
+    },
+    {
+      "source": "/work/vita-product-design",
+      "destination": "/work/vital-product-design/",
+      "permanent": true
+    },
+    {
+      "source": "/work/vita-product-design/",
+      "destination": "/work/vital-product-design/",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/work/:slug",
