@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio CMS | Halim Efe Tuzlu</title>
+  <meta name="description" content="Local CMS panel for managing portfolio content.">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data: blob:; media-src 'self' blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()">
+  <link rel="icon" href="assets/efe-avatar.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="cms-page">
+  <main class="cms-shell">
+    <aside class="cms-sidebar" aria-label="CMS navigation">
+      <div class="cms-brand">
+        <p class="text-ui text-muted">Portfolio CMS</p>
+        <h1 class="text-heading">Halim Efe Tuzlu</h1>
+      </div>
+
+      <div class="cms-stats" id="cmsStats" aria-label="Project counts"></div>
+
+      <div class="cms-actions">
+        <button class="btn btn-large primary" id="cmsSave" type="button">Save Content</button>
+        <button class="btn btn-large secondary" id="cmsExport" type="button">Export JSON</button>
+        <a class="btn btn-large secondary" href="/#top">Open Site</a>
+      </div>
+
+      <p class="cms-status text-ui text-muted" id="cmsStatus" role="status">Loading content...</p>
+    </aside>
+
+    <section class="cms-content" aria-label="Projects">
+      <header class="cms-toolbar">
+        <div>
+          <p class="text-ui text-muted">Content Source</p>
+          <h2 class="text-heading">cms/content.json</h2>
+        </div>
+        <button class="btn btn-regular secondary" id="cmsAddProject" type="button">Add Project</button>
+      </header>
+
+      <div class="cms-layout">
+        <section class="cms-list-panel" aria-label="Project list">
+          <div class="cms-list" id="cmsProjectList"></div>
+        </section>
+
+        <section class="cms-editor-panel" aria-label="Project editor">
+          <form class="cms-editor" id="cmsProjectForm"></form>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/cms/admin.js"></script>
+</body>
+</html>
