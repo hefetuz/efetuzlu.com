@@ -5,19 +5,19 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://efetuzlu.online/work/hant-product-design/</loc>
+    <loc>https://efetuzlu.online/work/hant-ai-travel-app/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://efetuzlu.online/work/hant-web-design/</loc>
+    <loc>https://efetuzlu.online/work/hant-ai-travel-website/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://efetuzlu.online/work/hant-sales-deck/</loc>
+    <loc>https://efetuzlu.online/work/hant-ai-travel-sales-deck/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://efetuzlu.online/work/en-kiymetlim-product-design/</loc>
+    <loc>https://efetuzlu.online/work/en-kiymetlim-parenting-app/</loc>
     <priority>0.8</priority>
   </url>
   <url>
@@ -25,19 +25,19 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://efetuzlu.online/work/saglik-gelsin-brand-identity/</loc>
+    <loc>https://efetuzlu.online/work/saglik-gelsin-sales-deck/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://efetuzlu.online/work/saunakit/</loc>
+    <loc>https://efetuzlu.online/work/saunakit-brand-identity/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://efetuzlu.online/work/mambocino/</loc>
+    <loc>https://efetuzlu.online/work/mambocino-coffee-branding/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://efetuzlu.online/work/samurai-bros/</loc>
+    <loc>https://efetuzlu.online/work/samurai-bros-packaging/</loc>
     <priority>0.8</priority>
   </url>
   <url>
@@ -45,7 +45,11 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://efetuzlu.online/work/saglik-gelsin-product-design/</loc>
+    <loc>https://efetuzlu.online/work/saglik-gelsin-home-healthcare-app/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://efetuzlu.online/work/vita-product-design/</loc>
     <priority>0.8</priority>
   </url>
 </urlset>

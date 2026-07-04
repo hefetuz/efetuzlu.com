@@ -100,7 +100,7 @@
   "projects": [
     {
       "title": "Hant Product Design",
-      "slug": "hant-product-design",
+      "slug": "hant-ai-travel-app",
       "category": "product",
       "categories": [
         "product"
@@ -323,7 +323,7 @@
     },
     {
       "title": "Hant Web Design",
-      "slug": "hant-web-design",
+      "slug": "hant-ai-travel-website",
       "category": "web",
       "categories": [
         "web"
@@ -396,7 +396,7 @@
     },
     {
       "title": "Hant Sales Deck",
-      "slug": "hant-sales-deck",
+      "slug": "hant-ai-travel-sales-deck",
       "category": "motion",
       "categories": [
         "motion"
@@ -529,7 +529,7 @@
     },
     {
       "title": "En Kıymetlim Product Design",
-      "slug": "en-kiymetlim-product-design",
+      "slug": "en-kiymetlim-parenting-app",
       "category": "product",
       "categories": [
         "product"
@@ -765,7 +765,7 @@
     },
     {
       "title": "Sağlık Gelsin Sales Deck",
-      "slug": "saglik-gelsin-brand-identity",
+      "slug": "saglik-gelsin-sales-deck",
       "category": "brand",
       "categories": [
         "brand"
@@ -858,7 +858,7 @@
     },
     {
       "title": "Saunakit",
-      "slug": "saunakit",
+      "slug": "saunakit-brand-identity",
       "category": "brand",
       "categories": [
         "brand"
@@ -901,7 +901,7 @@
     },
     {
       "title": "Mambocino",
-      "slug": "mambocino",
+      "slug": "mambocino-coffee-branding",
       "category": "brand",
       "categories": [
         "brand"
@@ -1024,7 +1024,7 @@
     },
     {
       "title": "Samurai Bros",
-      "slug": "samurai-bros",
+      "slug": "samurai-bros-packaging",
       "category": "brand",
       "categories": [
         "brand"
@@ -1150,7 +1150,7 @@
     },
     {
       "title": "Sağlık Gelsin Product Design",
-      "slug": "saglik-gelsin-product-design",
+      "slug": "saglik-gelsin-home-healthcare-app",
       "category": "product",
       "categories": [
         "product"
@@ -1203,7 +1203,7 @@
     },
     {
       "title": "Vita",
-      "slug": "new-project-12",
+      "slug": "vita-product-design",
       "category": "product",
       "categories": [
         "product"
@@ -1447,7 +1447,7 @@
           }
         ],
         "projects": {
-          "hant-product-design": {
+          "hant-ai-travel-app": {
             "title": "Hant Ürün Tasarımı",
             "summary": "AI Seyahat Uygulaması",
             "scope": "AI Seyahat Uygulaması",
@@ -1463,7 +1463,7 @@
               "Seyahat Planlama"
             ]
           },
-          "hant-web-design": {
+          "hant-ai-travel-website": {
             "title": "Hant Web Tasarımı",
             "summary": "AI Seyahat Uygulaması",
             "scope": "AI Seyahat Uygulaması",
@@ -1479,7 +1479,7 @@
               "Ürün Web Sitesi"
             ]
           },
-          "hant-sales-deck": {
+          "hant-ai-travel-sales-deck": {
             "title": "Hant Motion Design",
             "summary": "AI Seyahat Uygulaması",
             "scope": "AI Seyahat Uygulaması",
@@ -1495,7 +1495,7 @@
               "Mobil UX"
             ]
           },
-          "en-kiymetlim-product-design": {
+          "en-kiymetlim-parenting-app": {
             "title": "En Kıymetlim Ürün Tasarımı",
             "summary": "Ebeveynlik Uygulaması",
             "scope": "Ebeveynlik Uygulaması",
@@ -1527,7 +1527,7 @@
               "Aile Bakımı"
             ]
           },
-          "saglik-gelsin-brand-identity": {
+          "saglik-gelsin-sales-deck": {
             "title": "Sağlık Gelsin Sales Deck",
             "summary": "Evde Sağlık Uygulaması",
             "scope": "Evde Sağlık Uygulaması",
@@ -1543,7 +1543,7 @@
               "Marka Sistemi"
             ]
           },
-          "saglik-gelsin-product-design": {
+          "saglik-gelsin-home-healthcare-app": {
             "title": "Sağlık Gelsin Ürün Tasarımı",
             "summary": "Evde Sağlık Uygulaması",
             "scope": "Evde Sağlık Uygulaması",
@@ -1559,7 +1559,7 @@
               "Hizmet Pazaryeri"
             ]
           },
-          "saunakit": {
+          "saunakit-brand-identity": {
             "title": "Saunakit Marka Kimliği",
             "summary": "Portatif Sauna",
             "scope": "Portatif Sauna",
@@ -1575,7 +1575,7 @@
               "Fiziksel Ürün"
             ]
           },
-          "mambocino": {
+          "mambocino-coffee-branding": {
             "title": "Mambocino Marka Kimliği",
             "summary": "Kahve Markası",
             "scope": "Kahve Markası",
@@ -1591,7 +1591,7 @@
               "FMCG"
             ]
           },
-          "samurai-bros": {
+          "samurai-bros-packaging": {
             "title": "Samurai Bros Ambalaj Tasarımı",
             "summary": "Cold Brew Kahve",
             "scope": "Cold Brew Kahve",
@@ -1723,7 +1723,7 @@
           }
         ],
         "projects": {
-          "hant-product-design": {
+          "hant-ai-travel-app": {
             "title": "Hant Produktdesign",
             "meta": "Produktdesign",
             "summary": "KI-Reise-App",
@@ -1747,7 +1747,7 @@
               "Reiseplanung"
             ]
           },
-          "hant-web-design": {
+          "hant-ai-travel-website": {
             "title": "Hant Webdesign",
             "meta": "Webdesign",
             "summary": "KI-Reise-App",
@@ -1770,7 +1770,7 @@
               "Produktwebsite"
             ]
           },
-          "hant-sales-deck": {
+          "hant-ai-travel-sales-deck": {
             "title": "Hant Motion Design",
             "meta": "Motion Design",
             "summary": "KI-Reise-App",
@@ -1793,7 +1793,7 @@
               "Mobile UX"
             ]
           },
-          "en-kiymetlim-product-design": {
+          "en-kiymetlim-parenting-app": {
             "title": "En Kıymetlim Produktdesign",
             "meta": "Produktdesign",
             "summary": "Eltern-App",
@@ -1839,7 +1839,7 @@
               "Familienbetreuung"
             ]
           },
-          "saglik-gelsin-brand-identity": {
+          "saglik-gelsin-sales-deck": {
             "title": "Sağlık Gelsin Sales Deck",
             "meta": "Markenidentität",
             "summary": "Häusliche Gesundheits-App",
@@ -1862,7 +1862,7 @@
               "Markensystem"
             ]
           },
-          "saglik-gelsin-product-design": {
+          "saglik-gelsin-home-healthcare-app": {
             "title": "Sağlık Gelsin Produktdesign",
             "meta": "Produktdesign",
             "summary": "Häusliche Gesundheits-App",
@@ -1885,7 +1885,7 @@
               "Service-Marktplatz"
             ]
           },
-          "saunakit": {
+          "saunakit-brand-identity": {
             "title": "Saunakit Markenidentität",
             "meta": "Markenidentität",
             "summary": "Portable Sauna",
@@ -1908,7 +1908,7 @@
               "Physisches Produkt"
             ]
           },
-          "mambocino": {
+          "mambocino-coffee-branding": {
             "title": "Mambocino Markenidentität",
             "meta": "Markenidentität",
             "summary": "Kaffeemarke",
@@ -1931,7 +1931,7 @@
               "FMCG"
             ]
           },
-          "samurai-bros": {
+          "samurai-bros-packaging": {
             "title": "Samurai Bros Packaging Design",
             "meta": "Markenidentität",
             "summary": "Cold Brew Kaffee",
@@ -2077,7 +2077,7 @@
           }
         ],
         "projects": {
-          "hant-product-design": {
+          "hant-ai-travel-app": {
             "title": "Hant Diseño de Producto",
             "meta": "Diseño de Producto",
             "summary": "App de Viajes con IA",
@@ -2101,7 +2101,7 @@
               "Planificación de viajes"
             ]
           },
-          "hant-web-design": {
+          "hant-ai-travel-website": {
             "title": "Hant Diseño Web",
             "meta": "Diseño Web",
             "summary": "App de Viajes con IA",
@@ -2124,7 +2124,7 @@
               "Sitio de producto"
             ]
           },
-          "hant-sales-deck": {
+          "hant-ai-travel-sales-deck": {
             "title": "Hant Motion Design",
             "meta": "Motion Design",
             "summary": "App de Viajes con IA",
@@ -2147,7 +2147,7 @@
               "Mobile UX"
             ]
           },
-          "en-kiymetlim-product-design": {
+          "en-kiymetlim-parenting-app": {
             "title": "En Kıymetlim Diseño de Producto",
             "meta": "Diseño de Producto",
             "summary": "App de parentalidad",
@@ -2193,7 +2193,7 @@
               "Cuidado familiar"
             ]
           },
-          "saglik-gelsin-brand-identity": {
+          "saglik-gelsin-sales-deck": {
             "title": "Sağlık Gelsin Sales Deck",
             "meta": "Identidad de Marca",
             "summary": "App de salud a domicilio",
@@ -2216,7 +2216,7 @@
               "Sistema de marca"
             ]
           },
-          "saglik-gelsin-product-design": {
+          "saglik-gelsin-home-healthcare-app": {
             "title": "Sağlık Gelsin Diseño de Producto",
             "meta": "Diseño de Producto",
             "summary": "App de salud a domicilio",
@@ -2239,7 +2239,7 @@
               "Marketplace de servicios"
             ]
           },
-          "saunakit": {
+          "saunakit-brand-identity": {
             "title": "Saunakit Identidad de Marca",
             "meta": "Identidad de Marca",
             "summary": "Sauna portátil",
@@ -2262,7 +2262,7 @@
               "Producto físico"
             ]
           },
-          "mambocino": {
+          "mambocino-coffee-branding": {
             "title": "Mambocino Identidad de Marca",
             "meta": "Identidad de Marca",
             "summary": "Marca de café",
@@ -2285,7 +2285,7 @@
               "FMCG"
             ]
           },
-          "samurai-bros": {
+          "samurai-bros-packaging": {
             "title": "Samurai Bros Diseño de Packaging",
             "meta": "Identidad de Marca",
             "summary": "Café Cold Brew",
