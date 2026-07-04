@@ -1169,14 +1169,20 @@
           "src": "assets/cms/bd01ea66-0697-4143-afef-f527ec020ec4-1782806326668.png",
           "poster": "",
           "alt": "Sağlık Gelsin Product Design",
-          "caption": "Home Healthcare App"
+          "caption": "Home Healthcare App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
         },
         {
           "type": "image",
           "src": "assets/cms/bfe66bff-4d79-4141-a9a8-dc44dd743e3e-1782806326699.png",
           "poster": "",
           "alt": "Sağlık Gelsin Product Design",
-          "caption": "Home Healthcare App"
+          "caption": "Home Healthcare App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
         }
       ],
       "services": [
@@ -1193,6 +1199,75 @@
         "Home Healthcare",
         "Health Tech",
         "Service Marketplace"
+      ]
+    },
+    {
+      "title": "Vita",
+      "slug": "new-project-12",
+      "category": "product",
+      "categories": [
+        "product"
+      ],
+      "meta": "Product Design",
+      "date": "2026",
+      "summary": "Project Type",
+      "scope": "Project Type",
+      "service": "Product Design",
+      "goal": "",
+      "description": "Describe the work, the product context and what changed.",
+      "image": "assets/cms/3e30a472-35f4-4d72-87f1-8feb4c7c19e2-1783194590263.png",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/cms/2a37ceee-e31a-43ce-b7c7-119d89906d72-1783194590188.png",
+          "poster": "",
+          "alt": "Vita",
+          "caption": "Project Type"
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/3e30a472-35f4-4d72-87f1-8feb4c7c19e2-1783194590263.png",
+          "poster": "",
+          "alt": "Vita",
+          "caption": "Project Type"
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/4f31f7b8-c58d-466f-82bc-5ba2f09a4466-1783194590318.png",
+          "poster": "",
+          "alt": "Vita",
+          "caption": "Project Type"
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/41eb2dba-7bcb-4073-bbf2-ec6628b4e9e5-1783194590382.png",
+          "poster": "",
+          "alt": "Vita",
+          "caption": "Project Type"
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/2365a1f1-9857-49ad-9143-9cb2f53c8e5f-1783194590445.png",
+          "poster": "",
+          "alt": "Vita",
+          "caption": "Project Type"
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/72345b5c-b21d-451b-a9d3-8fa6f974fd28-1783194590502.png",
+          "poster": "",
+          "alt": "Vita",
+          "caption": "Project Type"
+        }
+      ],
+      "services": [
+        "Product Design"
+      ],
+      "techStack": [
+        "Figma"
+      ],
+      "industry": [
+        "Digital Product"
       ]
     }
   ],
