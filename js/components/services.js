@@ -18,6 +18,13 @@ const serviceKeys = [
   ["motion", "motion"]
 ];
 
+const selectedServicesTitleByLanguage = {
+  DE: "Leistungen ausw\u00e4hlen:",
+  EN: "Select service(s):",
+  ES: "Selecciona servicios:",
+  TR: "Hizmet se\u00e7:"
+};
+
 function getServiceKey(title = "") {
   const normalized = String(title).toLowerCase();
   return serviceKeys.find(([token]) => normalized.includes(token))?.[1] || "product";
@@ -32,10 +39,18 @@ function getServiceConfig(config) {
     return { email: config, web3FormsAccessKey: "", labels: defaultServiceLabels() };
   }
 
+  const defaults = defaultServiceLabels();
+  const labels = { ...defaults, ...(config?.labels || {}) };
+  const language = String(config?.language || "EN").trim().toUpperCase();
+  const localizedSelectedServicesTitle = selectedServicesTitleByLanguage[language];
+  if (localizedSelectedServicesTitle && labels.selectedServicesTitle === defaults.selectedServicesTitle) {
+    labels.selectedServicesTitle = localizedSelectedServicesTitle;
+  }
+
   return {
     email: config?.email || "",
     web3FormsAccessKey: config?.web3FormsAccessKey || "",
-    labels: { ...defaultServiceLabels(), ...(config?.labels || {}) }
+    labels
   };
 }
 

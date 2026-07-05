@@ -158,6 +158,7 @@ function renderLocalizedSite({ initial = false } = {}) {
   renderServices(state.content.services, undefined, {
     email: state.content.site.email,
     web3FormsAccessKey: state.content.site.web3FormsAccessKey,
+    language: state.language,
     labels: state.content.ui?.serviceForm || {}
   });
   renderCurrentProjects();
