@@ -9,6 +9,7 @@ const MEDIA_ACCEPT = "image/*,.gif,video/*";
 const state = {
   content: null,
   activeIndex: 0,
+  dragProjectIndex: null,
   dirty: false
 };
 
@@ -136,8 +137,7 @@ function renderProjectList() {
       .map((category) => state.content.projectCategories.find((item) => item.id === category)?.label || category)
       .join(", ");
     const position = `${index + 1}.`;
-    const moveUpLabel = `Move ${project.title} up`;
-    const moveDownLabel = `Move ${project.title} down`;
+    const dragLabel = `Drag ${project.title} to reorder`;
 
     return `
       <div class="cms-project-row${index === state.activeIndex ? " active" : ""}" data-project-index="${index}">
@@ -149,10 +149,11 @@ function renderProjectList() {
             <em class="text-ui text-muted">${escapeHtml(categories)}</em>
           </span>
         </button>
-        <div class="cms-project-order" aria-label="Project order">
-          <button class="cms-order-button" type="button" data-move-project="${index}" data-direction="-1" aria-label="${escapeAttr(moveUpLabel)}"${index === 0 ? " disabled" : ""}>Up</button>
-          <button class="cms-order-button" type="button" data-move-project="${index}" data-direction="1" aria-label="${escapeAttr(moveDownLabel)}"${index === state.content.projects.length - 1 ? " disabled" : ""}>Down</button>
-        </div>
+        <button class="cms-drag-handle" type="button" draggable="true" data-project-drag-handle aria-label="${escapeAttr(dragLabel)}">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     `;
   }).join("");
@@ -506,9 +507,9 @@ function deleteProject() {
   render();
 }
 
-function moveProject(index, direction) {
-  const nextIndex = index + direction;
+function moveProjectToIndex(index, nextIndex) {
   const projects = state.content.projects;
+  if (index === nextIndex) return;
   if (nextIndex < 0 || nextIndex >= projects.length) return;
 
   const [project] = projects.splice(index, 1);
@@ -516,15 +517,36 @@ function moveProject(index, direction) {
 
   if (state.activeIndex === index) {
     state.activeIndex = nextIndex;
-  } else if (direction < 0 && state.activeIndex === nextIndex) {
-    state.activeIndex = index;
-  } else if (direction > 0 && state.activeIndex === nextIndex) {
-    state.activeIndex = index;
+  } else if (index < state.activeIndex && nextIndex >= state.activeIndex) {
+    state.activeIndex -= 1;
+  } else if (index > state.activeIndex && nextIndex <= state.activeIndex) {
+    state.activeIndex += 1;
   }
 
   markDirty();
   renderProjectList();
   renderEditor();
+}
+
+function clearProjectDropIndicators() {
+  elements.list.querySelectorAll(".is-drop-before, .is-drop-after, .is-dragging").forEach((row) => {
+    row.classList.remove("is-drop-before", "is-drop-after", "is-dragging");
+  });
+}
+
+function getProjectDropIndex(row, clientY) {
+  const index = Number(row.dataset.projectIndex);
+  const rect = row.getBoundingClientRect();
+  return clientY < rect.top + rect.height / 2 ? index : index + 1;
+}
+
+function updateProjectDropIndicator(row, clientY) {
+  const dropIndex = getProjectDropIndex(row, clientY);
+  clearProjectDropIndicators();
+  row.classList.toggle("is-drop-before", dropIndex === Number(row.dataset.projectIndex));
+  row.classList.toggle("is-drop-after", dropIndex !== Number(row.dataset.projectIndex));
+  elements.list.querySelector(`[data-project-index="${state.dragProjectIndex}"]`)?.classList.add("is-dragging");
+  return dropIndex;
 }
 
 function addMedia() {
@@ -709,17 +731,52 @@ async function load() {
 }
 
 elements.list.addEventListener("click", (event) => {
-  const moveButton = event.target.closest("[data-move-project]");
-  if (moveButton) {
+  const row = event.target.closest("[data-project-index]");
+  if (!row) return;
+  state.activeIndex = Number(row.dataset.projectIndex);
+  render();
+});
+
+elements.list.addEventListener("dragstart", (event) => {
+  if (!event.target.closest("[data-project-drag-handle]")) {
     event.preventDefault();
-    moveProject(Number(moveButton.dataset.moveProject), Number(moveButton.dataset.direction));
     return;
   }
 
   const row = event.target.closest("[data-project-index]");
   if (!row) return;
-  state.activeIndex = Number(row.dataset.projectIndex);
-  render();
+
+  state.dragProjectIndex = Number(row.dataset.projectIndex);
+  event.dataTransfer.effectAllowed = "move";
+  event.dataTransfer.setData("text/plain", String(state.dragProjectIndex));
+  row.classList.add("is-dragging");
+});
+
+elements.list.addEventListener("dragover", (event) => {
+  const row = event.target.closest("[data-project-index]");
+  if (!row || !Number.isFinite(state.dragProjectIndex)) return;
+
+  event.preventDefault();
+  event.dataTransfer.dropEffect = "move";
+  updateProjectDropIndicator(row, event.clientY);
+});
+
+elements.list.addEventListener("drop", (event) => {
+  const row = event.target.closest("[data-project-index]");
+  if (!row || !Number.isFinite(state.dragProjectIndex)) return;
+
+  event.preventDefault();
+  const dropIndex = getProjectDropIndex(row, event.clientY);
+  const nextIndex = state.dragProjectIndex < dropIndex ? dropIndex - 1 : dropIndex;
+  const dragIndex = state.dragProjectIndex;
+  state.dragProjectIndex = null;
+  clearProjectDropIndicators();
+  moveProjectToIndex(dragIndex, nextIndex);
+});
+
+elements.list.addEventListener("dragend", () => {
+  state.dragProjectIndex = null;
+  clearProjectDropIndicators();
 });
 
 elements.form.addEventListener("input", (event) => {
