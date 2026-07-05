@@ -132,6 +132,15 @@ async function generateProjectPages() {
   }
 }
 
+async function generateCmsAliases() {
+  const cmsHtml = await readFile(join(root, "cms.html"), "utf8");
+  for (const alias of ["cms", "admin"]) {
+    const destination = join(outDir, alias, "index.html");
+    await mkdir(dirname(destination), { recursive: true });
+    await writeFile(destination, cmsHtml, "utf8");
+  }
+}
+
 try {
   await rm(outDir, { recursive: true, force: true, maxRetries: 5, retryDelay: 100 });
 } catch (error) {
@@ -145,6 +154,7 @@ for (const entry of entries) {
 }
 
 await generateProjectPages();
+await generateCmsAliases();
 
 const files = await readdir(outDir);
 console.log(`Built Vercel output in dist (${files.length} top-level entries).`);
