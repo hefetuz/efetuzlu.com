@@ -2,6 +2,7 @@ import { escapeAttr } from "./dom.js";
 
 const IMAGE_EXTENSIONS = new Set([".avif", ".gif", ".jpeg", ".jpg", ".png", ".svg", ".webp"]);
 const VIDEO_EXTENSIONS = new Set([".m4v", ".mov", ".mp4", ".ogg", ".ogv", ".webm"]);
+const COVER_OPTIMIZED_EXTENSIONS = new Set([".jpeg", ".jpg", ".png"]);
 const TRANSPARENT_IMAGE = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
 const OPTIMIZED_IMAGE_SOURCES = new Map([
   ["assets/cms/hant-product-01.png", "assets/optimized/hant-product-01-900.jpg"],
@@ -15,6 +16,14 @@ function getExtension(source = "") {
   return dotIndex >= 0 ? cleanSource.slice(dotIndex).toLowerCase() : "";
 }
 
+function getPathWithoutExtension(source = "") {
+  const cleanSource = String(source).split(/[?#]/)[0].replace(/^\.\//, "");
+  const slashIndex = cleanSource.lastIndexOf("/");
+  const dotIndex = cleanSource.lastIndexOf(".");
+  const filename = cleanSource.slice(slashIndex + 1, dotIndex >= 0 ? dotIndex : undefined);
+  return filename || "";
+}
+
 export function getMediaType(source = "", fallback = "image") {
   const extension = getExtension(source);
   if (VIDEO_EXTENSIONS.has(extension)) return "video";
@@ -22,9 +31,22 @@ export function getMediaType(source = "", fallback = "image") {
   return fallback;
 }
 
-export function getOptimizedImageSource(source = "") {
+export function getCoverOptimizedPath(source = "") {
+  const normalizedSource = String(source).split(/[?#]/)[0].replace(/^\.\//, "");
+  const extension = getExtension(normalizedSource);
+  if (!normalizedSource.startsWith("assets/cms/") || !COVER_OPTIMIZED_EXTENSIONS.has(extension)) {
+    return "";
+  }
+
+  const base = getPathWithoutExtension(normalizedSource);
+  return base ? `assets/optimized/${base}-cover.jpg` : "";
+}
+
+export function getOptimizedImageSource(source = "", optimizedSource = "") {
+  if (optimizedSource) return optimizedSource;
+
   const normalizedSource = String(source).replace(/^\.\//, "");
-  return OPTIMIZED_IMAGE_SOURCES.get(normalizedSource) || source;
+  return OPTIMIZED_IMAGE_SOURCES.get(normalizedSource) || getCoverOptimizedPath(normalizedSource) || source;
 }
 
 export function normalizeMediaItem(item, fallbackAlt = "") {
@@ -32,6 +54,7 @@ export function normalizeMediaItem(item, fallbackAlt = "") {
     return {
       type: getMediaType(item),
       src: item,
+      optimizedSrc: getCoverOptimizedPath(item),
       alt: fallbackAlt,
       caption: ""
     };
@@ -44,6 +67,7 @@ export function normalizeMediaItem(item, fallbackAlt = "") {
     type: inferredType || item?.type || "image",
     src: source,
     poster,
+    optimizedSrc: item?.optimizedSrc || item?.optimized || item?.coverOptimized || item?.thumbnail || "",
     alt: item?.alt || fallbackAlt,
     caption: item?.caption || item?.title || "",
     width: item?.width || item?.w || "",
@@ -81,6 +105,7 @@ export function getProjectCover(project = {}) {
     type: getMediaType(coverSource, media[0]?.type || "image"),
     src: coverSource,
     poster: media[0]?.poster || "",
+    optimizedSrc: project.coverOptimized || project.imageOptimized || project.thumbnail || media[0]?.optimizedSrc || "",
     alt: project.title
   }, project.title);
 }
@@ -88,7 +113,7 @@ export function getProjectCover(project = {}) {
 export function mediaElementTemplate(media, className = "", options = {}) {
   const item = normalizeMediaItem(media);
   const source = item.type === "image" && options.optimize !== false
-    ? getOptimizedImageSource(item.src)
+    ? getOptimizedImageSource(item.src, item.optimizedSrc)
     : item.src;
   const classes = className ? ` class="${escapeAttr(className)}"` : "";
   const loading = options.loading ? ` loading="${escapeAttr(options.loading)}"` : "";
@@ -100,6 +125,7 @@ export function mediaElementTemplate(media, className = "", options = {}) {
   const width = item.width ? ` width="${escapeAttr(item.width)}"` : "";
   const height = item.height ? ` height="${escapeAttr(item.height)}"` : "";
   const deferredAttrs = isDeferred ? ` data-defer-media="true" data-src="${escapeAttr(source)}"` : "";
+  const fallbackAttrs = source !== item.src ? ` data-fallback-src="${escapeAttr(item.src)}"` : "";
 
   if (item.type === "video") {
     const poster = item.poster
@@ -114,7 +140,21 @@ export function mediaElementTemplate(media, className = "", options = {}) {
   }
 
   const src = isDeferred ? TRANSPARENT_IMAGE : source;
-  return `<img${classes} src="${escapeAttr(src)}" alt="${escapeAttr(item.alt)}"${width}${height}${loading}${decoding}${fetchPriority}${deferredAttrs}>`;
+  return `<img${classes} src="${escapeAttr(src)}" alt="${escapeAttr(item.alt)}"${width}${height}${loading}${decoding}${fetchPriority}${deferredAttrs}${fallbackAttrs}>`;
+}
+
+function bindImageFallbacks(target = document) {
+  target.querySelectorAll("img[data-fallback-src]").forEach((image) => {
+    if (image.dataset.fallbackBound === "true") return;
+    image.dataset.fallbackBound = "true";
+    image.addEventListener("error", () => {
+      const fallbackSource = image.dataset.fallbackSrc;
+      if (!fallbackSource || image.src.endsWith(fallbackSource)) return;
+      image.src = fallbackSource;
+      delete image.dataset.src;
+      delete image.dataset.deferMedia;
+    });
+  });
 }
 
 function loadDeferredMedia(media) {
@@ -140,6 +180,8 @@ function loadDeferredMedia(media) {
 }
 
 export function bindDeferredMedia(target = document) {
+  bindImageFallbacks(target);
+
   const mediaItems = [...target.querySelectorAll("[data-defer-media='true']")];
   if (!mediaItems.length) return;
 

@@ -1,5 +1,5 @@
 import { cardLayoutFlush, escapeAttr, escapeHtml } from "../utils/dom.js";
-import { bindDeferredMedia, getMediaType, getOptimizedImageSource, getProjectMedia, mediaElementTemplate, normalizeMediaItem } from "../utils/media.js";
+import { bindDeferredMedia, getMediaType, getProjectMedia, mediaElementTemplate, normalizeMediaItem } from "../utils/media.js";
 
 const DETAIL_HASH_PREFIX = "#work/";
 const DETAIL_PATH_SEGMENT = "work";
@@ -120,7 +120,8 @@ function visualTemplate(media, index, project, labels = {}) {
           decoding: "async",
           fetchPriority: isPriority ? "high" : "auto",
           preload: isPriority ? "auto" : "none",
-          defer: !isPriority
+          defer: !isPriority,
+          optimize: false
         })}
       </button>
     </figure>
@@ -247,7 +248,7 @@ function warmProjectMedia(media = []) {
     if (index > 0) return;
     const normalized = normalizeMediaItem(item);
     if (!normalized.src || normalized.type !== "image") return;
-    const mediaSource = getOptimizedImageSource(normalized.src);
+    const mediaSource = normalized.src;
 
     const preloadSelector = `[data-project-preload="${CSS.escape(mediaSource)}"]`;
     if (document.head.querySelector(preloadSelector)) return;

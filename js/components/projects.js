@@ -153,7 +153,7 @@ function warmProjectCovers(projects) {
     if (visibleIndex > 0) return;
     const cover = getProjectCover(project);
     if (!cover?.src || cover.type !== "image") return;
-    const coverSource = getOptimizedImageSource(cover.src);
+    const coverSource = getOptimizedImageSource(cover.src, cover.optimizedSrc);
 
     const preloadSelector = `[data-project-cover-preload="${CSS.escape(coverSource)}"]`;
     if (document.head.querySelector(preloadSelector)) return;

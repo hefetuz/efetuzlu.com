@@ -34,6 +34,7 @@ const types = {
 };
 
 const mediaDirectory = join(root, "assets", "cms");
+const optimizedMediaDirectory = join(root, "assets", "optimized");
 const contentPath = join(root, "cms", "content.json");
 const maxUploadBytes = 50 * 1024 * 1024;
 const mediaExtensions = new Set([
@@ -52,6 +53,7 @@ const mediaExtensions = new Set([
   ".webp"
 ]);
 const videoExtensions = new Set([".m4v", ".mov", ".mp4", ".ogg", ".ogv", ".webm"]);
+const optimizedImageExtensions = new Set([".jpeg", ".jpg", ".png", ".webp"]);
 const securityHeaders = {
   "X-Content-Type-Options": "nosniff",
   "Referrer-Policy": "strict-origin-when-cross-origin",
@@ -109,7 +111,7 @@ function parseMultipartFile(buffer, contentType = "") {
   throw new Error("No file found");
 }
 
-function sanitizeFilename(filename = "") {
+function sanitizeFilename(filename = "", { unique = true } = {}) {
   const extension = extname(filename).toLowerCase();
   const base = filename
     .slice(0, Math.max(0, filename.length - extension.length))
@@ -119,7 +121,7 @@ function sanitizeFilename(filename = "") {
     .replace(/^-+|-+$/g, "")
     .toLowerCase() || "media";
 
-  return `${base}-${Date.now()}${extension}`;
+  return `${base}${unique ? `-${Date.now()}` : ""}${extension}`;
 }
 
 function sendJson(response, status, payload) {
@@ -131,7 +133,7 @@ function sendJson(response, status, payload) {
   response.end(JSON.stringify(payload));
 }
 
-async function handleMediaUpload(request, response) {
+async function handleMediaUpload(request, response, target = "cms") {
   try {
     const body = await readRequestBody(request);
     const file = parseMultipartFile(body, request.headers["content-type"]);
@@ -140,13 +142,20 @@ async function handleMediaUpload(request, response) {
       throw new Error("Unsupported media type");
     }
 
-    await mkdir(mediaDirectory, { recursive: true });
-    const filename = sanitizeFilename(file.filename);
-    await writeFile(join(mediaDirectory, filename), file.buffer);
+    const isOptimizedTarget = target === "optimized";
+    if (isOptimizedTarget && !optimizedImageExtensions.has(extension)) {
+      throw new Error("Optimized uploads must be JPEG, PNG or WebP images");
+    }
+
+    const directory = isOptimizedTarget ? optimizedMediaDirectory : mediaDirectory;
+    const publicDirectory = isOptimizedTarget ? "assets/optimized" : "assets/cms";
+    await mkdir(directory, { recursive: true });
+    const filename = sanitizeFilename(file.filename, { unique: !isOptimizedTarget });
+    await writeFile(join(directory, filename), file.buffer);
 
     sendJson(response, 200, {
       ok: true,
-      src: `assets/cms/${filename}`,
+      src: `${publicDirectory}/${filename}`,
       type: file.mime.startsWith("video/") || videoExtensions.has(extension) ? "video" : "image"
     });
   } catch (error) {
@@ -224,7 +233,7 @@ createServer((request, response) => {
   }
 
   if (request.method === "POST" && url.pathname === "/api/media") {
-    handleMediaUpload(request, response);
+    handleMediaUpload(request, response, url.searchParams.get("folder") || "cms");
     return;
   }
 
