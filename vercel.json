@@ -28,6 +28,22 @@
   ],
   "rewrites": [
     {
+      "source": "/cms",
+      "destination": "/cms.html"
+    },
+    {
+      "source": "/cms/",
+      "destination": "/cms.html"
+    },
+    {
+      "source": "/admin",
+      "destination": "/cms.html"
+    },
+    {
+      "source": "/admin/",
+      "destination": "/cms.html"
+    },
+    {
       "source": "/work/:slug",
       "destination": "/index.html"
     },
