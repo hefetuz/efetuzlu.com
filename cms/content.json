@@ -118,6 +118,8 @@
           "type": "image",
           "src": "assets/cms/hant-product-01.png",
           "poster": "",
+          "optimizedSrc": "assets/optimized/hant-product-01-cover.webp",
+          "previewSrc": "assets/optimized/hant-product-01-preview.webp",
           "alt": "Hant Product Design",
           "caption": "AI Travel Product Design",
           "width": "",
@@ -128,6 +130,8 @@
           "type": "image",
           "src": "assets/cms/hant-product-02.png",
           "poster": "",
+          "optimizedSrc": "assets/optimized/hant-product-02-cover.webp",
+          "previewSrc": "assets/optimized/hant-product-02-preview.webp",
           "alt": "Hant Product Design",
           "caption": "Product Exploration",
           "width": "",
@@ -138,6 +142,8 @@
           "type": "image",
           "src": "assets/cms/hant-product-03.png",
           "poster": "",
+          "optimizedSrc": "assets/optimized/hant-product-03-cover.webp",
+          "previewSrc": "assets/optimized/hant-product-03-preview.webp",
           "alt": "Hant Product Design",
           "caption": "Product Exploration",
           "width": "",
@@ -148,6 +154,8 @@
           "type": "image",
           "src": "assets/cms/hant-product-04.png",
           "poster": "",
+          "optimizedSrc": "assets/optimized/hant-product-04-cover.webp",
+          "previewSrc": "assets/optimized/hant-product-04-preview.webp",
           "alt": "Hant Product Design",
           "caption": "Product Exploration",
           "width": "",
@@ -158,6 +166,8 @@
           "type": "image",
           "src": "assets/cms/hant-product-05.png",
           "poster": "",
+          "optimizedSrc": "assets/optimized/hant-product-05-cover.webp",
+          "previewSrc": "assets/optimized/hant-product-05-preview.webp",
           "alt": "Hant Product Design",
           "caption": "Product Exploration",
           "width": "",
@@ -168,6 +178,8 @@
           "type": "image",
           "src": "assets/cms/hant-product-06.png",
           "poster": "",
+          "optimizedSrc": "assets/optimized/hant-product-06-cover.webp",
+          "previewSrc": "assets/optimized/hant-product-06-preview.webp",
           "alt": "Hant Product Design",
           "caption": "Product Exploration",
           "width": "",
@@ -178,6 +190,8 @@
           "type": "image",
           "src": "assets/cms/hant-product-07.png",
           "poster": "",
+          "optimizedSrc": "assets/optimized/hant-product-07-cover.webp",
+          "previewSrc": "assets/optimized/hant-product-07-preview.webp",
           "alt": "Hant Product Design",
           "caption": "Product Exploration",
           "width": "",
@@ -188,6 +202,8 @@
           "type": "image",
           "src": "assets/cms/hant-product-08.png",
           "poster": "",
+          "optimizedSrc": "assets/optimized/hant-product-08-cover.webp",
+          "previewSrc": "assets/optimized/hant-product-08-preview.webp",
           "alt": "Hant Product Design",
           "caption": "Product Exploration",
           "width": "",
@@ -198,6 +214,8 @@
           "type": "image",
           "src": "assets/cms/hant-product-09.png",
           "poster": "",
+          "optimizedSrc": "assets/optimized/hant-product-09-cover.webp",
+          "previewSrc": "assets/optimized/hant-product-09-preview.webp",
           "alt": "Hant Product Design",
           "caption": "Product Exploration",
           "width": "",
@@ -208,6 +226,8 @@
           "type": "image",
           "src": "assets/cms/hant-product-10.png",
           "poster": "",
+          "optimizedSrc": "assets/optimized/hant-product-10-cover.webp",
+          "previewSrc": "assets/optimized/hant-product-10-preview.webp",
           "alt": "Hant Product Design",
           "caption": "Product Exploration",
           "width": "",
@@ -218,6 +238,8 @@
           "type": "image",
           "src": "assets/cms/hant-product-11.png",
           "poster": "",
+          "optimizedSrc": "assets/optimized/hant-product-11-cover.webp",
+          "previewSrc": "assets/optimized/hant-product-11-preview.webp",
           "alt": "Hant Product Design",
           "caption": "Product Exploration",
           "width": "",
@@ -228,6 +250,8 @@
           "type": "image",
           "src": "assets/cms/hant-product-12.png",
           "poster": "",
+          "optimizedSrc": "assets/optimized/hant-product-12-cover.webp",
+          "previewSrc": "assets/optimized/hant-product-12-preview.webp",
           "alt": "Hant Product Design",
           "caption": "Product Exploration",
           "width": "",
@@ -238,6 +262,8 @@
           "type": "image",
           "src": "assets/cms/hant-product-13.png",
           "poster": "",
+          "optimizedSrc": "assets/optimized/hant-product-13-cover.webp",
+          "previewSrc": "assets/optimized/hant-product-13-preview.webp",
           "alt": "Hant Product Design",
           "caption": "Product Exploration",
           "width": "",
@@ -248,6 +274,8 @@
           "type": "image",
           "src": "assets/cms/hant-product-14.png",
           "poster": "",
+          "optimizedSrc": "assets/optimized/hant-product-14-cover.webp",
+          "previewSrc": "assets/optimized/hant-product-14-preview.webp",
           "alt": "Hant Product Design",
           "caption": "Product Exploration",
           "width": "",
@@ -258,6 +286,8 @@
           "type": "image",
           "src": "assets/cms/hant-product-15.png",
           "poster": "",
+          "optimizedSrc": "assets/optimized/hant-product-15-cover.webp",
+          "previewSrc": "assets/optimized/hant-product-15-preview.webp",
           "alt": "Hant Product Design",
           "caption": "Product Exploration",
           "width": "",
@@ -268,6 +298,8 @@
           "type": "image",
           "src": "assets/cms/hant-product-16.png",
           "poster": "",
+          "optimizedSrc": "assets/optimized/hant-product-16-cover.webp",
+          "previewSrc": "assets/optimized/hant-product-16-preview.webp",
           "alt": "Hant Product Design",
           "caption": "Product Exploration",
           "width": "",
@@ -278,6 +310,8 @@
           "type": "image",
           "src": "assets/cms/hant-product-17.png",
           "poster": "",
+          "optimizedSrc": "assets/optimized/hant-product-17-cover.webp",
+          "previewSrc": "assets/optimized/hant-product-17-preview.webp",
           "alt": "Hant Product Design",
           "caption": "Product Exploration",
           "width": "",
@@ -288,6 +322,8 @@
           "type": "image",
           "src": "assets/cms/hant-product-18.png",
           "poster": "",
+          "optimizedSrc": "assets/optimized/hant-product-18-cover.webp",
+          "previewSrc": "assets/optimized/hant-product-18-preview.webp",
           "alt": "Hant Product Design",
           "caption": "Product Exploration",
           "width": "",
@@ -298,6 +334,8 @@
           "type": "image",
           "src": "assets/cms/hant-product-19.png",
           "poster": "",
+          "optimizedSrc": "assets/optimized/hant-product-19-cover.webp",
+          "previewSrc": "assets/optimized/hant-product-19-preview.webp",
           "alt": "Hant Product Design",
           "caption": "Product Exploration",
           "width": "",
@@ -319,888 +357,8 @@
         "AI Travel",
         "Consumer App",
         "Travel Planning"
-      ]
-    },
-    {
-      "title": "Hant Web Design",
-      "slug": "hant-ai-travel-website",
-      "category": "web",
-      "categories": [
-        "web"
       ],
-      "meta": "Web Design",
-      "date": "2024 - Present",
-      "summary": "AI Travel App",
-      "scope": "AI Travel App",
-      "service": "Web Design",
-      "goal": "The objective was to turn a complex AI product into a focused web presence that explains the value quickly and builds trust.",
-      "description": "I translated Hant's AI travel concept into a responsive web experience with clear landing flows, product storytelling and interface-led communication.",
-      "image": "assets/cms/hant-button-1782768234785.gif",
-      "media": [
-        {
-          "type": "image",
-          "src": "assets/cms/hant-website-1782768036032.gif",
-          "poster": "",
-          "alt": "Hant Web Design",
-          "caption": "AI Travel App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/ezgif-com-cut-1782766603579.gif",
-          "poster": "",
-          "alt": "Hant Web Design",
-          "caption": "AI Travel App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/hant-button-1782768234785.gif",
-          "poster": "",
-          "alt": "Hant Web Design",
-          "caption": "AI Travel App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/hant-hero-1782767486228.gif",
-          "poster": "",
-          "alt": "Hant Web Design",
-          "caption": "AI Travel App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        }
-      ],
-      "services": [
-        "Website Design",
-        "Responsive UI",
-        "Front-End Direction"
-      ],
-      "techStack": [
-        "Figma",
-        "HTML/CSS",
-        "JavaScript"
-      ],
-      "industry": [
-        "AI Travel",
-        "SaaS",
-        "Product Website"
-      ]
-    },
-    {
-      "title": "Hant Motion Design",
-      "slug": "hant-motion-design",
-      "category": "motion",
-      "categories": [
-        "motion"
-      ],
-      "meta": "Motion Design",
-      "date": "2024 - Present",
-      "summary": "AI Travel Product Motion",
-      "scope": "AI Travel App",
-      "service": "Motion Design",
-      "goal": "The goal was to make Hant's AI planning experience feel clear, responsive and memorable through purposeful motion.",
-      "description": "I defined the motion language for Hant across onboarding, itinerary-building, AI feedback and presentation moments, turning product flows into animated prototypes and sales-ready sequences.",
-      "image": "assets/cms/kapak-1782755492230.gif",
-      "media": [
-        {
-          "type": "image",
-          "src": "assets/cms/kapak-1782755492230.gif",
-          "poster": "",
-          "alt": "Hant Motion Design",
-          "caption": "AI travel product motion",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/1-1782755492134.gif",
-          "poster": "",
-          "alt": "Hant Motion Design",
-          "caption": "Itinerary-building prototype motion",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/hant-deck-03.png",
-          "poster": "",
-          "alt": "Hant Motion Design",
-          "caption": "Motion / deck animation",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/hant-deck-04.png",
-          "poster": "",
-          "alt": "Hant Motion Design",
-          "caption": "Prototype transition system",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/hant-deck-05.png",
-          "poster": "",
-          "alt": "Hant Motion Design",
-          "caption": "Product storytelling sequence",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/hant-deck-06.png",
-          "poster": "",
-          "alt": "Hant Motion Design",
-          "caption": "Interaction rhythm study",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/hant-deck-08.png",
-          "poster": "",
-          "alt": "Hant Motion Design",
-          "caption": "Sales-ready motion frame",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/hant-deck-09.png",
-          "poster": "",
-          "alt": "Hant Motion Design",
-          "caption": "AI feedback motion direction",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/hant-deck-11.png",
-          "poster": "",
-          "alt": "Hant Motion Design",
-          "caption": "Mobile UX motion detail",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/10-1782755492185.gif",
-          "poster": "",
-          "alt": "Hant Motion Design",
-          "caption": "Motion design showcase",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        }
-      ],
-      "services": [
-        "Motion Design",
-        "Interaction Design",
-        "Prototype Motion",
-        "Product Storytelling"
-      ],
-      "techStack": [
-        "Figma",
-        "After Effects",
-        "Prototype Motion"
-      ],
-      "industry": [
-        "AI Travel",
-        "Product Motion",
-        "Mobile UX"
-      ]
-    },
-    {
-      "title": "En Kıymetlim Product Design",
-      "slug": "en-kiymetlim-parenting-app",
-      "category": "product",
-      "categories": [
-        "product"
-      ],
-      "meta": "Product Design",
-      "date": "2023 - 2024",
-      "summary": "Ebeveynlik App",
-      "scope": "Parent Health & Child Care App",
-      "service": "Product Design",
-      "goal": "The objective was to make sensitive parenting and care tasks feel calm, accessible and easy to manage day to day.",
-      "description": "I designed the product experience for En Kiymetlim, a parenting app focused on parent health, child care support and practical daily care flows.",
-      "image": "assets/cms/en-ka-ymetlim-web-app-1782747905607.png",
-      "media": [
-        {
-          "type": "image",
-          "src": "assets/cms/7478e877895013c1258d9d87f12a102f-1782747905299.webp",
-          "poster": "",
-          "alt": "En Kıymetlim Product Design",
-          "caption": "Ebeveynlik App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/d5551cfee43cc464d433144170e2ed27-1782747905344.webp",
-          "poster": "",
-          "alt": "En Kıymetlim Product Design",
-          "caption": "Ebeveynlik App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/dana-a-man-bul-zoom-1782747905430.png",
-          "poster": "",
-          "alt": "En Kıymetlim Product Design",
-          "caption": "Ebeveynlik App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/dana-a-man-bul-1782747905527.png",
-          "poster": "",
-          "alt": "En Kıymetlim Product Design",
-          "caption": "Ebeveynlik App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/kurs-feed-1782747905700.png",
-          "poster": "",
-          "alt": "En Kıymetlim Product Design",
-          "caption": "Ebeveynlik App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/kurs-zoom-1782747905846.png",
-          "poster": "",
-          "alt": "En Kıymetlim Product Design",
-          "caption": "Ebeveynlik App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/meet-zoom-1782747905925.png",
-          "poster": "",
-          "alt": "En Kıymetlim Product Design",
-          "caption": "Ebeveynlik App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/meet-1782747906081.png",
-          "poster": "",
-          "alt": "En Kıymetlim Product Design",
-          "caption": "Ebeveynlik App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/ma-fredat-zoom-1782747906130.png",
-          "poster": "",
-          "alt": "En Kıymetlim Product Design",
-          "caption": "Ebeveynlik App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/ma-fredat-1782747906232.png",
-          "poster": "",
-          "alt": "En Kıymetlim Product Design",
-          "caption": "Ebeveynlik App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/panel-1782747906327.png",
-          "poster": "",
-          "alt": "En Kıymetlim Product Design",
-          "caption": "Ebeveynlik App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        }
-      ],
-      "services": [
-        "Product Design",
-        "UX Strategy",
-        "Design Systems"
-      ],
-      "techStack": [
-        "Figma",
-        "FigJam",
-        "Prototype Motion"
-      ],
-      "industry": [
-        "Parenting",
-        "Health Tech",
-        "Child Care"
-      ]
-    },
-    {
-      "title": "En Kıymetlim Brand Identity",
-      "slug": "en-kiymetlim-brand-identity",
-      "category": "brand",
-      "categories": [
-        "brand"
-      ],
-      "meta": "Brand Identity",
-      "date": "2023 - 2024",
-      "summary": "Ebeveynlik App",
-      "scope": "Parent Health & Child Care App",
-      "service": "Logo & Visual Identity",
-      "goal": "The objective was to create a soft, trustworthy identity that could support both emotional reassurance and practical healthcare communication.",
-      "description": "I shaped the brand identity for En Kiymetlim around a calm visual system for parent health, child care and everyday family support.",
-      "image": "assets/cms/showcase-1782410290853.webp",
-      "media": [
-        {
-          "type": "image",
-          "src": "assets/cms/showcase-1782410290853.webp",
-          "poster": "",
-          "alt": "En Kıymetlim Brand Identity",
-          "caption": "Ebeveynlik App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/1-1782410276715.webp",
-          "poster": "",
-          "alt": "En Kıymetlim Brand Identity",
-          "caption": "Ebeveynlik App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/2-1782410276734.webp",
-          "poster": "",
-          "alt": "En Kıymetlim Brand Identity",
-          "caption": "Ebeveynlik App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/3-1782410276751.webp",
-          "poster": "",
-          "alt": "En Kıymetlim Brand Identity",
-          "caption": "Ebeveynlik App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/4-1782410276768.webp",
-          "poster": "",
-          "alt": "En Kıymetlim Brand Identity",
-          "caption": "Ebeveynlik App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/5-1782410276792.webp",
-          "poster": "",
-          "alt": "En Kıymetlim Brand Identity",
-          "caption": "Ebeveynlik App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        }
-      ],
-      "services": [
-        "Brand Identity",
-        "Visual Language",
-        "Packaging Direction"
-      ],
-      "techStack": [
-        "Figma",
-        "Adobe Illustrator",
-        "Adobe Photoshop"
-      ],
-      "industry": [
-        "Parenting",
-        "Health Tech",
-        "Family Care"
-      ]
-    },
-    {
-      "title": "Sağlık Gelsin Sales Deck",
-      "slug": "saglik-gelsin-sales-deck",
-      "category": "brand",
-      "categories": [
-        "brand"
-      ],
-      "meta": "Brand Identity",
-      "date": "2024",
-      "summary": "Home Healthcare App",
-      "scope": "Nurse & Physiotherapist Booking App",
-      "service": "Logo & Visual Identity",
-      "goal": "The objective was to build a healthcare communication system that feels reliable, accessible and human.",
-      "description": "I developed the visual direction for Saglik Gelsin around trust signals, service clarity and approachable communication for a home healthcare brand.",
-      "image": "assets/cms/use-case-1782755156596.gif",
-      "media": [
-        {
-          "type": "image",
-          "src": "assets/cms/kapak-1782755135649.gif",
-          "poster": "",
-          "alt": "Sağlık Gelsin Sales Deck",
-          "caption": "Home Healthcare App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/nasa-l-a-ala-a-a-r-1782753967935.gif",
-          "poster": "",
-          "alt": "Sağlık Gelsin Sales Deck",
-          "caption": "Home Healthcare App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/use-case-1782755156596.gif",
-          "poster": "",
-          "alt": "Sağlık Gelsin Sales Deck",
-          "caption": "Home Healthcare App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/saa-lanan-dea-er-1782748062189.png",
-          "poster": "",
-          "alt": "Sağlık Gelsin Sales Deck",
-          "caption": "Home Healthcare App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/problem-1782748062137.png",
-          "poster": "",
-          "alt": "Sağlık Gelsin Sales Deck",
-          "caption": "Home Healthcare App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/call-to-action-1782748061815.png",
-          "poster": "",
-          "alt": "Sağlık Gelsin Sales Deck",
-          "caption": "Home Healthcare App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        }
-      ],
-      "services": [
-        "Brand Identity",
-        "Visual Language",
-        "Packaging Direction"
-      ],
-      "techStack": [
-        "Figma",
-        "Adobe Illustrator",
-        "Adobe Photoshop"
-      ],
-      "industry": [
-        "Home Healthcare",
-        "Healthcare Communication",
-        "Brand System"
-      ]
-    },
-    {
-      "title": "Saunakit",
-      "slug": "saunakit-brand-identity",
-      "category": "brand",
-      "categories": [
-        "brand"
-      ],
-      "meta": "Physical Product Brand",
-      "date": "2024",
-      "summary": "Portable Sauna",
-      "scope": "Portable Sauna Product",
-      "service": "Logo & Visual Identity, Packaging Direction",
-      "goal": "The objective was to position a portable sauna as a premium but easy-to-understand wellness product.",
-      "description": "I created brand and packaging direction for Saunakit, focusing on clear product positioning, a clean visual system and consistent physical product communication.",
-      "image": "assets/project-5-design-systems.webp",
-      "media": [
-        {
-          "type": "image",
-          "src": "assets/project-5-design-systems.webp",
-          "poster": "",
-          "alt": "Saunakit",
-          "caption": "Portable Sauna",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        }
-      ],
-      "services": [
-        "Brand Identity",
-        "Visual Language",
-        "Packaging Direction"
-      ],
-      "techStack": [
-        "Figma",
-        "Adobe Illustrator",
-        "Adobe Photoshop"
-      ],
-      "industry": [
-        "Wellness",
-        "Portable Sauna",
-        "Physical Product"
-      ]
-    },
-    {
-      "title": "Mambocino",
-      "slug": "mambocino-coffee-branding",
-      "category": "brand",
-      "categories": [
-        "brand"
-      ],
-      "meta": "Physical Product Brand",
-      "date": "2024",
-      "summary": "Coffee Brand",
-      "scope": "Coffee Product",
-      "service": "Brand Identity, Visual Language, Packaging Direction",
-      "goal": "The objective was to create a playful but polished coffee identity that could scale across packaging and product communication.",
-      "description": "I shaped the Mambocino brand around naming, packaging and a shelf-ready visual system for specialty coffee products.",
-      "image": "assets/cms/mambocino-1.png",
-      "media": [
-        {
-          "type": "image",
-          "src": "assets/cms/mambocino-1.png",
-          "poster": "",
-          "alt": "Mambocino",
-          "caption": "Coffee Brand",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/mambocino-2.png",
-          "poster": "",
-          "alt": "Mambocino",
-          "caption": "Coffee Brand",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/mambocino-3.png",
-          "poster": "",
-          "alt": "Mambocino",
-          "caption": "Coffee Brand",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/mambocino-4.png",
-          "poster": "",
-          "alt": "Mambocino",
-          "caption": "Coffee Brand",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/mambocino-5.png",
-          "poster": "",
-          "alt": "Mambocino",
-          "caption": "Coffee Brand",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/mambocino-6.png",
-          "poster": "",
-          "alt": "Mambocino",
-          "caption": "Coffee Brand",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/mambocino-7.png",
-          "poster": "",
-          "alt": "Mambocino",
-          "caption": "Coffee Brand",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/mambocino-8.png",
-          "poster": "",
-          "alt": "Mambocino",
-          "caption": "Coffee Brand",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/mambocino-9.png",
-          "poster": "",
-          "alt": "Mambocino",
-          "caption": "Coffee Brand",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        }
-      ],
-      "services": [
-        "Brand Identity",
-        "Visual Language",
-        "Packaging Direction"
-      ],
-      "techStack": [
-        "Figma",
-        "Adobe Illustrator",
-        "Adobe Photoshop"
-      ],
-      "industry": [
-        "Coffee",
-        "Packaging",
-        "FMCG"
-      ]
-    },
-    {
-      "title": "Samurai Bros",
-      "slug": "samurai-bros-packaging",
-      "category": "brand",
-      "categories": [
-        "brand"
-      ],
-      "meta": "Physical Product Brand",
-      "date": "2024",
-      "summary": "Cold Brew Coffee",
-      "scope": "Coffee Packaging",
-      "service": "Brand Identity, Packaging Direction, Product Visuals",
-      "goal": "The objective was to create a bold, shelf-ready cold brew identity with a strong black-and-white packaging system.",
-      "description": "I designed the Samurai Bros packaging system with bold contrast, clear product hierarchy and a bottle-first presentation that reads well both on shelf and in close-up product visuals.",
-      "image": "assets/cms/samurai-bros-5.png",
-      "media": [
-        {
-          "type": "image",
-          "src": "assets/cms/samurai-bros-5.png",
-          "poster": "",
-          "alt": "Samurai Bros",
-          "caption": "Cold Brew Coffee",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/samurai-bros-4.png",
-          "poster": "",
-          "alt": "Samurai Bros",
-          "caption": "Cold Brew Coffee",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/samurai-bros-3.png",
-          "poster": "",
-          "alt": "Samurai Bros",
-          "caption": "Cold Brew Coffee",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/samurai-bros-2.png",
-          "poster": "",
-          "alt": "Samurai Bros",
-          "caption": "Cold Brew Coffee",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/samurai-bros-1.png",
-          "poster": "",
-          "alt": "Samurai Bros",
-          "caption": "Cold Brew Coffee",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        }
-      ],
-      "services": [
-        "Brand Identity",
-        "Packaging Direction",
-        "Product Visuals"
-      ],
-      "techStack": [
-        "Figma",
-        "Adobe Illustrator",
-        "Adobe Photoshop"
-      ],
-      "industry": [
-        "Coffee",
-        "Packaging",
-        "FMCG"
-      ]
-    },
-    {
-      "title": "Sales Training Game",
-      "slug": "sales-training-game",
-      "category": "motion",
-      "categories": [
-        "motion"
-      ],
-      "meta": "Motion & Game UX",
-      "date": "2024",
-      "summary": "Sales Training Game",
-      "scope": "Interactive Training Experience",
-      "service": "Motion Design, Interaction Design",
-      "goal": "The objective was to make sales training more interactive, easier to retain and more engaging than a static learning flow.",
-      "description": "I designed an interactive sales training game concept with motion direction, UX rhythm and lightweight gameplay patterns for learning scenarios.",
-      "image": "assets/cms/sales-training-demo-1782490521032.mp4",
-      "media": [
-        {
-          "type": "video",
-          "src": "assets/cms/sales-training-demo-1782490521032.mp4",
-          "poster": "",
-          "alt": "Sales Training Game",
-          "caption": "Sales Training Game",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        }
-      ],
-      "services": [
-        "Motion Design",
-        "Interaction Design",
-        "Prototype Motion"
-      ],
-      "techStack": [
-        "Figma",
-        "After Effects",
-        "Motion"
-      ],
-      "industry": [
-        "Sales Training",
-        "EdTech",
-        "Interactive Learning"
-      ]
-    },
-    {
-      "title": "Sağlık Gelsin Product Design",
-      "slug": "saglik-gelsin-home-healthcare-app",
-      "category": "product",
-      "categories": [
-        "product"
-      ],
-      "meta": "Product Design",
-      "date": "2024",
-      "summary": "Home Healthcare App",
-      "scope": "Home Healthcare App",
-      "service": "Product Design",
-      "goal": "Make home healthcare requests feel clear, trustworthy and easy to complete.",
-      "description": "I designed the product direction for Sağlık Gelsin, a home healthcare app that helps people request nurses, physiotherapists and care services with clearer flows and stronger trust cues.",
-      "image": "assets/cms/bd01ea66-0697-4143-afef-f527ec020ec4-1782806326668.png",
-      "media": [
-        {
-          "type": "image",
-          "src": "assets/cms/bd01ea66-0697-4143-afef-f527ec020ec4-1782806326668.png",
-          "poster": "",
-          "alt": "Sağlık Gelsin Product Design",
-          "caption": "Home Healthcare App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/bfe66bff-4d79-4141-a9a8-dc44dd743e3e-1782806326699.png",
-          "poster": "",
-          "alt": "Sağlık Gelsin Product Design",
-          "caption": "Home Healthcare App",
-          "width": "",
-          "height": "",
-          "aspectRatio": ""
-        }
-      ],
-      "services": [
-        "Product Design",
-        "UX Strategy",
-        "Design Systems"
-      ],
-      "techStack": [
-        "Figma",
-        "FigJam",
-        "Prototype Motion"
-      ],
-      "industry": [
-        "Home Healthcare",
-        "Health Tech",
-        "Service Marketplace"
-      ]
+      "coverOptimized": "assets/optimized/hant-product-01-cover.webp"
     },
     {
       "title": "Vital Product Design",
@@ -1222,6 +380,8 @@
           "type": "image",
           "src": "assets/cms/2a37ceee-e31a-43ce-b7c7-119d89906d72-1783194590188.png",
           "poster": "",
+          "optimizedSrc": "assets/optimized/2a37ceee-e31a-43ce-b7c7-119d89906d72-1783194590188-cover.webp",
+          "previewSrc": "assets/optimized/2a37ceee-e31a-43ce-b7c7-119d89906d72-1783194590188-preview.webp",
           "alt": "Vital Product Design",
           "caption": "Mobile health product concept",
           "width": "",
@@ -1232,6 +392,8 @@
           "type": "image",
           "src": "assets/cms/3e30a472-35f4-4d72-87f1-8feb4c7c19e2-1783194590263.png",
           "poster": "",
+          "optimizedSrc": "assets/optimized/3e30a472-35f4-4d72-87f1-8feb4c7c19e2-1783194590263-cover.webp",
+          "previewSrc": "assets/optimized/3e30a472-35f4-4d72-87f1-8feb4c7c19e2-1783194590263-preview.webp",
           "alt": "Vital Product Design",
           "caption": "Vital app dashboard and progress view",
           "width": "",
@@ -1242,6 +404,8 @@
           "type": "image",
           "src": "assets/cms/4f31f7b8-c58d-466f-82bc-5ba2f09a4466-1783194590318.png",
           "poster": "",
+          "optimizedSrc": "assets/optimized/4f31f7b8-c58d-466f-82bc-5ba2f09a4466-1783194590318-cover.webp",
+          "previewSrc": "assets/optimized/4f31f7b8-c58d-466f-82bc-5ba2f09a4466-1783194590318-preview.webp",
           "alt": "Vital Product Design",
           "caption": "Health tracking interface direction",
           "width": "",
@@ -1252,6 +416,8 @@
           "type": "image",
           "src": "assets/cms/41eb2dba-7bcb-4073-bbf2-ec6628b4e9e5-1783194590382.png",
           "poster": "",
+          "optimizedSrc": "assets/optimized/41eb2dba-7bcb-4073-bbf2-ec6628b4e9e5-1783194590382-cover.webp",
+          "previewSrc": "assets/optimized/41eb2dba-7bcb-4073-bbf2-ec6628b4e9e5-1783194590382-preview.webp",
           "alt": "Vital Product Design",
           "caption": "Wellness routine flow",
           "width": "",
@@ -1262,6 +428,8 @@
           "type": "image",
           "src": "assets/cms/2365a1f1-9857-49ad-9143-9cb2f53c8e5f-1783194590445.png",
           "poster": "",
+          "optimizedSrc": "assets/optimized/2365a1f1-9857-49ad-9143-9cb2f53c8e5f-1783194590445-cover.webp",
+          "previewSrc": "assets/optimized/2365a1f1-9857-49ad-9143-9cb2f53c8e5f-1783194590445-preview.webp",
           "alt": "Vital Product Design",
           "caption": "Mobile UI component system",
           "width": "",
@@ -1272,6 +440,8 @@
           "type": "image",
           "src": "assets/cms/72345b5c-b21d-451b-a9d3-8fa6f974fd28-1783194590502.png",
           "poster": "",
+          "optimizedSrc": "assets/optimized/72345b5c-b21d-451b-a9d3-8fa6f974fd28-1783194590502-cover.webp",
+          "previewSrc": "assets/optimized/72345b5c-b21d-451b-a9d3-8fa6f974fd28-1783194590502-preview.webp",
           "alt": "Vital Product Design",
           "caption": "Product experience detail",
           "width": "",
@@ -1294,7 +464,1009 @@
         "Health Tech",
         "Wellness",
         "Mobile App"
-      ]
+      ],
+      "coverOptimized": "assets/optimized/3e30a472-35f4-4d72-87f1-8feb4c7c19e2-1783194590263-cover.webp"
+    },
+    {
+      "title": "Sağlık Gelsin Product Design",
+      "slug": "saglik-gelsin-home-healthcare-app",
+      "category": "product",
+      "categories": [
+        "product"
+      ],
+      "meta": "Product Design",
+      "date": "2024",
+      "summary": "Home Healthcare App",
+      "scope": "Home Healthcare App",
+      "service": "Product Design",
+      "goal": "Make home healthcare requests feel clear, trustworthy and easy to complete.",
+      "description": "I designed the product direction for Sağlık Gelsin, a home healthcare app that helps people request nurses, physiotherapists and care services with clearer flows and stronger trust cues.",
+      "image": "assets/cms/bd01ea66-0697-4143-afef-f527ec020ec4-1782806326668.png",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/cms/7b2b77e1-54f4-4462-a623-2ef5ad26945f-1783275970600.png",
+          "optimizedSrc": "assets/cms/7b2b77e1-54f4-4462-a623-2ef5ad26945f-1783275970600-cover-1783275971393.webp",
+          "previewSrc": "assets/cms/7b2b77e1-54f4-4462-a623-2ef5ad26945f-1783275970600-preview-1783275971454.webp",
+          "poster": "",
+          "alt": "Sağlık Gelsin Product Design",
+          "caption": "Home Healthcare App"
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/bd01ea66-0697-4143-afef-f527ec020ec4-1783275971527.png",
+          "optimizedSrc": "assets/cms/bd01ea66-0697-4143-afef-f527ec020ec4-1783275971527-cover-1783275971960.webp",
+          "previewSrc": "assets/cms/bd01ea66-0697-4143-afef-f527ec020ec4-1783275971527-preview-1783275971979.webp",
+          "poster": "",
+          "alt": "Sağlık Gelsin Product Design",
+          "caption": "Home Healthcare App"
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/bfe66bff-4d79-4141-a9a8-dc44dd743e3e-1783275972047.png",
+          "optimizedSrc": "assets/cms/bfe66bff-4d79-4141-a9a8-dc44dd743e3e-1783275972047-cover-1783275973182.webp",
+          "previewSrc": "assets/cms/bfe66bff-4d79-4141-a9a8-dc44dd743e3e-1783275972047-preview-1783275973209.webp",
+          "poster": "",
+          "alt": "Sağlık Gelsin Product Design",
+          "caption": "Home Healthcare App"
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/e0bc542d-c732-4900-8945-65951b31b067-1783275973243.png",
+          "optimizedSrc": "assets/cms/e0bc542d-c732-4900-8945-65951b31b067-1783275973243-cover-1783275974362.webp",
+          "previewSrc": "assets/cms/e0bc542d-c732-4900-8945-65951b31b067-1783275973243-preview-1783275974392.webp",
+          "poster": "",
+          "alt": "Sağlık Gelsin Product Design",
+          "caption": "Home Healthcare App"
+        }
+      ],
+      "services": [
+        "Product Design",
+        "UX Strategy",
+        "Design Systems"
+      ],
+      "techStack": [
+        "Figma",
+        "FigJam",
+        "Prototype Motion"
+      ],
+      "industry": [
+        "Home Healthcare",
+        "Health Tech",
+        "Service Marketplace"
+      ],
+      "coverOptimized": "assets/optimized/bd01ea66-0697-4143-afef-f527ec020ec4-1782806326668-cover.webp"
+    },
+    {
+      "title": "En Kıymetlim Product Design",
+      "slug": "en-kiymetlim-parenting-app",
+      "category": "product",
+      "categories": [
+        "product"
+      ],
+      "meta": "Product Design",
+      "date": "2023 - 2024",
+      "summary": "Ebeveynlik App",
+      "scope": "Parent Health & Child Care App",
+      "service": "Product Design",
+      "goal": "The objective was to make sensitive parenting and care tasks feel calm, accessible and easy to manage day to day.",
+      "description": "I designed the product experience for En Kiymetlim, a parenting app focused on parent health, child care support and practical daily care flows.",
+      "image": "assets/cms/en-ka-ymetlim-web-app-1782747905607.png",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/cms/7478e877895013c1258d9d87f12a102f-1782747905299.webp",
+          "poster": "",
+          "optimizedSrc": "",
+          "previewSrc": "",
+          "alt": "En Kıymetlim Product Design",
+          "caption": "Ebeveynlik App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/d5551cfee43cc464d433144170e2ed27-1782747905344.webp",
+          "poster": "",
+          "optimizedSrc": "",
+          "previewSrc": "",
+          "alt": "En Kıymetlim Product Design",
+          "caption": "Ebeveynlik App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/dana-a-man-bul-zoom-1782747905430.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/dana-a-man-bul-zoom-1782747905430-cover.webp",
+          "previewSrc": "assets/optimized/dana-a-man-bul-zoom-1782747905430-preview.webp",
+          "alt": "En Kıymetlim Product Design",
+          "caption": "Ebeveynlik App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/dana-a-man-bul-1782747905527.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/dana-a-man-bul-1782747905527-cover.webp",
+          "previewSrc": "assets/optimized/dana-a-man-bul-1782747905527-preview.webp",
+          "alt": "En Kıymetlim Product Design",
+          "caption": "Ebeveynlik App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/kurs-feed-1782747905700.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/kurs-feed-1782747905700-cover.webp",
+          "previewSrc": "assets/optimized/kurs-feed-1782747905700-preview.webp",
+          "alt": "En Kıymetlim Product Design",
+          "caption": "Ebeveynlik App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/kurs-zoom-1782747905846.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/kurs-zoom-1782747905846-cover.webp",
+          "previewSrc": "assets/optimized/kurs-zoom-1782747905846-preview.webp",
+          "alt": "En Kıymetlim Product Design",
+          "caption": "Ebeveynlik App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/meet-zoom-1782747905925.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/meet-zoom-1782747905925-cover.webp",
+          "previewSrc": "assets/optimized/meet-zoom-1782747905925-preview.webp",
+          "alt": "En Kıymetlim Product Design",
+          "caption": "Ebeveynlik App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/meet-1782747906081.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/meet-1782747906081-cover.webp",
+          "previewSrc": "assets/optimized/meet-1782747906081-preview.webp",
+          "alt": "En Kıymetlim Product Design",
+          "caption": "Ebeveynlik App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/ma-fredat-zoom-1782747906130.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/ma-fredat-zoom-1782747906130-cover.webp",
+          "previewSrc": "assets/optimized/ma-fredat-zoom-1782747906130-preview.webp",
+          "alt": "En Kıymetlim Product Design",
+          "caption": "Ebeveynlik App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/ma-fredat-1782747906232.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/ma-fredat-1782747906232-cover.webp",
+          "previewSrc": "assets/optimized/ma-fredat-1782747906232-preview.webp",
+          "alt": "En Kıymetlim Product Design",
+          "caption": "Ebeveynlik App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/panel-1782747906327.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/panel-1782747906327-cover.webp",
+          "previewSrc": "assets/optimized/panel-1782747906327-preview.webp",
+          "alt": "En Kıymetlim Product Design",
+          "caption": "Ebeveynlik App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        }
+      ],
+      "services": [
+        "Product Design",
+        "UX Strategy",
+        "Design Systems"
+      ],
+      "techStack": [
+        "Figma",
+        "FigJam",
+        "Prototype Motion"
+      ],
+      "industry": [
+        "Parenting",
+        "Health Tech",
+        "Child Care"
+      ],
+      "coverOptimized": "assets/optimized/en-ka-ymetlim-web-app-1782747905607-cover.webp"
+    },
+    {
+      "title": "Sales Training Game",
+      "slug": "sales-training-game",
+      "category": "motion",
+      "categories": [
+        "motion"
+      ],
+      "meta": "Motion & Game UX",
+      "date": "2024",
+      "summary": "Sales Training Game",
+      "scope": "Interactive Training Experience",
+      "service": "Motion Design, Interaction Design",
+      "goal": "The objective was to make sales training more interactive, easier to retain and more engaging than a static learning flow.",
+      "description": "I designed an interactive sales training game concept with motion direction, UX rhythm and lightweight gameplay patterns for learning scenarios.",
+      "image": "assets/cms/sales-training-demo-1782490521032.mp4",
+      "media": [
+        {
+          "type": "video",
+          "src": "assets/cms/sales-training-demo-1782490521032.mp4",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/sales-training-demo-1782490521032-cover.webm",
+          "previewSrc": "assets/optimized/sales-training-demo-1782490521032-preview.webm",
+          "alt": "Sales Training Game",
+          "caption": "Sales Training Game",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        }
+      ],
+      "services": [
+        "Motion Design",
+        "Interaction Design",
+        "Prototype Motion"
+      ],
+      "techStack": [
+        "Figma",
+        "After Effects",
+        "Motion"
+      ],
+      "industry": [
+        "Sales Training",
+        "EdTech",
+        "Interactive Learning"
+      ],
+      "coverOptimized": "assets/optimized/sales-training-demo-1782490521032-cover.webm"
+    },
+    {
+      "title": "Hant Motion Design",
+      "slug": "hant-motion-design",
+      "category": "brand",
+      "categories": [
+        "motion",
+        "brand"
+      ],
+      "meta": "Motion Design",
+      "date": "2024 - Present",
+      "summary": "AI Travel Product Motion",
+      "scope": "AI Travel App",
+      "service": "Motion Design",
+      "goal": "The goal was to make Hant's AI planning experience feel clear, responsive and memorable through purposeful motion.",
+      "description": "I defined the motion language for Hant across onboarding, itinerary-building, AI feedback and presentation moments, turning product flows into animated prototypes and sales-ready sequences.",
+      "image": "assets/cms/kapak-1782755492230.gif",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/cms/kapak-1782755492230.gif",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/kapak-1782755492230-cover.webm",
+          "previewSrc": "assets/optimized/kapak-1782755492230-preview.webm",
+          "alt": "Hant Motion Design",
+          "caption": "AI travel product motion",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/1-1782755492134.gif",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/1-1782755492134-cover.webm",
+          "previewSrc": "assets/optimized/1-1782755492134-preview.webm",
+          "alt": "Hant Motion Design",
+          "caption": "Itinerary-building prototype motion",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/hant-deck-03.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/hant-deck-03-cover.webp",
+          "previewSrc": "assets/optimized/hant-deck-03-preview.webp",
+          "alt": "Hant Motion Design",
+          "caption": "Motion / deck animation",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/hant-deck-04.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/hant-deck-04-cover.webp",
+          "previewSrc": "assets/optimized/hant-deck-04-preview.webp",
+          "alt": "Hant Motion Design",
+          "caption": "Prototype transition system",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/hant-deck-05.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/hant-deck-05-cover.webp",
+          "previewSrc": "assets/optimized/hant-deck-05-preview.webp",
+          "alt": "Hant Motion Design",
+          "caption": "Product storytelling sequence",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/hant-deck-06.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/hant-deck-06-cover.webp",
+          "previewSrc": "assets/optimized/hant-deck-06-preview.webp",
+          "alt": "Hant Motion Design",
+          "caption": "Interaction rhythm study",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/hant-deck-08.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/hant-deck-08-cover.webp",
+          "previewSrc": "assets/optimized/hant-deck-08-preview.webp",
+          "alt": "Hant Motion Design",
+          "caption": "Sales-ready motion frame",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/hant-deck-09.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/hant-deck-09-cover.webp",
+          "previewSrc": "assets/optimized/hant-deck-09-preview.webp",
+          "alt": "Hant Motion Design",
+          "caption": "AI feedback motion direction",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/hant-deck-11.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/hant-deck-11-cover.webp",
+          "previewSrc": "assets/optimized/hant-deck-11-preview.webp",
+          "alt": "Hant Motion Design",
+          "caption": "Mobile UX motion detail",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/10-1782755492185.gif",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/10-1782755492185-cover.webm",
+          "previewSrc": "assets/optimized/10-1782755492185-preview.webm",
+          "alt": "Hant Motion Design",
+          "caption": "Motion design showcase",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        }
+      ],
+      "services": [
+        "Motion Design",
+        "Interaction Design",
+        "Prototype Motion",
+        "Product Storytelling"
+      ],
+      "techStack": [
+        "Figma",
+        "After Effects",
+        "Prototype Motion"
+      ],
+      "industry": [
+        "AI Travel",
+        "Product Motion",
+        "Mobile UX"
+      ],
+      "coverOptimized": "assets/optimized/kapak-1782755492230-cover.webm"
+    },
+    {
+      "title": "Hant Web Design",
+      "slug": "hant-ai-travel-website",
+      "category": "web",
+      "categories": [
+        "web"
+      ],
+      "meta": "Web Design",
+      "date": "2024 - Present",
+      "summary": "AI Travel App",
+      "scope": "AI Travel App",
+      "service": "Web Design",
+      "goal": "The objective was to turn a complex AI product into a focused web presence that explains the value quickly and builds trust.",
+      "description": "I translated Hant's AI travel concept into a responsive web experience with clear landing flows, product storytelling and interface-led communication.",
+      "image": "assets/cms/hant-button-1782768234785.gif",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/cms/hant-website-1782768036032.gif",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/hant-website-1782768036032-cover.webm",
+          "previewSrc": "assets/optimized/hant-website-1782768036032-preview.webm",
+          "alt": "Hant Web Design",
+          "caption": "AI Travel App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/ezgif-com-cut-1782766603579.gif",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/ezgif-com-cut-1782766603579-cover.webm",
+          "previewSrc": "assets/optimized/ezgif-com-cut-1782766603579-preview.webm",
+          "alt": "Hant Web Design",
+          "caption": "AI Travel App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/hant-button-1782768234785.gif",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/hant-button-1782768234785-cover.webm",
+          "previewSrc": "assets/optimized/hant-button-1782768234785-preview.webm",
+          "alt": "Hant Web Design",
+          "caption": "AI Travel App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/hant-hero-1782767486228.gif",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/hant-hero-1782767486228-cover.webm",
+          "previewSrc": "assets/optimized/hant-hero-1782767486228-preview.webm",
+          "alt": "Hant Web Design",
+          "caption": "AI Travel App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        }
+      ],
+      "services": [
+        "Website Design",
+        "Responsive UI",
+        "Front-End Direction"
+      ],
+      "techStack": [
+        "Figma",
+        "HTML/CSS",
+        "JavaScript"
+      ],
+      "industry": [
+        "AI Travel",
+        "SaaS",
+        "Product Website"
+      ],
+      "coverOptimized": "assets/optimized/hant-button-1782768234785-cover.webm"
+    },
+    {
+      "title": "Sağlık Gelsin Sales Deck",
+      "slug": "saglik-gelsin-sales-deck",
+      "category": "brand",
+      "categories": [
+        "brand"
+      ],
+      "meta": "Brand Identity",
+      "date": "2024",
+      "summary": "Home Healthcare App",
+      "scope": "Nurse & Physiotherapist Booking App",
+      "service": "Logo & Visual Identity",
+      "goal": "The objective was to build a healthcare communication system that feels reliable, accessible and human.",
+      "description": "I developed the visual direction for Saglik Gelsin around trust signals, service clarity and approachable communication for a home healthcare brand.",
+      "image": "assets/cms/use-case-1782755156596.gif",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/cms/kapak-1782755135649.gif",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/kapak-1782755135649-cover.webm",
+          "previewSrc": "assets/optimized/kapak-1782755135649-preview.webm",
+          "alt": "Sağlık Gelsin Sales Deck",
+          "caption": "Home Healthcare App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/nasa-l-a-ala-a-a-r-1782753967935.gif",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/nasa-l-a-ala-a-a-r-1782753967935-cover.webm",
+          "previewSrc": "assets/optimized/nasa-l-a-ala-a-a-r-1782753967935-preview.webm",
+          "alt": "Sağlık Gelsin Sales Deck",
+          "caption": "Home Healthcare App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/use-case-1782755156596.gif",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/use-case-1782755156596-cover.webm",
+          "previewSrc": "assets/optimized/use-case-1782755156596-preview.webm",
+          "alt": "Sağlık Gelsin Sales Deck",
+          "caption": "Home Healthcare App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/saa-lanan-dea-er-1782748062189.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/saa-lanan-dea-er-1782748062189-cover.webp",
+          "previewSrc": "assets/optimized/saa-lanan-dea-er-1782748062189-preview.webp",
+          "alt": "Sağlık Gelsin Sales Deck",
+          "caption": "Home Healthcare App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/problem-1782748062137.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/problem-1782748062137-cover.webp",
+          "previewSrc": "assets/optimized/problem-1782748062137-preview.webp",
+          "alt": "Sağlık Gelsin Sales Deck",
+          "caption": "Home Healthcare App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/call-to-action-1782748061815.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/call-to-action-1782748061815-cover.webp",
+          "previewSrc": "assets/optimized/call-to-action-1782748061815-preview.webp",
+          "alt": "Sağlık Gelsin Sales Deck",
+          "caption": "Home Healthcare App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        }
+      ],
+      "services": [
+        "Brand Identity",
+        "Visual Language",
+        "Packaging Direction"
+      ],
+      "techStack": [
+        "Figma",
+        "Adobe Illustrator",
+        "Adobe Photoshop"
+      ],
+      "industry": [
+        "Home Healthcare",
+        "Healthcare Communication",
+        "Brand System"
+      ],
+      "coverOptimized": "assets/optimized/use-case-1782755156596-cover.webm"
+    },
+    {
+      "title": "Saunakit",
+      "slug": "saunakit",
+      "category": "brand",
+      "categories": [
+        "brand"
+      ],
+      "meta": "Physical Product Brand",
+      "date": "2024",
+      "summary": "Portable Sauna",
+      "scope": "Portable Sauna Product",
+      "service": "Logo & Visual Identity, Packaging Direction",
+      "goal": "The objective was to position a portable sauna as a premium but easy-to-understand wellness product.",
+      "description": "I created brand and packaging direction for Saunakit, focusing on clear product positioning, a clean visual system and consistent physical product communication.",
+      "image": "assets/project-5-design-systems.webp",
+      "media": [],
+      "services": [
+        "Brand Identity",
+        "Visual Language",
+        "Packaging Direction"
+      ],
+      "techStack": [
+        "Figma",
+        "Adobe Illustrator",
+        "Adobe Photoshop"
+      ],
+      "industry": [
+        "Wellness",
+        "Portable Sauna",
+        "Physical Product"
+      ],
+      "coverOptimized": ""
+    },
+    {
+      "title": "Mambocino",
+      "slug": "mambocino-coffee-branding",
+      "category": "brand",
+      "categories": [
+        "brand"
+      ],
+      "meta": "Physical Product Brand",
+      "date": "2024",
+      "summary": "Coffee Brand",
+      "scope": "Coffee Product",
+      "service": "Brand Identity, Visual Language, Packaging Direction",
+      "goal": "The objective was to create a playful but polished coffee identity that could scale across packaging and product communication.",
+      "description": "I shaped the Mambocino brand around naming, packaging and a shelf-ready visual system for specialty coffee products.",
+      "image": "assets/cms/mambocino-1.png",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/cms/mambocino-1.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/mambocino-1-cover.webp",
+          "previewSrc": "assets/optimized/mambocino-1-preview.webp",
+          "alt": "Mambocino",
+          "caption": "Coffee Brand",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/mambocino-2.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/mambocino-2-cover.webp",
+          "previewSrc": "assets/optimized/mambocino-2-preview.webp",
+          "alt": "Mambocino",
+          "caption": "Coffee Brand",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/mambocino-3.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/mambocino-3-cover.webp",
+          "previewSrc": "assets/optimized/mambocino-3-preview.webp",
+          "alt": "Mambocino",
+          "caption": "Coffee Brand",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/mambocino-4.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/mambocino-4-cover.webp",
+          "previewSrc": "assets/optimized/mambocino-4-preview.webp",
+          "alt": "Mambocino",
+          "caption": "Coffee Brand",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/mambocino-5.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/mambocino-5-cover.webp",
+          "previewSrc": "assets/optimized/mambocino-5-preview.webp",
+          "alt": "Mambocino",
+          "caption": "Coffee Brand",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/mambocino-6.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/mambocino-6-cover.webp",
+          "previewSrc": "assets/optimized/mambocino-6-preview.webp",
+          "alt": "Mambocino",
+          "caption": "Coffee Brand",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/mambocino-7.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/mambocino-7-cover.webp",
+          "previewSrc": "assets/optimized/mambocino-7-preview.webp",
+          "alt": "Mambocino",
+          "caption": "Coffee Brand",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/mambocino-8.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/mambocino-8-cover.webp",
+          "previewSrc": "assets/optimized/mambocino-8-preview.webp",
+          "alt": "Mambocino",
+          "caption": "Coffee Brand",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/mambocino-9.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/mambocino-9-cover.webp",
+          "previewSrc": "assets/optimized/mambocino-9-preview.webp",
+          "alt": "Mambocino",
+          "caption": "Coffee Brand",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        }
+      ],
+      "services": [
+        "Brand Identity",
+        "Visual Language",
+        "Packaging Direction"
+      ],
+      "techStack": [
+        "Figma",
+        "Adobe Illustrator",
+        "Adobe Photoshop"
+      ],
+      "industry": [
+        "Coffee",
+        "Packaging",
+        "FMCG"
+      ],
+      "coverOptimized": "assets/optimized/mambocino-1-cover.webp"
+    },
+    {
+      "title": "En Kıymetlim Brand Identity",
+      "slug": "en-kiymetlim-brand-identity",
+      "category": "brand",
+      "categories": [
+        "brand"
+      ],
+      "meta": "Brand Identity",
+      "date": "2023 - 2024",
+      "summary": "Ebeveynlik App",
+      "scope": "Parent Health & Child Care App",
+      "service": "Logo & Visual Identity",
+      "goal": "The objective was to create a soft, trustworthy identity that could support both emotional reassurance and practical healthcare communication.",
+      "description": "I shaped the brand identity for En Kiymetlim around a calm visual system for parent health, child care and everyday family support.",
+      "image": "assets/cms/showcase-1782410290853.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/cms/showcase-1782410290853.webp",
+          "poster": "",
+          "optimizedSrc": "",
+          "previewSrc": "",
+          "alt": "En Kıymetlim Brand Identity",
+          "caption": "Ebeveynlik App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/1-1782410276715.webp",
+          "poster": "",
+          "optimizedSrc": "",
+          "previewSrc": "",
+          "alt": "En Kıymetlim Brand Identity",
+          "caption": "Ebeveynlik App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/2-1782410276734.webp",
+          "poster": "",
+          "optimizedSrc": "",
+          "previewSrc": "",
+          "alt": "En Kıymetlim Brand Identity",
+          "caption": "Ebeveynlik App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/3-1782410276751.webp",
+          "poster": "",
+          "optimizedSrc": "",
+          "previewSrc": "",
+          "alt": "En Kıymetlim Brand Identity",
+          "caption": "Ebeveynlik App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/4-1782410276768.webp",
+          "poster": "",
+          "optimizedSrc": "",
+          "previewSrc": "",
+          "alt": "En Kıymetlim Brand Identity",
+          "caption": "Ebeveynlik App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/5-1782410276792.webp",
+          "poster": "",
+          "optimizedSrc": "",
+          "previewSrc": "",
+          "alt": "En Kıymetlim Brand Identity",
+          "caption": "Ebeveynlik App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        }
+      ],
+      "services": [
+        "Brand Identity",
+        "Visual Language",
+        "Packaging Direction"
+      ],
+      "techStack": [
+        "Figma",
+        "Adobe Illustrator",
+        "Adobe Photoshop"
+      ],
+      "industry": [
+        "Parenting",
+        "Health Tech",
+        "Family Care"
+      ],
+      "coverOptimized": ""
+    },
+    {
+      "title": "Samurai Bros",
+      "slug": "samurai-bros-packaging",
+      "category": "brand",
+      "categories": [
+        "brand"
+      ],
+      "meta": "Physical Product Brand",
+      "date": "2024",
+      "summary": "Cold Brew Coffee",
+      "scope": "Coffee Packaging",
+      "service": "Brand Identity, Packaging Direction, Product Visuals",
+      "goal": "The objective was to create a bold, shelf-ready cold brew identity with a strong black-and-white packaging system.",
+      "description": "I designed the Samurai Bros packaging system with bold contrast, clear product hierarchy and a bottle-first presentation that reads well both on shelf and in close-up product visuals.",
+      "image": "assets/cms/samurai-bros-5.png",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/cms/samurai-bros-5.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/samurai-bros-5-cover.webp",
+          "previewSrc": "assets/optimized/samurai-bros-5-preview.webp",
+          "alt": "Samurai Bros",
+          "caption": "Cold Brew Coffee",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/samurai-bros-4.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/samurai-bros-4-cover.webp",
+          "previewSrc": "assets/optimized/samurai-bros-4-preview.webp",
+          "alt": "Samurai Bros",
+          "caption": "Cold Brew Coffee",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/samurai-bros-3.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/samurai-bros-3-cover.webp",
+          "previewSrc": "assets/optimized/samurai-bros-3-preview.webp",
+          "alt": "Samurai Bros",
+          "caption": "Cold Brew Coffee",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/samurai-bros-2.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/samurai-bros-2-cover.webp",
+          "previewSrc": "assets/optimized/samurai-bros-2-preview.webp",
+          "alt": "Samurai Bros",
+          "caption": "Cold Brew Coffee",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/samurai-bros-1.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/samurai-bros-1-cover.webp",
+          "previewSrc": "assets/optimized/samurai-bros-1-preview.webp",
+          "alt": "Samurai Bros",
+          "caption": "Cold Brew Coffee",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
+        }
+      ],
+      "services": [
+        "Brand Identity",
+        "Packaging Direction",
+        "Product Visuals"
+      ],
+      "techStack": [
+        "Figma",
+        "Adobe Illustrator",
+        "Adobe Photoshop"
+      ],
+      "industry": [
+        "Coffee",
+        "Packaging",
+        "FMCG"
+      ],
+      "coverOptimized": "assets/optimized/samurai-bros-5-cover.webp"
     }
   ],
   "playground": [
