@@ -135,15 +135,25 @@ function renderProjectList() {
     const categories = getProjectCategories(project)
       .map((category) => state.content.projectCategories.find((item) => item.id === category)?.label || category)
       .join(", ");
+    const position = `${index + 1}.`;
+    const moveUpLabel = `Move ${project.title} up`;
+    const moveDownLabel = `Move ${project.title} down`;
 
     return `
-      <button class="cms-project-row${index === state.activeIndex ? " active" : ""}" type="button" data-project-index="${index}">
-        <span>
-          <strong class="text-ui">${escapeHtml(project.title)}</strong>
-          <small class="text-ui text-muted">${escapeHtml(project.summary || project.scope || "No project type")}</small>
-        </span>
-        <em class="text-ui text-muted">${escapeHtml(categories)}</em>
-      </button>
+      <div class="cms-project-row${index === state.activeIndex ? " active" : ""}" data-project-index="${index}">
+        <button class="cms-project-select" type="button" data-project-select>
+          <span class="cms-project-position text-mono text-muted">${escapeHtml(position)}</span>
+          <span class="cms-project-copy">
+            <strong class="text-ui">${escapeHtml(project.title)}</strong>
+            <small class="text-ui text-muted">${escapeHtml(project.summary || project.scope || "No project type")}</small>
+            <em class="text-ui text-muted">${escapeHtml(categories)}</em>
+          </span>
+        </button>
+        <div class="cms-project-order" aria-label="Project order">
+          <button class="cms-order-button" type="button" data-move-project="${index}" data-direction="-1" aria-label="${escapeAttr(moveUpLabel)}"${index === 0 ? " disabled" : ""}>Up</button>
+          <button class="cms-order-button" type="button" data-move-project="${index}" data-direction="1" aria-label="${escapeAttr(moveDownLabel)}"${index === state.content.projects.length - 1 ? " disabled" : ""}>Down</button>
+        </div>
+      </div>
     `;
   }).join("");
 }
@@ -496,6 +506,27 @@ function deleteProject() {
   render();
 }
 
+function moveProject(index, direction) {
+  const nextIndex = index + direction;
+  const projects = state.content.projects;
+  if (nextIndex < 0 || nextIndex >= projects.length) return;
+
+  const [project] = projects.splice(index, 1);
+  projects.splice(nextIndex, 0, project);
+
+  if (state.activeIndex === index) {
+    state.activeIndex = nextIndex;
+  } else if (direction < 0 && state.activeIndex === nextIndex) {
+    state.activeIndex = index;
+  } else if (direction > 0 && state.activeIndex === nextIndex) {
+    state.activeIndex = index;
+  }
+
+  markDirty();
+  renderProjectList();
+  renderEditor();
+}
+
 function addMedia() {
   const project = state.content.projects[state.activeIndex];
   if (!project) return;
@@ -678,6 +709,13 @@ async function load() {
 }
 
 elements.list.addEventListener("click", (event) => {
+  const moveButton = event.target.closest("[data-move-project]");
+  if (moveButton) {
+    event.preventDefault();
+    moveProject(Number(moveButton.dataset.moveProject), Number(moveButton.dataset.direction));
+    return;
+  }
+
   const row = event.target.closest("[data-project-index]");
   if (!row) return;
   state.activeIndex = Number(row.dataset.projectIndex);
