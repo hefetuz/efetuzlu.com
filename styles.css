@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Inter Variable";
   src: url("./assets/inter-variable-latin.woff2") format("woff2");
-  font-display: swap;
+  font-display: optional;
   font-style: normal;
   font-weight: 100 600;
 }
@@ -9,7 +9,7 @@
 @font-face {
   font-family: "Inter";
   src: url("./assets/inter-regular-latin.woff2") format("woff2");
-  font-display: swap;
+  font-display: optional;
   font-style: normal;
   font-weight: 400;
 }
@@ -17,7 +17,7 @@
 @font-face {
   font-family: "Inter";
   src: url("./assets/inter-bold-latin.woff2") format("woff2");
-  font-display: swap;
+  font-display: optional;
   font-style: normal;
   font-weight: 600;
 }
@@ -163,6 +163,64 @@ body {
   font-weight: var(--font-weight-regular);
   line-height: 1.4;
   letter-spacing: var(--tracking-default);
+}
+
+html.is-loading {
+  overflow: hidden;
+}
+
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  color: var(--label-primary);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 280ms var(--quick),
+    visibility 0ms linear 280ms;
+}
+
+html.is-loading .page-loader {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition:
+    opacity 220ms var(--quick),
+    visibility 0ms linear 0ms;
+}
+
+.page-loader-icon {
+  width: clamp(44px, 7vw, 64px);
+  height: clamp(44px, 7vw, 64px);
+  display: block;
+}
+
+.page-loader-scan {
+  fill: currentColor;
+  opacity: 0;
+  animation: page-loader-scan 2200ms cubic-bezier(0.25, 1, 0.5, 1) infinite both;
+}
+
+.page-loader-d00 { animation-delay: 0ms; }
+.page-loader-d01 { animation-delay: 183ms; }
+.page-loader-d02 { animation-delay: 367ms; }
+.page-loader-d03 { animation-delay: 550ms; }
+.page-loader-d04 { animation-delay: 733ms; }
+.page-loader-d05 { animation-delay: 917ms; }
+.page-loader-d06 { animation-delay: 1100ms; }
+.page-loader-d07 { animation-delay: 1283ms; }
+.page-loader-d08 { animation-delay: 1467ms; }
+
+@keyframes page-loader-scan {
+  0% { opacity: 0; }
+  8% { opacity: 1; }
+  36% { opacity: 0.05; }
+  100% { opacity: 0; }
 }
 
 html.is-lightbox-open {
@@ -660,6 +718,10 @@ img {
 
 .services h2 {
   margin: 0 0 16px;
+}
+
+#servicesList {
+  min-height: 280px;
 }
 
 .services h2:has(.service-heading-back) {
@@ -3135,6 +3197,10 @@ img {
   margin-top: 26px;
 }
 
+#work.project-grid:empty {
+  min-height: clamp(620px, 100vh, 900px);
+}
+
 .site-quote {
   width: 100%;
   margin: clamp(56px, 8vw, 104px) 0 0;
@@ -4050,6 +4116,16 @@ img {
     transition-duration: .001ms !important;
   }
 
+  .page-loader,
+  .page-loader-scan {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .page-loader-scan {
+    opacity: .45;
+  }
+
   .profile,
   .services,
   .footer,
@@ -4359,6 +4435,21 @@ img {
       max(var(--shell-x), env(safe-area-inset-right))
       max(24px, env(safe-area-inset-bottom))
       max(var(--shell-x), env(safe-area-inset-left));
+  }
+
+  .profile,
+  .services,
+  .project-card,
+  .intro-word {
+    animation: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+  }
+
+  .project-card::before,
+  .project-visual::before {
+    animation: none !important;
   }
 
   .rail {

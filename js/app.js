@@ -34,7 +34,10 @@ const HTML_LANGUAGE_MAP = {
   TR: "tr"
 };
 const MOBILE_VIEW_QUERY = "(max-width: 760px)";
+const LOADER_MIN_DURATION_MS = 420;
+const LOADER_EXIT_MS = 320;
 const mobileViewMedia = window.matchMedia(MOBILE_VIEW_QUERY);
+const loaderStartedAt = performance.now();
 
 function isMobileView() {
   return mobileViewMedia.matches;
@@ -50,6 +53,21 @@ function getEffectiveDetailView(view = state.detailView) {
 
 if ("scrollRestoration" in window.history) {
   window.history.scrollRestoration = "manual";
+}
+
+function hidePageLoader() {
+  const html = document.documentElement;
+  const loader = document.getElementById("pageLoader");
+  const elapsed = performance.now() - loaderStartedAt;
+  const remaining = Math.max(0, LOADER_MIN_DURATION_MS - elapsed);
+
+  window.setTimeout(() => {
+    requestAnimationFrame(() => {
+      html.classList.remove("is-loading");
+      if (!loader) return;
+      window.setTimeout(() => loader.remove(), LOADER_EXIT_MS);
+    });
+  }, remaining);
 }
 
 function renderCurrentProjects() {
@@ -273,6 +291,7 @@ function hydrateSite(content) {
   (document.fonts?.ready ?? Promise.resolve()).then(revealWorkToolbar);
   startAppearAnimations();
   window.setInterval(() => updateClock(state.language), 1000);
+  hidePageLoader();
 }
 
 bindInteractions();
@@ -281,4 +300,5 @@ loadContent()
   .then(hydrateSite)
   .catch((error) => {
     document.body.insertAdjacentHTML("afterbegin", `<p style="padding:24px;color:oklch(0.767 0.138 20.782)">${escapeHtml(error.message)}</p>`);
+    hidePageLoader();
   });

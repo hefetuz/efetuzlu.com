@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="is-loading">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,13 +26,36 @@
   <link rel="icon" href="assets/efe-avatar.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet"></noscript>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <noscript><style>html.is-loading{overflow:auto!important}.page-loader{display:none!important}</style></noscript>
+  <div class="page-loader" id="pageLoader" role="status" aria-live="polite" aria-label="Loading portfolio">
+    <svg class="page-loader-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" aria-hidden="true" focusable="false">
+      <defs>
+        <circle id="loader-base-dot" r="2.4" fill="#ffffff" opacity="0.07"></circle>
+        <circle id="loader-scan-dot" r="3.1"></circle>
+      </defs>
+      <use href="#loader-base-dot" x="6" y="6"></use><use href="#loader-base-dot" x="17" y="6"></use><use href="#loader-base-dot" x="28" y="6"></use><use href="#loader-base-dot" x="39" y="6"></use><use href="#loader-base-dot" x="50" y="6"></use>
+      <use href="#loader-base-dot" x="6" y="17"></use><use href="#loader-base-dot" x="17" y="17"></use><use href="#loader-base-dot" x="28" y="17"></use><use href="#loader-base-dot" x="39" y="17"></use><use href="#loader-base-dot" x="50" y="17"></use>
+      <use href="#loader-base-dot" x="6" y="28"></use><use href="#loader-base-dot" x="17" y="28"></use><use href="#loader-base-dot" x="28" y="28"></use><use href="#loader-base-dot" x="39" y="28"></use><use href="#loader-base-dot" x="50" y="28"></use>
+      <use href="#loader-base-dot" x="6" y="39"></use><use href="#loader-base-dot" x="17" y="39"></use><use href="#loader-base-dot" x="28" y="39"></use><use href="#loader-base-dot" x="39" y="39"></use><use href="#loader-base-dot" x="50" y="39"></use>
+      <use href="#loader-base-dot" x="6" y="50"></use><use href="#loader-base-dot" x="17" y="50"></use><use href="#loader-base-dot" x="28" y="50"></use><use href="#loader-base-dot" x="39" y="50"></use><use href="#loader-base-dot" x="50" y="50"></use>
+      <use class="page-loader-scan page-loader-d00" href="#loader-scan-dot" x="6" y="6"></use>
+      <use class="page-loader-scan page-loader-d01" href="#loader-scan-dot" x="17" y="6"></use><use class="page-loader-scan page-loader-d02" href="#loader-scan-dot" x="28" y="6"></use><use class="page-loader-scan page-loader-d03" href="#loader-scan-dot" x="39" y="6"></use><use class="page-loader-scan page-loader-d04" href="#loader-scan-dot" x="50" y="6"></use>
+      <use class="page-loader-scan page-loader-d01" href="#loader-scan-dot" x="6" y="17"></use><use class="page-loader-scan page-loader-d02" href="#loader-scan-dot" x="17" y="17"></use><use class="page-loader-scan page-loader-d03" href="#loader-scan-dot" x="28" y="17"></use><use class="page-loader-scan page-loader-d04" href="#loader-scan-dot" x="39" y="17"></use><use class="page-loader-scan page-loader-d05" href="#loader-scan-dot" x="50" y="17"></use>
+      <use class="page-loader-scan page-loader-d02" href="#loader-scan-dot" x="6" y="28"></use><use class="page-loader-scan page-loader-d03" href="#loader-scan-dot" x="17" y="28"></use><use class="page-loader-scan page-loader-d04" href="#loader-scan-dot" x="28" y="28"></use><use class="page-loader-scan page-loader-d05" href="#loader-scan-dot" x="39" y="28"></use><use class="page-loader-scan page-loader-d06" href="#loader-scan-dot" x="50" y="28"></use>
+      <use class="page-loader-scan page-loader-d03" href="#loader-scan-dot" x="6" y="39"></use><use class="page-loader-scan page-loader-d04" href="#loader-scan-dot" x="17" y="39"></use><use class="page-loader-scan page-loader-d05" href="#loader-scan-dot" x="28" y="39"></use><use class="page-loader-scan page-loader-d06" href="#loader-scan-dot" x="39" y="39"></use><use class="page-loader-scan page-loader-d07" href="#loader-scan-dot" x="50" y="39"></use>
+      <use class="page-loader-scan page-loader-d04" href="#loader-scan-dot" x="6" y="50"></use><use class="page-loader-scan page-loader-d05" href="#loader-scan-dot" x="17" y="50"></use><use class="page-loader-scan page-loader-d06" href="#loader-scan-dot" x="28" y="50"></use><use class="page-loader-scan page-loader-d07" href="#loader-scan-dot" x="39" y="50"></use><use class="page-loader-scan page-loader-d08" href="#loader-scan-dot" x="50" y="50"></use>
+    </svg>
+    <span class="sr-only">Loading portfolio</span>
+  </div>
   <div class="app-shell">
     <aside class="rail" aria-label="Profile and services">
-      <a class="profile" href="#top" aria-label="Home">
+      <a class="profile" href="#top">
         <span class="avatar-media" aria-hidden="true">
           <img id="avatarImage" class="avatar-image is-hidden" src="" alt="">
           <video id="avatarVideo" class="avatar-video" muted playsinline preload="auto"></video>
@@ -100,7 +123,7 @@
         <p class="site-quote-author text-ui text-muted">
           <span class="site-quote-author-trigger" tabindex="0">
             -Ben Affleck
-            <img class="affleck-gif" src="assets/ben-affleck-regret.gif" alt="" aria-hidden="true">
+            <img class="affleck-gif" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-hover-src="assets/ben-affleck-regret.gif" alt="" aria-hidden="true" loading="lazy" decoding="async">
           </span>
         </p>
       </section>

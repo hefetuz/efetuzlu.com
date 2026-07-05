@@ -110,7 +110,7 @@ export function bindAdaptiveTooltips() {
 
 function categoryTabTemplate(category, isActive) {
   return `
-    <button class="tab text-ui${isActive ? " active" : ""}" type="button" data-filter="${escapeAttr(category.id)}">
+    <button class="tab text-ui${isActive ? " active" : ""}" type="button" role="tab" aria-selected="${String(isActive)}" tabindex="${isActive ? "0" : "-1"}" data-filter="${escapeAttr(category.id)}">
       <span class="tab-text">${escapeHtml(category.label)}</span>
     </button>
   `;
@@ -118,7 +118,7 @@ function categoryTabTemplate(category, isActive) {
 
 function viewTabTemplate(viewMode, isActive) {
   return `
-    <button class="tab text-ui icon-tab${isActive ? " active" : ""}" type="button" data-view="${escapeAttr(viewMode.id)}" data-tooltip="${escapeAttr(viewMode.label)}" aria-label="${escapeAttr(viewMode.label)}">
+    <button class="tab text-ui icon-tab${isActive ? " active" : ""}" type="button" role="tab" aria-selected="${String(isActive)}" tabindex="${isActive ? "0" : "-1"}" data-view="${escapeAttr(viewMode.id)}" data-tooltip="${escapeAttr(viewMode.label)}" aria-label="${escapeAttr(viewMode.label)}">
       <span class="view-icon view-icon-${escapeAttr(viewMode.icon || viewMode.id)}" aria-hidden="true"></span>
     </button>
   `;
@@ -236,7 +236,10 @@ export function bindTabs(selector, callback) {
     }
 
     tabs.querySelectorAll(".tab").forEach((tab) => {
-      tab.classList.toggle("active", tab === button);
+      const isActive = tab === button;
+      tab.classList.toggle("active", isActive);
+      tab.setAttribute("aria-selected", String(isActive));
+      tab.tabIndex = isActive ? 0 : -1;
     });
 
     if (isViewTabs) {
@@ -250,5 +253,29 @@ export function bindTabs(selector, callback) {
 
     callback(button);
     updateAllTabIndicators();
+  });
+
+  tabs.addEventListener("keydown", (event) => {
+    if (!["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "Home", "End"].includes(event.key)) return;
+
+    const buttons = [...tabs.querySelectorAll(".tab")];
+    const currentIndex = Math.max(0, buttons.indexOf(document.activeElement));
+    let nextIndex = currentIndex;
+
+    if (event.key === "Home") {
+      nextIndex = 0;
+    } else if (event.key === "End") {
+      nextIndex = buttons.length - 1;
+    } else {
+      const direction = event.key === "ArrowLeft" || event.key === "ArrowUp" ? -1 : 1;
+      nextIndex = (currentIndex + direction + buttons.length) % buttons.length;
+    }
+
+    const nextButton = buttons[nextIndex];
+    if (!nextButton) return;
+
+    event.preventDefault();
+    nextButton.click();
+    nextButton.focus({ preventScroll: true });
   });
 }

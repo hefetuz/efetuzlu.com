@@ -2,6 +2,12 @@ import { escapeAttr } from "./dom.js";
 
 const IMAGE_EXTENSIONS = new Set([".avif", ".gif", ".jpeg", ".jpg", ".png", ".svg", ".webp"]);
 const VIDEO_EXTENSIONS = new Set([".m4v", ".mov", ".mp4", ".ogg", ".ogv", ".webm"]);
+const TRANSPARENT_IMAGE = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+const OPTIMIZED_IMAGE_SOURCES = new Map([
+  ["assets/cms/hant-product-01.png", "assets/optimized/hant-product-01-900.jpg"],
+  ["assets/cms/bd01ea66-0697-4143-afef-f527ec020ec4-1782806326668.png", "assets/optimized/saglik-gelsin-product-design-900.jpg"]
+]);
+let deferredMediaObserver;
 
 function getExtension(source = "") {
   const cleanSource = String(source).split(/[?#]/)[0];
@@ -14,6 +20,11 @@ export function getMediaType(source = "", fallback = "image") {
   if (VIDEO_EXTENSIONS.has(extension)) return "video";
   if (IMAGE_EXTENSIONS.has(extension)) return "image";
   return fallback;
+}
+
+export function getOptimizedImageSource(source = "") {
+  const normalizedSource = String(source).replace(/^\.\//, "");
+  return OPTIMIZED_IMAGE_SOURCES.get(normalizedSource) || source;
 }
 
 export function normalizeMediaItem(item, fallbackAlt = "") {
@@ -76,19 +87,78 @@ export function getProjectCover(project = {}) {
 
 export function mediaElementTemplate(media, className = "", options = {}) {
   const item = normalizeMediaItem(media);
+  const source = item.type === "image" && options.optimize !== false
+    ? getOptimizedImageSource(item.src)
+    : item.src;
   const classes = className ? ` class="${escapeAttr(className)}"` : "";
   const loading = options.loading ? ` loading="${escapeAttr(options.loading)}"` : "";
   const decoding = options.decoding ? ` decoding="${escapeAttr(options.decoding)}"` : "";
   const fetchPriority = options.fetchPriority ? ` fetchpriority="${escapeAttr(options.fetchPriority)}"` : "";
-  const preload = options.preload ? ` preload="${escapeAttr(options.preload)}"` : ` preload="metadata"`;
+  const isDeferred = options.defer === true;
+  const preloadValue = isDeferred ? "none" : (options.preload || "metadata");
+  const preload = ` preload="${escapeAttr(preloadValue)}"`;
   const width = item.width ? ` width="${escapeAttr(item.width)}"` : "";
   const height = item.height ? ` height="${escapeAttr(item.height)}"` : "";
+  const deferredAttrs = isDeferred ? ` data-defer-media="true" data-src="${escapeAttr(source)}"` : "";
 
   if (item.type === "video") {
+    const poster = item.poster
+      ? isDeferred
+        ? ` data-poster="${escapeAttr(item.poster)}"`
+        : ` poster="${escapeAttr(item.poster)}"`
+      : "";
+    const src = isDeferred ? "" : ` src="${escapeAttr(source)}"`;
     return `
-      <video${classes} src="${escapeAttr(item.src)}"${item.poster ? ` poster="${escapeAttr(item.poster)}"` : ""}${width}${height} muted playsinline${preload}></video>
+      <video${classes}${src}${poster}${width}${height}${deferredAttrs} muted playsinline${preload}></video>
     `;
   }
 
-  return `<img${classes} src="${escapeAttr(item.src)}" alt="${escapeAttr(item.alt)}"${width}${height}${loading}${decoding}${fetchPriority}>`;
+  const src = isDeferred ? TRANSPARENT_IMAGE : source;
+  return `<img${classes} src="${escapeAttr(src)}" alt="${escapeAttr(item.alt)}"${width}${height}${loading}${decoding}${fetchPriority}${deferredAttrs}>`;
+}
+
+function loadDeferredMedia(media) {
+  if (!media || media.dataset.deferMedia !== "true") return;
+
+  const source = media.dataset.src;
+  if (!source) return;
+
+  if (media.tagName === "VIDEO") {
+    if (media.dataset.poster) {
+      media.poster = media.dataset.poster;
+    }
+    media.src = source;
+    media.preload = "metadata";
+    media.load();
+  } else {
+    media.src = source;
+  }
+
+  delete media.dataset.deferMedia;
+  delete media.dataset.src;
+  delete media.dataset.poster;
+}
+
+export function bindDeferredMedia(target = document) {
+  const mediaItems = [...target.querySelectorAll("[data-defer-media='true']")];
+  if (!mediaItems.length) return;
+
+  if (!("IntersectionObserver" in window)) {
+    mediaItems.forEach(loadDeferredMedia);
+    return;
+  }
+
+  deferredMediaObserver ??= new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      deferredMediaObserver.unobserve(entry.target);
+      loadDeferredMedia(entry.target);
+    });
+  }, {
+    root: null,
+    rootMargin: "120px 0px",
+    threshold: 0.01
+  });
+
+  mediaItems.forEach((media) => deferredMediaObserver.observe(media));
 }

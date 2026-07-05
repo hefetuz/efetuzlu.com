@@ -1,5 +1,5 @@
 import { cardLayoutFlush, escapeAttr, escapeHtml } from "../utils/dom.js";
-import { getMediaType, getProjectMedia, mediaElementTemplate, normalizeMediaItem } from "../utils/media.js";
+import { bindDeferredMedia, getMediaType, getOptimizedImageSource, getProjectMedia, mediaElementTemplate, normalizeMediaItem } from "../utils/media.js";
 
 const DETAIL_HASH_PREFIX = "#work/";
 const DETAIL_PATH_SEGMENT = "work";
@@ -109,16 +109,18 @@ function visualTemplate(media, index, project, labels = {}) {
   const alt = item.alt || project.title;
   const ratio = getInitialAspectRatio(item);
   const style = [`--appear-delay:${120 + index * 90}ms`];
+  const isPriority = index === 0;
   if (ratio) style.push(`--media-ratio:${ratio}`);
 
   return `
     <figure class="project-visual" data-bento-index="${index}" style="${style.join(";")}">
       <button class="project-visual-zoom" type="button" data-visual-zoom="${escapeAttr(source)}" data-visual-type="${escapeAttr(item.type)}" data-visual-alt="${escapeAttr(alt)}"${item.poster ? ` data-visual-poster="${escapeAttr(item.poster)}"` : ""} aria-label="${escapeAttr(`${labels.expandVisual || "Expand"} ${alt}`)}">
         ${mediaElementTemplate(item, "", {
-          loading: index < 3 ? "eager" : "lazy",
+          loading: isPriority ? "eager" : "lazy",
           decoding: "async",
-          fetchPriority: index < 2 ? "high" : "auto",
-          preload: index < 2 ? "auto" : "metadata"
+          fetchPriority: isPriority ? "high" : "auto",
+          preload: isPriority ? "auto" : "none",
+          defer: !isPriority
         })}
       </button>
     </figure>
@@ -185,10 +187,11 @@ function bindVisualAspectRatios(showcase) {
   showcase.querySelectorAll(".project-visual").forEach((visual) => {
     const media = visual.querySelector("img, video");
     if (!media) return;
+    const isDeferred = media.dataset.deferMedia === "true";
 
     if (media.tagName === "IMG") {
       const updateImageRatio = () => applyVisualAspectRatio(visual, media.naturalWidth, media.naturalHeight);
-      if (media.complete && media.naturalWidth) {
+      if (!isDeferred && media.complete && media.naturalWidth) {
         updateImageRatio();
       } else {
         media.addEventListener("load", updateImageRatio, { once: true });
@@ -197,7 +200,7 @@ function bindVisualAspectRatios(showcase) {
     }
 
     const updateVideoRatio = () => applyVisualAspectRatio(visual, media.videoWidth, media.videoHeight);
-    if (media.readyState >= 1 && media.videoWidth) {
+    if (!isDeferred && media.readyState >= 1 && media.videoWidth) {
       updateVideoRatio();
     } else {
       media.addEventListener("loadedmetadata", updateVideoRatio, { once: true });
@@ -212,6 +215,7 @@ function bindVisualLoadState(showcase) {
     const media = visual.querySelector("img, video");
     if (!media) return;
     const loadStart = performance.now();
+    const isDeferred = media.dataset.deferMedia === "true";
 
     const markLoaded = () => {
       const elapsed = performance.now() - loadStart;
@@ -222,7 +226,7 @@ function bindVisualLoadState(showcase) {
     };
 
     if (media.tagName === "IMG") {
-      if (media.complete && media.naturalWidth) {
+      if (!isDeferred && media.complete && media.naturalWidth) {
         markLoaded();
       } else {
         media.addEventListener("load", markLoaded, { once: true });
@@ -230,7 +234,7 @@ function bindVisualLoadState(showcase) {
       return;
     }
 
-    if (media.readyState >= 2) {
+    if (!isDeferred && media.readyState >= 2) {
       markLoaded();
     } else {
       media.addEventListener("loadeddata", markLoaded, { once: true });
@@ -240,35 +244,23 @@ function bindVisualLoadState(showcase) {
 
 function warmProjectMedia(media = []) {
   media.forEach((item, index) => {
-    if (index >= 4) return;
+    if (index > 0) return;
     const normalized = normalizeMediaItem(item);
-    if (!normalized.src) return;
+    if (!normalized.src || normalized.type !== "image") return;
+    const mediaSource = getOptimizedImageSource(normalized.src);
 
-    const preloadSelector = `[data-project-preload="${CSS.escape(normalized.src)}"]`;
+    const preloadSelector = `[data-project-preload="${CSS.escape(mediaSource)}"]`;
     if (document.head.querySelector(preloadSelector)) return;
 
     if (normalized.type === "image") {
       const preloadLink = document.createElement("link");
       preloadLink.rel = "preload";
       preloadLink.as = "image";
-      preloadLink.href = normalized.src;
-      preloadLink.fetchPriority = index < 6 ? "high" : "auto";
-      preloadLink.dataset.projectPreload = normalized.src;
+      preloadLink.href = mediaSource;
+      preloadLink.fetchPriority = "high";
+      preloadLink.dataset.projectPreload = mediaSource;
       document.head.append(preloadLink);
-
-      const image = new Image();
-      image.decoding = "async";
-      image.fetchPriority = index < 6 ? "high" : "auto";
-      image.src = normalized.src;
-      return;
     }
-
-    const preloadLink = document.createElement("link");
-    preloadLink.rel = "preload";
-    preloadLink.as = "video";
-    preloadLink.href = normalized.src;
-    preloadLink.dataset.projectPreload = normalized.src;
-    document.head.append(preloadLink);
   });
 }
 
@@ -470,6 +462,7 @@ export function renderProjectDetail({
   bindVisualLoadState(showcase);
   bindVisualZoomButtons(showcase);
   bindVisualAspectRatios(showcase);
+  bindDeferredMedia(showcase);
 }
 
 export function animateProjectVisualViewChange({ view, target = document.getElementById("projectShowcase") }) {

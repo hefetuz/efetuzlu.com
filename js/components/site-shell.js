@@ -6,12 +6,14 @@ export function prepareHandwrittenQuote() {
   document.querySelectorAll("[data-handwrite]").forEach((quote) => {
     if (quote.dataset.handwriteReady !== "true") {
       const text = quote.textContent || "";
+      const trimmedText = text.trim();
       let characterIndex = 0;
       quote.dataset.handwriteReady = "true";
-      quote.setAttribute("aria-label", text);
+      quote.removeAttribute("aria-label");
       quote.innerHTML = `
+        <span class="sr-only">${escapeHtml(trimmedText)}</span>
         <span class="quote-line" aria-hidden="true">
-          ${text.trim().split(/\s+/u).map((word) => `
+          ${trimmedText.split(/\s+/u).map((word) => `
             <span class="quote-word">
               ${Array.from(word).map((character) => {
                 const index = characterIndex;
@@ -97,6 +99,25 @@ export function wireLinks(content) {
     emailLink.querySelector("span").textContent = content.ui?.shell?.email || "Email";
   }
   renderSocialLinks(content);
+  bindHoverImages();
+}
+
+function bindHoverImages(root = document) {
+  root.querySelectorAll("img[data-hover-src]").forEach((image) => {
+    if (image.dataset.hoverBound === "true") return;
+
+    const loadImage = () => {
+      const source = image.dataset.hoverSrc;
+      if (!source) return;
+      image.src = source;
+      delete image.dataset.hoverSrc;
+    };
+    const trigger = image.closest(".site-quote-author-trigger, .profile-quote em") || image;
+
+    image.dataset.hoverBound = "true";
+    trigger.addEventListener("pointerenter", loadImage, { once: true });
+    trigger.addEventListener("focusin", loadImage, { once: true });
+  });
 }
 
 function renderSocialLinks(content) {

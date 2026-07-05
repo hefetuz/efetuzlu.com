@@ -1,5 +1,5 @@
 import { cardLayoutFlush, escapeAttr, escapeHtml } from "../utils/dom.js";
-import { getProjectCover, mediaElementTemplate } from "../utils/media.js";
+import { bindDeferredMedia, getOptimizedImageSource, getProjectCover, mediaElementTemplate } from "../utils/media.js";
 
 const resizeAnimations = new WeakMap();
 const gridResizeObservers = new WeakMap();
@@ -22,14 +22,16 @@ function projectCardTemplate(project, visibleIndex, sourceIndex) {
   const scope = project.scope || project.summary || project.description;
   const date = project.date || project.meta;
   const cover = getProjectCover(project);
+  const isPriority = visibleIndex === 0;
 
   return `
     <article class="project-card t-resize" tabindex="0" role="button" data-project-index="${sourceIndex}" data-bento-index="${visibleIndex}" style="--appear-delay:${80 + visibleIndex * 90}ms">
       ${mediaElementTemplate(cover, "", {
-        loading: visibleIndex < 4 ? "eager" : "lazy",
+        loading: isPriority ? "eager" : "lazy",
         decoding: "async",
-        fetchPriority: visibleIndex < 2 ? "high" : "auto",
-        preload: visibleIndex < 2 ? "auto" : "metadata"
+        fetchPriority: isPriority ? "high" : "auto",
+        preload: isPriority ? "auto" : "none",
+        defer: !isPriority
       })}
       <div class="project-info">
         <div class="project-line">
@@ -91,10 +93,11 @@ function bindCardAspectRatios(grid) {
   grid.querySelectorAll(".project-card").forEach((card) => {
     const media = card.querySelector("img, video");
     if (!media) return;
+    const isDeferred = media.dataset.deferMedia === "true";
 
     if (media.tagName === "IMG") {
       const updateImageRatio = () => applyCardAspectRatio(card, media.naturalWidth, media.naturalHeight);
-      if (media.complete && media.naturalWidth) {
+      if (!isDeferred && media.complete && media.naturalWidth) {
         updateImageRatio();
       } else {
         media.addEventListener("load", updateImageRatio, { once: true });
@@ -103,7 +106,7 @@ function bindCardAspectRatios(grid) {
     }
 
     const updateVideoRatio = () => applyCardAspectRatio(card, media.videoWidth, media.videoHeight);
-    if (media.readyState >= 1 && media.videoWidth) {
+    if (!isDeferred && media.readyState >= 1 && media.videoWidth) {
       updateVideoRatio();
     } else {
       media.addEventListener("loadedmetadata", updateVideoRatio, { once: true });
@@ -118,6 +121,7 @@ function bindCardLoadState(grid) {
     const media = card.querySelector("img, video");
     if (!media) return;
     const loadStart = performance.now();
+    const isDeferred = media.dataset.deferMedia === "true";
 
     const markLoaded = () => {
       const elapsed = performance.now() - loadStart;
@@ -128,7 +132,7 @@ function bindCardLoadState(grid) {
     };
 
     if (media.tagName === "IMG") {
-      if (media.complete && media.naturalWidth) {
+      if (!isDeferred && media.complete && media.naturalWidth) {
         markLoaded();
       } else {
         media.addEventListener("load", markLoaded, { once: true });
@@ -136,7 +140,7 @@ function bindCardLoadState(grid) {
       return;
     }
 
-    if (media.readyState >= 2) {
+    if (!isDeferred && media.readyState >= 2) {
       markLoaded();
     } else {
       media.addEventListener("loadeddata", markLoaded, { once: true });
@@ -146,35 +150,23 @@ function bindCardLoadState(grid) {
 
 function warmProjectCovers(projects) {
   projects.forEach(({ project }, visibleIndex) => {
-    if (visibleIndex >= 4) return;
+    if (visibleIndex > 0) return;
     const cover = getProjectCover(project);
-    if (!cover?.src) return;
+    if (!cover?.src || cover.type !== "image") return;
+    const coverSource = getOptimizedImageSource(cover.src);
 
-    const preloadSelector = `[data-project-cover-preload="${CSS.escape(cover.src)}"]`;
+    const preloadSelector = `[data-project-cover-preload="${CSS.escape(coverSource)}"]`;
     if (document.head.querySelector(preloadSelector)) return;
 
     if (cover.type === "image") {
       const preloadLink = document.createElement("link");
       preloadLink.rel = "preload";
       preloadLink.as = "image";
-      preloadLink.href = cover.src;
-      preloadLink.fetchPriority = visibleIndex < 6 ? "high" : "auto";
-      preloadLink.dataset.projectCoverPreload = cover.src;
+      preloadLink.href = coverSource;
+      preloadLink.fetchPriority = "high";
+      preloadLink.dataset.projectCoverPreload = coverSource;
       document.head.append(preloadLink);
-
-      const image = new Image();
-      image.decoding = "async";
-      image.fetchPriority = visibleIndex < 6 ? "high" : "auto";
-      image.src = cover.src;
-      return;
     }
-
-    const preloadLink = document.createElement("link");
-    preloadLink.rel = "preload";
-    preloadLink.as = "video";
-    preloadLink.href = cover.src;
-    preloadLink.dataset.projectCoverPreload = cover.src;
-    document.head.append(preloadLink);
   });
 }
 
@@ -204,6 +196,7 @@ export function renderProjects({ projects, filter, view, target = document.getEl
   });
   bindCardLoadState(target);
   bindCardAspectRatios(target);
+  bindDeferredMedia(target);
 }
 
 export function animateProjectViewChange({ view, target = document.getElementById("work") }) {
