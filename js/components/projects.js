@@ -1,5 +1,5 @@
 import { cardLayoutFlush, escapeAttr, escapeHtml } from "../utils/dom.js";
-import { bindDeferredMedia, getOptimizedImageSource, getProjectCover, mediaElementTemplate } from "../utils/media.js";
+import { bindDeferredMedia, getMediaType, getOptimizedImageSource, getProjectCover, mediaElementTemplate } from "../utils/media.js";
 
 const resizeAnimations = new WeakMap();
 const gridResizeObservers = new WeakMap();
@@ -31,7 +31,8 @@ function projectCardTemplate(project, visibleIndex, sourceIndex) {
         decoding: "async",
         fetchPriority: isPriority ? "high" : "auto",
         preload: isPriority ? "auto" : "none",
-        defer: !isPriority
+        defer: !isPriority,
+        optimizeVariant: "cover"
       })}
       <div class="project-info">
         <div class="project-line">
@@ -153,7 +154,7 @@ function warmProjectCovers(projects) {
     if (visibleIndex > 0) return;
     const cover = getProjectCover(project);
     if (!cover?.src || cover.type !== "image") return;
-    const coverSource = getOptimizedImageSource(cover.src, cover.optimizedSrc);
+    const coverSource = getOptimizedImageSource(cover.src, cover.optimizedSrc, "cover");
 
     const preloadSelector = `[data-project-cover-preload="${CSS.escape(coverSource)}"]`;
     if (document.head.querySelector(preloadSelector)) return;
@@ -161,7 +162,7 @@ function warmProjectCovers(projects) {
     if (cover.type === "image") {
       const preloadLink = document.createElement("link");
       preloadLink.rel = "preload";
-      preloadLink.as = "image";
+      preloadLink.as = getMediaType(coverSource) === "video" ? "video" : "image";
       preloadLink.href = coverSource;
       preloadLink.fetchPriority = "high";
       preloadLink.dataset.projectCoverPreload = coverSource;

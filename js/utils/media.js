@@ -2,7 +2,8 @@ import { escapeAttr } from "./dom.js";
 
 const IMAGE_EXTENSIONS = new Set([".avif", ".gif", ".jpeg", ".jpg", ".png", ".svg", ".webp"]);
 const VIDEO_EXTENSIONS = new Set([".m4v", ".mov", ".mp4", ".ogg", ".ogv", ".webm"]);
-const COVER_OPTIMIZED_EXTENSIONS = new Set([".jpeg", ".jpg", ".png"]);
+const STATIC_OPTIMIZED_EXTENSIONS = new Set([".jpeg", ".jpg", ".png"]);
+const MOTION_OPTIMIZED_EXTENSIONS = new Set([".gif", ...VIDEO_EXTENSIONS]);
 const TRANSPARENT_IMAGE = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
 const OPTIMIZED_IMAGE_SOURCES = new Map([
   ["assets/cms/hant-product-01.png", "assets/optimized/hant-product-01-900.jpg"],
@@ -31,22 +32,39 @@ export function getMediaType(source = "", fallback = "image") {
   return fallback;
 }
 
-export function getCoverOptimizedPath(source = "") {
+export function getOptimizedMediaPath(source = "", variant = "preview") {
   const normalizedSource = String(source).split(/[?#]/)[0].replace(/^\.\//, "");
   const extension = getExtension(normalizedSource);
-  if (!normalizedSource.startsWith("assets/cms/") || !COVER_OPTIMIZED_EXTENSIONS.has(extension)) {
+  if (!normalizedSource.startsWith("assets/cms/")) {
     return "";
   }
 
   const base = getPathWithoutExtension(normalizedSource);
-  return base ? `assets/optimized/${base}-cover.jpg` : "";
+  if (!base) return "";
+  if (STATIC_OPTIMIZED_EXTENSIONS.has(extension)) return `assets/optimized/${base}-${variant}.webp`;
+  if (MOTION_OPTIMIZED_EXTENSIONS.has(extension)) return `assets/optimized/${base}-${variant}.webm`;
+  return "";
 }
 
-export function getOptimizedImageSource(source = "", optimizedSource = "") {
+export function getCoverOptimizedPath(source = "") {
+  return getOptimizedMediaPath(source, "cover");
+}
+
+export function getPreviewOptimizedPath(source = "") {
+  return getOptimizedMediaPath(source, "preview");
+}
+
+export function getOptimizedMediaSource(source = "", optimizedSource = "", variant = "preview") {
   if (optimizedSource) return optimizedSource;
 
   const normalizedSource = String(source).replace(/^\.\//, "");
-  return OPTIMIZED_IMAGE_SOURCES.get(normalizedSource) || getCoverOptimizedPath(normalizedSource) || source;
+  return getOptimizedMediaPath(normalizedSource, variant)
+    || (variant === "cover" ? OPTIMIZED_IMAGE_SOURCES.get(normalizedSource) : "")
+    || source;
+}
+
+export function getOptimizedImageSource(source = "", optimizedSource = "", variant = "cover") {
+  return getOptimizedMediaSource(source, optimizedSource, variant);
 }
 
 export function normalizeMediaItem(item, fallbackAlt = "") {
@@ -55,6 +73,7 @@ export function normalizeMediaItem(item, fallbackAlt = "") {
       type: getMediaType(item),
       src: item,
       optimizedSrc: getCoverOptimizedPath(item),
+      previewSrc: getPreviewOptimizedPath(item),
       alt: fallbackAlt,
       caption: ""
     };
@@ -68,6 +87,7 @@ export function normalizeMediaItem(item, fallbackAlt = "") {
     src: source,
     poster,
     optimizedSrc: item?.optimizedSrc || item?.optimized || item?.coverOptimized || item?.thumbnail || "",
+    previewSrc: item?.previewSrc || item?.previewOptimized || "",
     alt: item?.alt || fallbackAlt,
     caption: item?.caption || item?.title || "",
     width: item?.width || item?.w || "",
@@ -112,9 +132,12 @@ export function getProjectCover(project = {}) {
 
 export function mediaElementTemplate(media, className = "", options = {}) {
   const item = normalizeMediaItem(media);
-  const source = item.type === "image" && options.optimize !== false
-    ? getOptimizedImageSource(item.src, item.optimizedSrc)
+  const optimizedVariant = options.optimizeVariant || "preview";
+  const explicitOptimizedSource = optimizedVariant === "cover" ? item.optimizedSrc : item.previewSrc;
+  const source = options.optimize !== false
+    ? getOptimizedMediaSource(item.src, explicitOptimizedSource, optimizedVariant)
     : item.src;
+  const renderedType = getMediaType(source, item.type);
   const classes = className ? ` class="${escapeAttr(className)}"` : "";
   const loading = options.loading ? ` loading="${escapeAttr(options.loading)}"` : "";
   const decoding = options.decoding ? ` decoding="${escapeAttr(options.decoding)}"` : "";
@@ -127,15 +150,16 @@ export function mediaElementTemplate(media, className = "", options = {}) {
   const deferredAttrs = isDeferred ? ` data-defer-media="true" data-src="${escapeAttr(source)}"` : "";
   const fallbackAttrs = source !== item.src ? ` data-fallback-src="${escapeAttr(item.src)}"` : "";
 
-  if (item.type === "video") {
+  if (renderedType === "video") {
     const poster = item.poster
       ? isDeferred
         ? ` data-poster="${escapeAttr(item.poster)}"`
         : ` poster="${escapeAttr(item.poster)}"`
       : "";
     const src = isDeferred ? "" : ` src="${escapeAttr(source)}"`;
+    const motionAttrs = source !== item.src || item.type !== "video" ? " autoplay loop" : "";
     return `
-      <video${classes}${src}${poster}${width}${height}${deferredAttrs} muted playsinline${preload}></video>
+      <video${classes}${src}${poster}${width}${height}${deferredAttrs}${fallbackAttrs} muted playsinline${motionAttrs}${preload}></video>
     `;
   }
 
@@ -143,16 +167,19 @@ export function mediaElementTemplate(media, className = "", options = {}) {
   return `<img${classes} src="${escapeAttr(src)}" alt="${escapeAttr(item.alt)}"${width}${height}${loading}${decoding}${fetchPriority}${deferredAttrs}${fallbackAttrs}>`;
 }
 
-function bindImageFallbacks(target = document) {
-  target.querySelectorAll("img[data-fallback-src]").forEach((image) => {
-    if (image.dataset.fallbackBound === "true") return;
-    image.dataset.fallbackBound = "true";
-    image.addEventListener("error", () => {
-      const fallbackSource = image.dataset.fallbackSrc;
-      if (!fallbackSource || image.src.endsWith(fallbackSource)) return;
-      image.src = fallbackSource;
-      delete image.dataset.src;
-      delete image.dataset.deferMedia;
+function bindMediaFallbacks(target = document) {
+  target.querySelectorAll("img[data-fallback-src], video[data-fallback-src]").forEach((media) => {
+    if (media.dataset.fallbackBound === "true") return;
+    media.dataset.fallbackBound = "true";
+    media.addEventListener("error", () => {
+      const fallbackSource = media.dataset.fallbackSrc;
+      if (!fallbackSource || media.src.endsWith(fallbackSource)) return;
+      media.src = fallbackSource;
+      delete media.dataset.src;
+      delete media.dataset.deferMedia;
+      if (media.tagName === "VIDEO") {
+        media.load();
+      }
     });
   });
 }
@@ -180,7 +207,7 @@ function loadDeferredMedia(media) {
 }
 
 export function bindDeferredMedia(target = document) {
-  bindImageFallbacks(target);
+  bindMediaFallbacks(target);
 
   const mediaItems = [...target.querySelectorAll("[data-defer-media='true']")];
   if (!mediaItems.length) return;

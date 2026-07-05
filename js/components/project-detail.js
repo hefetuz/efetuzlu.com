@@ -1,5 +1,5 @@
 import { cardLayoutFlush, escapeAttr, escapeHtml } from "../utils/dom.js";
-import { bindDeferredMedia, getMediaType, getProjectMedia, mediaElementTemplate, normalizeMediaItem } from "../utils/media.js";
+import { bindDeferredMedia, getMediaType, getOptimizedMediaSource, getProjectMedia, mediaElementTemplate, normalizeMediaItem } from "../utils/media.js";
 
 const DETAIL_HASH_PREFIX = "#work/";
 const DETAIL_PATH_SEGMENT = "work";
@@ -121,7 +121,7 @@ function visualTemplate(media, index, project, labels = {}) {
           fetchPriority: isPriority ? "high" : "auto",
           preload: isPriority ? "auto" : "none",
           defer: !isPriority,
-          optimize: false
+          optimizeVariant: "preview"
         })}
       </button>
     </figure>
@@ -248,7 +248,7 @@ function warmProjectMedia(media = []) {
     if (index > 0) return;
     const normalized = normalizeMediaItem(item);
     if (!normalized.src || normalized.type !== "image") return;
-    const mediaSource = normalized.src;
+    const mediaSource = getOptimizedMediaSource(normalized.src, normalized.previewSrc, "preview");
 
     const preloadSelector = `[data-project-preload="${CSS.escape(mediaSource)}"]`;
     if (document.head.querySelector(preloadSelector)) return;
@@ -256,7 +256,7 @@ function warmProjectMedia(media = []) {
     if (normalized.type === "image") {
       const preloadLink = document.createElement("link");
       preloadLink.rel = "preload";
-      preloadLink.as = "image";
+      preloadLink.as = getMediaType(mediaSource) === "video" ? "video" : "image";
       preloadLink.href = mediaSource;
       preloadLink.fetchPriority = "high";
       preloadLink.dataset.projectPreload = mediaSource;

@@ -6,6 +6,7 @@
   "scripts": {
     "build": "node scripts/build-vercel.mjs",
     "dev": "node server.mjs",
-    "check": "node --check server.mjs && node --check scripts/build-vercel.mjs && node --check js/app.js && node --check js/cms/admin.js"
+    "optimize:media": "node scripts/optimize-media.mjs",
+    "check": "node --check server.mjs && node --check scripts/build-vercel.mjs && node --check scripts/optimize-media.mjs && node --check js/app.js && node --check js/cms/admin.js"
   }
 }

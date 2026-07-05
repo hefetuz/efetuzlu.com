@@ -1,12 +1,14 @@
 import { escapeAttr, escapeHtml } from "../utils/dom.js";
-import { getCoverOptimizedPath, getMediaType, normalizeMediaItem } from "../utils/media.js";
+import { getCoverOptimizedPath, getMediaType, getPreviewOptimizedPath, normalizeMediaItem } from "../utils/media.js";
 
 const CONTENT_URL = "cms/content.json";
 const SAVE_URL = "/api/content";
 const MEDIA_URL = "/api/media";
 const MEDIA_ACCEPT = "image/*,.gif,video/*";
 const COVER_MAX_WIDTH = 900;
-const COVER_JPEG_QUALITY = 0.86;
+const PREVIEW_MAX_WIDTH = 1800;
+const COVER_WEBP_QUALITY = 0.84;
+const PREVIEW_WEBP_QUALITY = 0.9;
 const COVER_OPTIMIZE_TYPES = new Set(["image/avif", "image/jpeg", "image/png", "image/webp"]);
 
 const state = {
@@ -99,6 +101,7 @@ function normalizeProject(project) {
   project.media = sourceMedia.map((item) => {
     const normalized = normalizeMediaItem(item, project.title);
     normalized.optimizedSrc = normalized.optimizedSrc || getCoverOptimizedPath(normalized.src);
+    normalized.previewSrc = normalized.previewSrc || getPreviewOptimizedPath(normalized.src);
     return normalized;
   });
   project.categories = getProjectCategories(project);
@@ -294,6 +297,10 @@ function mediaItemTemplate(media, index) {
           <input data-media-field="optimizedSrc" type="text" value="${escapeAttr(item.optimizedSrc || "")}">
         </label>
         <label class="cms-field">
+          <span class="text-ui text-muted">Optimized Preview</span>
+          <input data-media-field="previewSrc" type="text" value="${escapeAttr(item.previewSrc || "")}">
+        </label>
+        <label class="cms-field">
           <span class="text-ui text-muted">Poster</span>
           <input data-media-field="poster" type="text" value="${escapeAttr(item.poster || "")}">
         </label>
@@ -427,6 +434,7 @@ function updateMediaField(input) {
   if (field === "src") {
     project.media[index].type = getMediaType(input.value, project.media[index].type || "image");
     project.media[index].optimizedSrc = getCoverOptimizedPath(input.value);
+    project.media[index].previewSrc = getPreviewOptimizedPath(input.value);
   }
 
   markDirty();
@@ -601,6 +609,7 @@ async function addMediaFiles(files) {
         type: payload.type,
         src: payload.src,
         optimizedSrc: payload.optimizedSrc || getCoverOptimizedPath(payload.src),
+        previewSrc: payload.previewSrc || getPreviewOptimizedPath(payload.src),
         poster: "",
         alt: project.title,
         caption: project.summary || ""
@@ -664,12 +673,12 @@ function canCreateCoverDerivative(file) {
   return COVER_OPTIMIZE_TYPES.has(file.type);
 }
 
-function getOptimizedFileName(source = "") {
+function getOptimizedFileName(source = "", variant = "cover") {
   const cleanSource = String(source).split(/[?#]/)[0];
   const filename = cleanSource.slice(cleanSource.lastIndexOf("/") + 1);
   const dotIndex = filename.lastIndexOf(".");
   const base = dotIndex >= 0 ? filename.slice(0, dotIndex) : filename;
-  return `${base || "cover"}-cover.jpg`;
+  return `${base || variant}-${variant}.webp`;
 }
 
 async function loadBitmap(file) {
@@ -691,7 +700,7 @@ async function loadBitmap(file) {
   }
 }
 
-async function createCoverDerivative(file) {
+async function createImageDerivative(file, maxWidth, quality) {
   if (!canCreateCoverDerivative(file)) return null;
 
   const bitmap = await loadBitmap(file);
@@ -699,7 +708,7 @@ async function createCoverDerivative(file) {
   const sourceHeight = bitmap.height || bitmap.naturalHeight;
   if (!sourceWidth || !sourceHeight) return null;
 
-  const scale = Math.min(1, COVER_MAX_WIDTH / sourceWidth);
+  const scale = Math.min(1, maxWidth / sourceWidth);
   const width = Math.max(1, Math.round(sourceWidth * scale));
   const height = Math.max(1, Math.round(sourceHeight * scale));
   const canvas = document.createElement("canvas");
@@ -724,7 +733,7 @@ async function createCoverDerivative(file) {
         return;
       }
       resolve(blob);
-    }, "image/jpeg", COVER_JPEG_QUALITY);
+    }, "image/webp", quality);
   });
 }
 
@@ -756,15 +765,26 @@ async function uploadMediaFile(file, { optimizeCover = true } = {}) {
   }
 
   try {
-    const derivative = await createCoverDerivative(file);
-    if (!derivative) return payload;
+    const coverDerivative = await createImageDerivative(file, COVER_MAX_WIDTH, COVER_WEBP_QUALITY);
+    const previewDerivative = await createImageDerivative(file, PREVIEW_MAX_WIDTH, PREVIEW_WEBP_QUALITY);
 
-    const optimizedPayload = await uploadMediaBlob(
-      derivative,
-      getOptimizedFileName(payload.src),
-      "optimized"
-    );
-    payload.optimizedSrc = optimizedPayload.src;
+    if (coverDerivative) {
+      const optimizedPayload = await uploadMediaBlob(
+        coverDerivative,
+        getOptimizedFileName(payload.src, "cover"),
+        "optimized"
+      );
+      payload.optimizedSrc = optimizedPayload.src;
+    }
+
+    if (previewDerivative) {
+      const previewPayload = await uploadMediaBlob(
+        previewDerivative,
+        getOptimizedFileName(payload.src, "preview"),
+        "optimized"
+      );
+      payload.previewSrc = previewPayload.src;
+    }
   } catch (error) {
     console.warn("Cover optimization failed", error);
     payload.optimizationError = error.message;
@@ -790,6 +810,7 @@ async function handleUpload(input) {
           type: payload.type,
           src: payload.src,
           optimizedSrc: payload.optimizedSrc || getCoverOptimizedPath(payload.src),
+          previewSrc: payload.previewSrc || getPreviewOptimizedPath(payload.src),
           alt: project.title,
           caption: project.summary || ""
         });
@@ -801,6 +822,7 @@ async function handleUpload(input) {
         type: payload.type,
         src: payload.src,
         optimizedSrc: payload.optimizedSrc || getCoverOptimizedPath(payload.src),
+        previewSrc: payload.previewSrc || getPreviewOptimizedPath(payload.src),
         alt: project.media[index]?.alt || project.title,
         caption: project.media[index]?.caption || project.summary || ""
       };
