@@ -6,7 +6,7 @@
   <title>Portfolio CMS | Halim Efe Tuzlu</title>
   <meta name="description" content="Local CMS panel for managing portfolio content.">
   <meta name="theme-color" content="#0b0b0b">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data: blob:; media-src 'self' blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data: blob: https:; media-src 'self' blob: https:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https:; form-action 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/profile-icon-32.png">
@@ -14,7 +14,23 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="cms-page">
-  <main class="cms-shell">
+  <main class="cms-login-shell" id="cmsLogin" hidden>
+    <form class="cms-login-panel" id="cmsLoginForm">
+      <div class="cms-brand">
+        <p class="text-ui text-muted">Portfolio CMS</p>
+        <h1 class="text-heading">Secure Access</h1>
+      </div>
+      <p class="cms-lock-copy text-body text-muted">Enter the CMS password to edit live portfolio content.</p>
+      <label class="cms-field">
+        <span class="text-ui text-muted">Password</span>
+        <input id="cmsPassword" name="password" type="password" autocomplete="current-password" required>
+      </label>
+      <button class="btn btn-large primary" type="submit">Unlock CMS</button>
+      <p class="cms-status text-ui text-muted" id="cmsLoginStatus" role="status">Checking session...</p>
+    </form>
+  </main>
+
+  <main class="cms-shell" id="cmsShell" hidden>
     <aside class="cms-sidebar" aria-label="CMS navigation">
       <div class="cms-brand">
         <p class="text-ui text-muted">Portfolio CMS</p>
@@ -27,6 +43,7 @@
         <button class="btn btn-large primary" id="cmsSave" type="button">Save Content</button>
         <button class="btn btn-large secondary" id="cmsExport" type="button">Export JSON</button>
         <a class="btn btn-large secondary" href="/#top">Open Site</a>
+        <button class="btn btn-large secondary" id="cmsLogout" type="button">Log Out</button>
       </div>
 
       <p class="cms-status text-ui text-muted" id="cmsStatus" role="status">Loading content...</p>
@@ -36,7 +53,7 @@
       <header class="cms-toolbar">
         <div>
           <p class="text-ui text-muted">Content Source</p>
-          <h2 class="text-heading">cms/content.json</h2>
+          <h2 class="text-heading">Live CMS</h2>
         </div>
         <button class="btn btn-regular secondary" id="cmsAddProject" type="button">Add Project</button>
       </header>

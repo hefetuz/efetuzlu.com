@@ -1,5 +1,5 @@
 import { copyFile, mkdir, readFile, readdir, rm, stat, writeFile } from "node:fs/promises";
-import { dirname, join, relative } from "node:path";
+import { dirname, join } from "node:path";
 
 const root = process.cwd();
 const outDir = join(root, "dist");
@@ -17,17 +17,10 @@ const entries = [
   "work"
 ];
 
-const excludedFiles = new Set([
-  join("js", "cms", "admin.js")
-]);
-
 async function copyEntry(entry) {
   const source = join(root, entry);
   const destination = join(outDir, entry);
   const sourceStats = await stat(source);
-  const relativePath = relative(root, source);
-
-  if (excludedFiles.has(relativePath)) return;
 
   if (sourceStats.isDirectory()) {
     await mkdir(destination, { recursive: true });

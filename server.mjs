@@ -1,5 +1,5 @@
 import { createReadStream, existsSync, statSync } from "node:fs";
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { createServer } from "node:http";
 import { dirname, extname, join, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -133,6 +133,24 @@ function sendJson(response, status, payload) {
   response.end(JSON.stringify(payload));
 }
 
+async function handleContentRead(response) {
+  try {
+    const content = JSON.parse(await readFile(contentPath, "utf8"));
+    sendJson(response, 200, content);
+  } catch (error) {
+    sendJson(response, 500, { ok: false, error: error.message });
+  }
+}
+
+function handleDevSession(response) {
+  sendJson(response, 200, {
+    ok: true,
+    configured: true,
+    authenticated: true,
+    csrfToken: "local-dev"
+  });
+}
+
 async function handleMediaUpload(request, response, target = "cms") {
   try {
     const body = await readRequestBody(request);
@@ -227,8 +245,23 @@ createServer((request, response) => {
     response.end(body);
   };
 
-  if (!["GET", "HEAD", "POST"].includes(request.method)) {
-    respond(405, { "Allow": "GET, HEAD, POST" }, "Method not allowed");
+  if (!["GET", "HEAD", "POST", "DELETE"].includes(request.method)) {
+    respond(405, { "Allow": "GET, HEAD, POST, DELETE" }, "Method not allowed");
+    return;
+  }
+
+  if (request.method === "GET" && url.pathname === "/api/content") {
+    handleContentRead(response);
+    return;
+  }
+
+  if (url.pathname === "/api/session") {
+    if (request.method === "GET" || request.method === "POST" || request.method === "DELETE") {
+      handleDevSession(response);
+      return;
+    }
+
+    respond(405, { "Allow": "GET, POST, DELETE" }, "Method not allowed");
     return;
   }
 
@@ -242,7 +275,7 @@ createServer((request, response) => {
     return;
   }
 
-  if (request.method === "POST") {
+  if (request.method === "POST" || request.method === "DELETE") {
     respond(404, {}, "Not found");
     return;
   }

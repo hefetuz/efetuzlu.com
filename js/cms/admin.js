@@ -1,9 +1,11 @@
 import { escapeAttr, escapeHtml } from "../utils/dom.js";
 import { getCoverOptimizedPath, getMediaType, getPreviewOptimizedPath, normalizeMediaItem } from "../utils/media.js";
 
-const CONTENT_URL = "cms/content.json";
+const CONTENT_URL = "/api/content";
+const STATIC_CONTENT_URL = "cms/content.json";
 const SAVE_URL = "/api/content";
 const MEDIA_URL = "/api/media";
+const SESSION_URL = "/api/session";
 const MEDIA_ACCEPT = "image/*,.gif,video/*";
 const COVER_MAX_WIDTH = 900;
 const PREVIEW_MAX_WIDTH = 1800;
@@ -15,16 +17,23 @@ const state = {
   content: null,
   activeIndex: 0,
   dragProjectIndex: null,
+  csrfToken: "",
   dirty: false
 };
 
 const elements = {
+  shell: document.getElementById("cmsShell"),
+  login: document.getElementById("cmsLogin"),
+  loginForm: document.getElementById("cmsLoginForm"),
+  password: document.getElementById("cmsPassword"),
+  loginStatus: document.getElementById("cmsLoginStatus"),
   stats: document.getElementById("cmsStats"),
   list: document.getElementById("cmsProjectList"),
   form: document.getElementById("cmsProjectForm"),
   status: document.getElementById("cmsStatus"),
   save: document.getElementById("cmsSave"),
   export: document.getElementById("cmsExport"),
+  logout: document.getElementById("cmsLogout"),
   add: document.getElementById("cmsAddProject")
 };
 
@@ -76,6 +85,120 @@ function listToTextareaValue(value) {
 function setStatus(message, tone = "muted") {
   elements.status.textContent = message;
   elements.status.dataset.tone = tone;
+}
+
+function setLoginStatus(message, tone = "muted") {
+  elements.loginStatus.textContent = message;
+  elements.loginStatus.dataset.tone = tone;
+}
+
+function isLocalDev() {
+  return ["localhost", "127.0.0.1", "::1"].includes(window.location.hostname);
+}
+
+function showLogin(message = "Enter password to continue.", tone = "muted") {
+  state.csrfToken = "";
+  elements.shell.hidden = true;
+  elements.login.hidden = false;
+  setLoginStatus(message, tone);
+  window.setTimeout(() => elements.password?.focus(), 0);
+}
+
+function showCms(message = "Ready", tone = "success") {
+  elements.login.hidden = true;
+  elements.shell.hidden = false;
+  elements.password.value = "";
+  setStatus(message, tone);
+}
+
+function headersWithSession(headers = {}) {
+  return state.csrfToken
+    ? { ...headers, "X-CMS-CSRF": state.csrfToken }
+    : headers;
+}
+
+function handleAuthFailure(response, payload = {}) {
+  if (![401, 403].includes(response.status)) return false;
+  showLogin(payload.error || "Session expired. Please log in again.", "error");
+  return true;
+}
+
+async function checkSession() {
+  setLoginStatus("Checking session...");
+
+  try {
+    const response = await fetch(SESSION_URL, {
+      cache: "no-store",
+      credentials: "same-origin"
+    });
+
+    if (response.status === 404 && isLocalDev()) {
+      state.csrfToken = "local-dev";
+      showCms("Local CMS ready", "success");
+      return true;
+    }
+
+    const payload = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      showLogin(payload.error || "Could not verify session.", "error");
+      return false;
+    }
+
+    if (!payload.configured) {
+      if (isLocalDev()) {
+        state.csrfToken = "local-dev";
+        showCms("Local CMS ready", "success");
+        return true;
+      }
+
+      showLogin(payload.error || "CMS auth is not configured.", "error");
+      return false;
+    }
+
+    if (payload.authenticated) {
+      state.csrfToken = payload.csrfToken || "";
+      showCms("Session restored", "success");
+      return true;
+    }
+
+    showLogin();
+    return false;
+  } catch (error) {
+    if (isLocalDev()) {
+      state.csrfToken = "local-dev";
+      showCms("Local CMS ready", "success");
+      return true;
+    }
+
+    showLogin(error.message || "Could not verify session.", "error");
+    return false;
+  }
+}
+
+async function login(password) {
+  const response = await fetch(SESSION_URL, {
+    method: "POST",
+    credentials: "same-origin",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ password })
+  });
+  const payload = await response.json().catch(() => ({}));
+
+  if (!response.ok || !payload.authenticated) {
+    throw new Error(payload.error || "Login failed.");
+  }
+
+  state.csrfToken = payload.csrfToken || "";
+  showCms("Session unlocked", "success");
+  await load();
+}
+
+async function logout() {
+  await fetch(SESSION_URL, {
+    method: "DELETE",
+    credentials: "same-origin"
+  }).catch(() => {});
+  showLogin("Logged out.", "success");
 }
 
 function markDirty() {
@@ -746,10 +869,15 @@ async function uploadMediaBlob(blob, fileName, folder = "cms") {
     : MEDIA_URL;
   const response = await fetch(uploadUrl, {
     method: "POST",
+    credentials: "same-origin",
+    headers: headersWithSession(),
     body: formData
   });
 
   const payload = await response.json().catch(() => ({}));
+  if (handleAuthFailure(response, payload)) {
+    throw new Error(payload.error || "Login required.");
+  }
   if (!response.ok || !payload.ok) {
     throw new Error(payload.error || "Upload failed");
   }
@@ -853,23 +981,44 @@ async function saveContent() {
   try {
     const response = await fetch(SAVE_URL, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      credentials: "same-origin",
+      headers: headersWithSession({ "Content-Type": "application/json" }),
       body: JSON.stringify(state.content)
     });
+    const payload = await response.json().catch(() => ({}));
 
-    if (!response.ok) throw new Error("Local save endpoint unavailable");
+    if (handleAuthFailure(response, payload)) return;
+    if (!response.ok || !payload.ok) throw new Error(payload.error || "Save failed");
 
     state.dirty = false;
-    setStatus("Saved to cms/content.json", "success");
+    setStatus("Saved to live CMS", "success");
   } catch (error) {
-    setStatus("Save failed. Use Export JSON on static hosting.", "error");
+    setStatus(error.message || "Save failed.", "error");
   }
 }
 
+async function fetchContent() {
+  const urls = [CONTENT_URL, STATIC_CONTENT_URL];
+  let lastError = null;
+
+  for (const url of urls) {
+    try {
+      const response = await fetch(url, {
+        cache: "no-store",
+        credentials: "same-origin"
+      });
+      if (!response.ok) throw new Error(`Could not load ${url}`);
+      return response.json();
+    } catch (error) {
+      lastError = error;
+    }
+  }
+
+  throw lastError || new Error("Could not load content.");
+}
+
 async function load() {
-  const response = await fetch(CONTENT_URL);
-  if (!response.ok) throw new Error(`Could not load ${CONTENT_URL}`);
-  state.content = normalizeContent(await response.json());
+  state.content = normalizeContent(await fetchContent());
   state.activeIndex = 0;
   state.dirty = false;
   setStatus("Ready", "success");
@@ -979,6 +1128,24 @@ elements.form.addEventListener("click", (event) => {
 elements.add.addEventListener("click", addProject);
 elements.export.addEventListener("click", downloadContent);
 elements.save.addEventListener("click", saveContent);
+elements.logout.addEventListener("click", logout);
+
+elements.loginForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const password = elements.password.value;
+  if (!password) return;
+
+  try {
+    setLoginStatus("Unlocking...");
+    await login(password);
+  } catch (error) {
+    if (elements.shell.hidden) {
+      setLoginStatus(error.message || "Login failed.", "error");
+    } else {
+      setStatus(error.message || "Could not load CMS content.", "error");
+    }
+  }
+});
 
 window.addEventListener("beforeunload", (event) => {
   if (!state.dirty) return;
@@ -986,6 +1153,12 @@ window.addEventListener("beforeunload", (event) => {
   event.returnValue = "";
 });
 
-load().catch((error) => {
-  setStatus(error.message, "error");
+async function init() {
+  const ready = await checkSession();
+  if (!ready) return;
+  await load();
+}
+
+init().catch((error) => {
+  showLogin(error.message, "error");
 });
