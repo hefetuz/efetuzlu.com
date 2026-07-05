@@ -42,6 +42,7 @@ function getServiceConfig(config) {
 function defaultServiceLabels() {
   return {
     servicesTitle: "Services",
+    selectedServicesTitle: "Select service(s):",
     contactTitle: "Contact Details",
     backToServices: "Back to services",
     selectService: "Select",
@@ -129,6 +130,10 @@ function updateServiceSelection(target) {
   next.disabled = !hasSelection;
   next.setAttribute("aria-hidden", String(!hasSelection));
   next.setAttribute("aria-disabled", String(!hasSelection));
+
+  if (String(target.dataset.serviceStep || "1") === "1") {
+    updateServiceHeading(target, 1);
+  }
 }
 
 function resetServicePicker(target) {
@@ -188,7 +193,9 @@ function updateServiceHeading(target, step) {
     return;
   }
 
-  nodes.heading.textContent = labels.servicesTitle;
+  nodes.heading.textContent = getSelectedServices(target).length
+    ? labels.selectedServicesTitle
+    : labels.servicesTitle;
   nodes.copy.textContent = "";
   nodes.copy.hidden = true;
 }
