@@ -704,6 +704,55 @@
       "coverOptimized": "assets/optimized/en-ka-ymetlim-web-app-1782747905607-cover.webp"
     },
     {
+      "title": "Hant Motion Design",
+      "slug": "hant-motion-design",
+      "category": "motion",
+      "categories": [
+        "motion",
+        "brand"
+      ],
+      "meta": "Motion Design",
+      "date": "2025",
+      "summary": "AI travel promo film",
+      "scope": "Launch video and product motion",
+      "service": "Motion Design, Product Storytelling",
+      "goal": "The goal was to turn Hant's AI travel planning flow into a compact promo film that feels fast, clear and premium.",
+      "description": "I created a 50-second promo film for Hant, shaping the pacing, screen choreography and product story around AI-assisted trip planning, itinerary building and mobile UX moments.",
+      "image": "assets/cms/hant-promo.mp4",
+      "media": [
+        {
+          "type": "video",
+          "src": "assets/cms/hant-promo.mp4",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/hant-promo-cover.webm",
+          "previewSrc": "assets/optimized/hant-promo-preview.webm",
+          "alt": "Hant AI travel promo film",
+          "caption": "AI travel promo film",
+          "width": "1920",
+          "height": "1080",
+          "aspectRatio": "1.7778"
+        }
+      ],
+      "services": [
+        "Motion Design",
+        "Product Storytelling",
+        "Prototype Motion",
+        "Video Editing"
+      ],
+      "techStack": [
+        "Figma",
+        "After Effects",
+        "Premiere Pro",
+        "Motion"
+      ],
+      "industry": [
+        "AI Travel",
+        "Product Motion",
+        "Mobile UX"
+      ],
+      "coverOptimized": "assets/optimized/hant-promo-cover.webm"
+    },
+    {
       "title": "Sales Training Game",
       "slug": "sales-training-game",
       "category": "motion",
@@ -750,17 +799,17 @@
       "coverOptimized": "assets/optimized/sales-training-demo-1782490521032-cover.webm"
     },
     {
-      "title": "Hant Motion Design",
-      "slug": "hant-motion-design",
+      "title": "Hant Sales Deck",
+      "slug": "hant-ai-travel-sales-deck/",
       "category": "brand",
       "categories": [
         "motion",
         "brand"
       ],
       "meta": "Motion Design",
-      "date": "2024 - Present",
-      "summary": "AI Travel Product Motion",
-      "scope": "AI Travel App",
+      "date": "2024 - 2026",
+      "summary": "AI Travel Presentation",
+      "scope": "AI Travel Presentation",
       "service": "Motion Design",
       "goal": "The goal was to make Hant's AI planning experience feel clear, responsive and memorable through purposeful motion.",
       "description": "I defined the motion language for Hant across onboarding, itinerary-building, AI feedback and presentation moments, turning product flows into animated prototypes and sales-ready sequences.",
@@ -1808,18 +1857,20 @@
           },
           "hant-motion-design": {
             "title": "Hant Motion Design",
-            "summary": "AI Seyahat ?r?n Motion",
-            "scope": "AI Seyahat Uygulamas?",
-            "description": "Hant i?in onboarding, rota olu?turma, AI geri bildirimi ve sunum anlar?n? kapsayan motion dilini tan?mlad?m; ?r?n ak??lar?n? animasyonlu prototiplere ve sunuma haz?r sekanslara d?n??t?rd?m.",
+            "meta": "Motion Design",
+            "summary": "AI seyahat tanıtım filmi",
+            "scope": "Lansman videosu ve product motion",
+            "service": "Motion Design, ürün hikayeleştirme",
+            "description": "Hant için 50 saniyelik bir tanıtım filmi hazırladım; AI destekli seyahat planlama, rota oluşturma ve mobil UX anlarını daha hızlı, net ve premium hissettiren bir ürün hikayesine dönüştürdüm.",
             "services": [
               "Motion Design",
-              "Etkile?im Tasar?m?",
+              "Ürün Hikayeleştirme",
               "Prototip Motion",
-              "?r?n Hikayele?tirme"
+              "Video Editing"
             ],
             "industry": [
               "AI Seyahat",
-              "?r?n Motion",
+              "Product Motion",
               "Mobil UX"
             ],
             "techStack": [
@@ -2186,15 +2237,15 @@
           "hant-motion-design": {
             "title": "Hant Motion Design",
             "meta": "Motion Design",
-            "summary": "KI-Reise Product Motion",
-            "scope": "KI-Reise-App",
-            "service": "Motion Design",
-            "description": "Ich definierte die Motion-Sprache f?r Hant ?ber Onboarding, Reiseplanung, KI-Feedback und Pr?sentationsmomente hinweg und verwandelte Produktfl?sse in animierte Prototypen sowie pr?sentationsreife Sequenzen.",
+            "summary": "KI-Reise-Promofilm",
+            "scope": "Launch-Video und Product Motion",
+            "service": "Motion Design, Product Storytelling",
+            "description": "Ich entwickelte einen 50-sekündigen Promofilm für Hant und übersetzte KI-gestützte Reiseplanung, Itinerary Building und mobile UX-Momente in eine klare, schnelle und hochwertige Produktstory.",
             "services": [
               "Motion Design",
-              "Interaktionsdesign",
+              "Product Storytelling",
               "Prototype Motion",
-              "Product Storytelling"
+              "Video Editing"
             ],
             "techStack": [
               "Figma",
@@ -2565,15 +2616,15 @@
           "hant-motion-design": {
             "title": "Hant Motion Design",
             "meta": "Motion Design",
-            "summary": "Product Motion para viajes con IA",
-            "scope": "App de viajes con IA",
-            "service": "Motion Design",
-            "description": "Defin? el lenguaje motion de Hant en onboarding, creaci?n de itinerarios, feedback de IA y momentos de presentaci?n, convirtiendo flujos de producto en prototipos animados y secuencias listas para presentar.",
+            "summary": "Video promocional de viajes con IA",
+            "scope": "Video de lanzamiento y product motion",
+            "service": "Motion Design, storytelling de producto",
+            "description": "Creé un video promocional de 50 segundos para Hant, convirtiendo la planificación de viajes con IA, la creación de itinerarios y los momentos clave de UX móvil en una historia de producto clara, rápida y premium.",
             "services": [
               "Motion Design",
-              "Dise?o de Interacci?n",
+              "Storytelling de Producto",
               "Prototype Motion",
-              "Storytelling de Producto"
+              "Video Editing"
             ],
             "techStack": [
               "Figma",

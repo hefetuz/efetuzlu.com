@@ -12,7 +12,7 @@ import {
 import { animateProjectViewChange, bindProjectGrid, renderProjects } from "./components/projects.js";
 import { startAppearAnimations } from "./components/reveal.js";
 import { renderServices } from "./components/services.js";
-import { bindLanguageMenu, prepareHandwrittenQuote, updateClock, wireLinks } from "./components/site-shell.js";
+import { bindLanguageMenu, bindMobileBottomNav, prepareHandwrittenQuote, updateClock, wireLinks } from "./components/site-shell.js";
 import { bindAdaptiveTooltips, bindTabs, renderCategoryTabs, renderViewTabs, updateAllTabIndicators } from "./components/tabs.js";
 import { setTextBindings, splitIntroWords, syncButtonLabels } from "./components/text-bindings.js";
 import { escapeHtml } from "./utils/dom.js";
@@ -219,6 +219,7 @@ function handleResponsiveViewChange() {
 
 function bindInteractions() {
   bindAdaptiveTooltips();
+  bindMobileBottomNav();
 
   bindTabs(".filter-tabs", (button) => {
     state.filter = button.dataset.filter;
