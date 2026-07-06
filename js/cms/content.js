@@ -1,4 +1,4 @@
-const CONTENT_URLS = ["/api/content", "cms/content.json"];
+const CONTENT_URLS = ["/api/content", "/cms/content.json"];
 
 export async function loadContent() {
   let lastError = null;

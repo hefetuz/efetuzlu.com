@@ -2,7 +2,7 @@ import { escapeAttr, escapeHtml } from "../utils/dom.js";
 import { getCoverOptimizedPath, getMediaType, getPreviewOptimizedPath, normalizeMediaItem } from "../utils/media.js";
 
 const CONTENT_URL = "/api/content";
-const STATIC_CONTENT_URL = "cms/content.json";
+const STATIC_CONTENT_URL = "/cms/content.json";
 const SAVE_URL = "/api/content";
 const MEDIA_URL = "/api/media";
 const SESSION_URL = "/api/session";
