@@ -67,6 +67,23 @@ function projectInfoColumnTemplate(label, values) {
   `;
 }
 
+function projectInteractiveLinkTemplate(project, labels = {}) {
+  const embed = project.interactiveEmbed || project.embed;
+  if (!embed?.src) return "";
+
+  const openLabel = embed.openLabel || labels.openInteractive || "Open configurator";
+
+  return `
+    <a class="btn btn-small primary project-detail-action-link" href="${escapeAttr(embed.src)}" target="_blank" rel="noopener noreferrer" data-project-configurator data-configurator-link>
+      <span>${escapeHtml(openLabel)}</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7 17 17 7"></path>
+        <path d="M9 7h8v8"></path>
+      </svg>
+    </a>
+  `;
+}
+
 function projectNavigationTemplate(projects = [], activeIndex = 0, labels = {}) {
   if (!Array.isArray(projects) || projects.length < 2) return "";
 
@@ -449,6 +466,7 @@ export function renderProjectDetail({
       ${projectInfoColumnTemplate(labels.industry || "Industry", industry)}
       ${projectInfoColumnTemplate(labels.year || "Year", year)}
     </div>
+    ${projectInteractiveLinkTemplate(project, labels)}
     ${projectNavigationTemplate(projects, index, labels)}
   `;
 
@@ -560,6 +578,17 @@ export function bindProjectDetail({ onBack, onNavigate }) {
       const index = Number(navTrigger.dataset.projectNav);
       if (Number.isFinite(index)) {
         onNavigate?.(index);
+      }
+      return;
+    }
+
+    const configuratorLink = event.target.closest("[data-configurator-link]");
+    if (configuratorLink) {
+      try {
+        window.localStorage.removeItem("saunakit:dev-defaults:v1");
+        window.localStorage.removeItem("saunakit:dev-defaults:v2");
+      } catch {
+        // Ignore storage failures; the configurator also clears stale embed defaults on load.
       }
       return;
     }

@@ -108,6 +108,7 @@ function setProjectDetail(index) {
   if (!project) return;
 
   state.activeProjectIndex = index;
+  document.documentElement.dataset.routeMode = "project";
   document.querySelector(".app-shell")?.classList.add("is-project-detail");
   document.getElementById("projectVisualToolbar").hidden = false;
   renderActiveProjectDetail();
@@ -140,6 +141,7 @@ function clearProjectRoute() {
 
 function clearProjectView() {
   state.activeProjectIndex = -1;
+  document.documentElement.dataset.routeMode = "home";
   document.querySelector(".app-shell")?.classList.remove("is-project-detail");
   const visualToolbar = document.getElementById("projectVisualToolbar");
   if (visualToolbar) {

@@ -30,6 +30,7 @@
   <link rel="preload" href="assets/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet"></noscript>
+  <script>document.documentElement.dataset.routeMode = location.pathname.startsWith("/work/") ? "project" : "home";</script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -148,14 +149,6 @@
 
   <nav class="mobile-bottom-nav" data-mobile-bottom-nav data-visible="true" data-contact-open="false" aria-label="Mobile navigation">
     <div class="mobile-bottom-group" role="group" aria-label="Sections">
-      <a class="mobile-bottom-item is-active" href="#work" data-mobile-section-link="work">
-        <span class="mobile-bottom-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24">
-            <path d="M4.5 5.75a1.25 1.25 0 0 1 1.25-1.25h4.5a1.25 1.25 0 0 1 1.25 1.25v4.5a1.25 1.25 0 0 1-1.25 1.25h-4.5a1.25 1.25 0 0 1-1.25-1.25v-4.5Zm8 0a1.25 1.25 0 0 1 1.25-1.25h4.5a1.25 1.25 0 0 1 1.25 1.25v4.5a1.25 1.25 0 0 1-1.25 1.25h-4.5a1.25 1.25 0 0 1-1.25-1.25v-4.5Zm-8 8a1.25 1.25 0 0 1 1.25-1.25h4.5a1.25 1.25 0 0 1 1.25 1.25v4.5a1.25 1.25 0 0 1-1.25 1.25h-4.5a1.25 1.25 0 0 1-1.25-1.25v-4.5Zm8 0a1.25 1.25 0 0 1 1.25-1.25h4.5a1.25 1.25 0 0 1 1.25 1.25v4.5a1.25 1.25 0 0 1-1.25 1.25h-4.5a1.25 1.25 0 0 1-1.25-1.25v-4.5Z"></path>
-          </svg>
-        </span>
-        <span class="mobile-bottom-label" data-mobile-label="work">Work</span>
-      </a>
       <a class="mobile-bottom-item" href="#services" data-mobile-section-link="services">
         <span class="mobile-bottom-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24">
@@ -163,6 +156,14 @@
           </svg>
         </span>
         <span class="mobile-bottom-label" data-mobile-label="services">Services</span>
+      </a>
+      <a class="mobile-bottom-item is-active" href="#work" data-mobile-section-link="work">
+        <span class="mobile-bottom-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M4.5 5.75a1.25 1.25 0 0 1 1.25-1.25h4.5a1.25 1.25 0 0 1 1.25 1.25v4.5a1.25 1.25 0 0 1-1.25 1.25h-4.5a1.25 1.25 0 0 1-1.25-1.25v-4.5Zm8 0a1.25 1.25 0 0 1 1.25-1.25h4.5a1.25 1.25 0 0 1 1.25 1.25v4.5a1.25 1.25 0 0 1-1.25 1.25h-4.5a1.25 1.25 0 0 1-1.25-1.25v-4.5Zm-8 8a1.25 1.25 0 0 1 1.25-1.25h4.5a1.25 1.25 0 0 1 1.25 1.25v4.5a1.25 1.25 0 0 1-1.25 1.25h-4.5a1.25 1.25 0 0 1-1.25-1.25v-4.5Zm8 0a1.25 1.25 0 0 1 1.25-1.25h4.5a1.25 1.25 0 0 1 1.25 1.25v4.5a1.25 1.25 0 0 1-1.25 1.25h-4.5a1.25 1.25 0 0 1-1.25-1.25v-4.5Z"></path>
+          </svg>
+        </span>
+        <span class="mobile-bottom-label" data-mobile-label="work">Work</span>
       </a>
     </div>
     <div class="mobile-contact" data-mobile-contact>

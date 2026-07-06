@@ -335,17 +335,54 @@ export function bindMobileBottomNav() {
     window.requestAnimationFrame(syncVisibility);
   };
 
+  const setActiveLink = (activeLink) => {
+    nav.querySelectorAll("[data-mobile-section-link]").forEach((item) => {
+      item.classList.toggle("is-active", item === activeLink);
+    });
+  };
+
+  const scrollToSection = (section) => {
+    if (section === "services") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const target = section === "work"
+        ? document.querySelector(".work-toolbar")
+        : document.getElementById(section);
+      if (!target) return false;
+
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest"
+      });
+    }
+
+    if (history.pushState) {
+      history.pushState(null, "", `#${section}`);
+    }
+    return true;
+  };
+
+  const syncActiveLinkFromHash = () => {
+    const section = window.location.hash.replace(/^#/, "").split("/")[0];
+    const link = nav.querySelector(`[data-mobile-section-link="${section}"]`);
+    if (link) setActiveLink(link);
+  };
+
   window.addEventListener("scroll", requestSync, { passive: true });
   window.addEventListener("resize", requestSync);
+  window.addEventListener("hashchange", syncActiveLinkFromHash);
   mobileQuery.addEventListener?.("change", requestSync);
   contactToggle?.addEventListener("click", () => {
     setContactOpen(nav.dataset.contactOpen !== "true");
   });
   nav.querySelectorAll("[data-mobile-section-link]").forEach((link) => {
-    link.addEventListener("click", () => {
-      nav.querySelectorAll("[data-mobile-section-link]").forEach((item) => {
-        item.classList.toggle("is-active", item === link);
-      });
+    link.addEventListener("click", (event) => {
+      const section = link.dataset.mobileSectionLink;
+      if (mobileQuery.matches && scrollToSection(section)) {
+        event.preventDefault();
+      }
+      setActiveLink(link);
       closeContact();
     });
   });
@@ -368,6 +405,7 @@ export function bindMobileBottomNav() {
 
   setVisible(true);
   setContactOpen(false);
+  syncActiveLinkFromHash();
   requestSync();
 }
 

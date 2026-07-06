@@ -10,3 +10,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 Halim_Efe_Tuzlu_CV_*.md
+
+.vercel
+.env*

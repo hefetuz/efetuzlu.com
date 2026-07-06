@@ -10,6 +10,7 @@ const entries = [
   "cms",
   "index.html",
   "js",
+  "labs",
   "robots.txt",
   "site.webmanifest",
   "sitemap.xml",
