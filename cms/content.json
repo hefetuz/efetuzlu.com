@@ -464,7 +464,7 @@
       "coverOptimized": "assets/optimized/3e30a472-35f4-4d72-87f1-8feb4c7c19e2-1783194590263-cover.webp"
     },
     {
-      "title": "Sağlık Gelsin Product Design",
+      "title": "Sa�Ylık Gelsin Product Design",
       "slug": "saglik-gelsin-home-healthcare-app",
       "category": "product",
       "categories": [
@@ -476,7 +476,7 @@
       "scope": "Home Healthcare App",
       "service": "Product Design",
       "goal": "Make home healthcare requests feel clear, trustworthy and easy to complete.",
-      "description": "I designed the product direction for Sağlık Gelsin, a home healthcare app that helps people request nurses, physiotherapists and care services with clearer flows and stronger trust cues.",
+      "description": "I designed the product direction for Sa�Ylık Gelsin, a home healthcare app that helps people request nurses, physiotherapists and care services with clearer flows and stronger trust cues.",
       "image": "assets/cms/bd01ea66-0697-4143-afef-f527ec020ec4-1782806326668.png",
       "media": [
         {
@@ -485,7 +485,7 @@
           "poster": "",
           "optimizedSrc": "assets/cms/7b2b77e1-54f4-4462-a623-2ef5ad26945f-1783275970600-cover-1783275971393.webp",
           "previewSrc": "assets/cms/7b2b77e1-54f4-4462-a623-2ef5ad26945f-1783275970600-preview-1783275971454.webp",
-          "alt": "Sağlık Gelsin Product Design",
+          "alt": "Sa�Ylık Gelsin Product Design",
           "caption": "Home Healthcare App",
           "width": "",
           "height": "",
@@ -497,7 +497,7 @@
           "poster": "",
           "optimizedSrc": "assets/cms/bd01ea66-0697-4143-afef-f527ec020ec4-1783275971527-cover-1783275971960.webp",
           "previewSrc": "assets/cms/bd01ea66-0697-4143-afef-f527ec020ec4-1783275971527-preview-1783275971979.webp",
-          "alt": "Sağlık Gelsin Product Design",
+          "alt": "Sa�Ylık Gelsin Product Design",
           "caption": "Home Healthcare App",
           "width": "",
           "height": "",
@@ -509,7 +509,7 @@
           "poster": "",
           "optimizedSrc": "assets/cms/bfe66bff-4d79-4141-a9a8-dc44dd743e3e-1783275972047-cover-1783275973182.webp",
           "previewSrc": "assets/cms/bfe66bff-4d79-4141-a9a8-dc44dd743e3e-1783275972047-preview-1783275973209.webp",
-          "alt": "Sağlık Gelsin Product Design",
+          "alt": "Sa�Ylık Gelsin Product Design",
           "caption": "Home Healthcare App",
           "width": "",
           "height": "",
@@ -521,7 +521,7 @@
           "poster": "",
           "optimizedSrc": "assets/cms/e0bc542d-c732-4900-8945-65951b31b067-1783275973243-cover-1783275974362.webp",
           "previewSrc": "assets/cms/e0bc542d-c732-4900-8945-65951b31b067-1783275973243-preview-1783275974392.webp",
-          "alt": "Sağlık Gelsin Product Design",
+          "alt": "Sa�Ylık Gelsin Product Design",
           "caption": "Home Healthcare App",
           "width": "",
           "height": "",
@@ -746,6 +746,30 @@
           "width": "1920",
           "height": "1080",
           "aspectRatio": "1.7778"
+        },
+        {
+          "type": "video",
+          "src": "assets/cms/saunakit-3d-rotating-20260707.mp4",
+          "poster": "assets/optimized/saunakit-3d-rotating-20260707-poster.webp",
+          "optimizedSrc": "assets/optimized/saunakit-3d-rotating-20260707-cover.webm",
+          "previewSrc": "assets/optimized/saunakit-3d-rotating-20260707-preview.webm",
+          "alt": "SaunaKit 3D rotating product view",
+          "caption": "360 rotating sauna showcase",
+          "width": "1080",
+          "height": "1080",
+          "aspectRatio": "1"
+        },
+        {
+          "type": "video",
+          "src": "assets/cms/saunakit-app-view-20260707.mp4",
+          "poster": "assets/optimized/saunakit-app-view-20260707-poster.webp",
+          "optimizedSrc": "assets/optimized/saunakit-app-view-20260707-cover.webm",
+          "previewSrc": "assets/optimized/saunakit-app-view-20260707-preview.webm",
+          "alt": "SaunaKit application interface view",
+          "caption": "Configurator app flow",
+          "width": "1530",
+          "height": "900",
+          "aspectRatio": "1.7"
         },
         {
           "type": "image",
@@ -1117,7 +1141,7 @@
       "coverOptimized": "assets/optimized/hant-button-1782768234785-cover.webm"
     },
     {
-      "title": "Sağlık Gelsin Sales Deck",
+      "title": "Sa�Ylık Gelsin Sales Deck",
       "slug": "saglik-gelsin-sales-deck",
       "category": "brand",
       "categories": [
@@ -1138,7 +1162,7 @@
           "poster": "",
           "optimizedSrc": "assets/optimized/kapak-1782755135649-cover.webm",
           "previewSrc": "assets/optimized/kapak-1782755135649-preview.webm",
-          "alt": "Sağlık Gelsin Sales Deck",
+          "alt": "Sa�Ylık Gelsin Sales Deck",
           "caption": "Home Healthcare App",
           "width": "",
           "height": "",
@@ -1150,7 +1174,7 @@
           "poster": "",
           "optimizedSrc": "assets/optimized/nasa-l-a-ala-a-a-r-1782753967935-cover.webm",
           "previewSrc": "assets/optimized/nasa-l-a-ala-a-a-r-1782753967935-preview.webm",
-          "alt": "Sağlık Gelsin Sales Deck",
+          "alt": "Sa�Ylık Gelsin Sales Deck",
           "caption": "Home Healthcare App",
           "width": "",
           "height": "",
@@ -1162,7 +1186,7 @@
           "poster": "",
           "optimizedSrc": "assets/optimized/use-case-1782755156596-cover.webm",
           "previewSrc": "assets/optimized/use-case-1782755156596-preview.webm",
-          "alt": "Sağlık Gelsin Sales Deck",
+          "alt": "Sa�Ylık Gelsin Sales Deck",
           "caption": "Home Healthcare App",
           "width": "",
           "height": "",
@@ -1174,7 +1198,7 @@
           "poster": "",
           "optimizedSrc": "assets/optimized/saa-lanan-dea-er-1782748062189-cover.webp",
           "previewSrc": "assets/optimized/saa-lanan-dea-er-1782748062189-preview.webp",
-          "alt": "Sağlık Gelsin Sales Deck",
+          "alt": "Sa�Ylık Gelsin Sales Deck",
           "caption": "Home Healthcare App",
           "width": "",
           "height": "",
@@ -1186,7 +1210,7 @@
           "poster": "",
           "optimizedSrc": "assets/optimized/problem-1782748062137-cover.webp",
           "previewSrc": "assets/optimized/problem-1782748062137-preview.webp",
-          "alt": "Sağlık Gelsin Sales Deck",
+          "alt": "Sa�Ylık Gelsin Sales Deck",
           "caption": "Home Healthcare App",
           "width": "",
           "height": "",
@@ -1198,7 +1222,7 @@
           "poster": "",
           "optimizedSrc": "assets/optimized/call-to-action-1782748061815-cover.webp",
           "previewSrc": "assets/optimized/call-to-action-1782748061815-preview.webp",
-          "alt": "Sağlık Gelsin Sales Deck",
+          "alt": "Sa�Ylık Gelsin Sales Deck",
           "caption": "Home Healthcare App",
           "width": "",
           "height": "",
@@ -1641,9 +1665,9 @@
     "translations": {
       "TR": {
         "site": {
-          "title": "Halim Efe Tuzlu | Ürün Tasarımcısı & CPO",
-          "description": "İstanbul merkezli; AI ürünleri, tasarım sistemleri, UI/UX, marka kimliği ve ürün stratejisi odağında çalışan ürün tasarımcısı ve CPO.",
-          "role": "Ürün Tasarımcısı & CPO",
+          "title": "Halim Efe Tuzlu | �orün Tasarımcısı & CPO",
+          "description": "İstanbul merkezli; AI ürünleri, tasarım sistemleri, UI/UX, marka kimli�Yi ve ürün stratejisi oda�Yında çalı�Yan ürün tasarımcısı ve CPO.",
+          "role": "�orün Tasarımcısı & CPO",
           "location": "Pendik, İstanbul"
         },
         "hero": {
@@ -1656,12 +1680,12 @@
           },
           "serviceForm": {
             "servicesTitle": "Hizmetler",
-            "contactTitle": "İletişim Bilgileri",
+            "contactTitle": "İleti�Yim Bilgileri",
             "backToServices": "Hizmetlere geri dön",
             "selectService": "Seç",
             "next": "İleri",
             "name": "İsim",
-            "company": "Şirket",
+            "company": "�zirket",
             "email": "E-posta",
             "phone": "Telefon",
             "message": "Mesaj",
@@ -1669,10 +1693,10 @@
             "sending": "Gönderiliyor...",
             "sendRequest": "Talebi Gönder",
             "requestSent": "Talep Gönderildi",
-            "requestSuccess": "Talebin başarıyla gönderildi."
+            "requestSuccess": "Talebin ba�Yarıyla gönderildi."
           },
           "projectDetail": {
-            "backToWork": "İşlere geri dön",
+            "backToWork": "İ�Ylere geri dön",
             "expandVisual": "Büyüt",
             "services": "Hizmetler",
             "techStack": "Araçlar",
@@ -1682,10 +1706,10 @@
         },
         "services": [
           {
-            "title": "Ürün Tasarımı",
+            "title": "�orün Tasarımı",
             "items": [
               "Strateji",
-              "UX Akışları",
+              "UX Akı�Yları",
               "Tasarım Sistemleri"
             ]
           },
@@ -1698,7 +1722,7 @@
             ]
           },
           {
-            "title": "Marka Kimliği",
+            "title": "Marka Kimli�Yi",
             "items": [
               "Logo Sistemleri",
               "Ambalaj",
@@ -1710,7 +1734,7 @@
             "items": [
               "Prototip Motion",
               "Lansman Videoları",
-              "Mikro Etkileşimler"
+              "Mikro Etkile�Yimler"
             ]
           }
         ],
@@ -1721,7 +1745,7 @@
           },
           {
             "id": "product",
-            "label": "Ürün"
+            "label": "�orün"
           },
           {
             "id": "web",
@@ -1738,12 +1762,12 @@
         ],
         "projects": {
           "hant-ai-travel-app": {
-            "title": "Hant Ürün Tasarımı",
+            "title": "Hant �orün Tasarımı",
             "summary": "AI Seyahat Uygulaması",
             "scope": "AI Seyahat Uygulaması",
-            "description": "Hant için ürün deneyimini; temel stratejiden bilgi mimarisine, seyahat planlama akışlarından karar destek anlarına kadar tasarladım.",
+            "description": "Hant için ürün deneyimini; temel stratejiden bilgi mimarisine, seyahat planlama akı�Ylarından karar destek anlarına kadar tasarladım.",
             "services": [
-              "Ürün Tasarımı",
+              "�orün Tasarımı",
               "UX Stratejisi",
               "Tasarım Sistemleri"
             ],
@@ -1757,7 +1781,7 @@
             "title": "Hant Web Tasarımı",
             "summary": "AI Seyahat Uygulaması",
             "scope": "AI Seyahat Uygulaması",
-            "description": "Hant'ın AI seyahat konseptini; net landing akışları, ürün hikayesi ve arayüz odaklı iletişimle responsive bir web deneyimine taşıdım.",
+            "description": "Hant'ın AI seyahat konseptini; net landing akı�Yları, ürün hikayesi ve arayüz odaklı ileti�Yimle responsive bir web deneyimine ta�Yıdım.",
             "services": [
               "Web Sitesi Tasarımı",
               "Responsive UI",
@@ -1766,32 +1790,32 @@
             "industry": [
               "AI Seyahat",
               "SaaS",
-              "Ürün Web Sitesi"
+              "�orün Web Sitesi"
             ]
           },
           "en-kiymetlim-parenting-app": {
-            "title": "En Kıymetlim Ürün Tasarımı",
+            "title": "En Kıymetlim �orün Tasarımı",
             "summary": "Ebeveynlik Uygulaması",
             "scope": "Ebeveynlik Uygulaması",
-            "description": "En Kıymetlim için ebeveyn sağlığı, çocuk bakım desteği ve günlük bakım akışlarına odaklanan ürün deneyimini tasarladım.",
+            "description": "En Kıymetlim için ebeveyn sa�Ylı�Yı, çocuk bakım deste�Yi ve günlük bakım akı�Ylarına odaklanan ürün deneyimini tasarladım.",
             "services": [
-              "Ürün Tasarımı",
+              "�orün Tasarımı",
               "UX Stratejisi",
               "Tasarım Sistemleri"
             ],
             "industry": [
               "Ebeveynlik",
               "Health Tech",
-              "Çocuk Bakımı"
+              "�?ocuk Bakımı"
             ]
           },
           "en-kiymetlim-brand-identity": {
-            "title": "En Kıymetlim Marka Kimliği",
+            "title": "En Kıymetlim Marka Kimli�Yi",
             "summary": "Ebeveynlik Uygulaması",
             "scope": "Ebeveynlik Uygulaması",
-            "description": "En Kıymetlim'in marka kimliğini ebeveyn sağlığı, çocuk bakımı ve aile desteği için sakin bir görsel sistem etrafında şekillendirdim.",
+            "description": "En Kıymetlim'in marka kimli�Yini ebeveyn sa�Ylı�Yı, çocuk bakımı ve aile deste�Yi için sakin bir görsel sistem etrafında �Yekillendirdim.",
             "services": [
-              "Marka Kimliği",
+              "Marka Kimli�Yi",
               "Görsel Dil",
               "Ambalaj Yönlendirme"
             ],
@@ -1802,60 +1826,60 @@
             ]
           },
           "saglik-gelsin-sales-deck": {
-            "title": "Sağlık Gelsin Sales Deck",
-            "summary": "Evde Sağlık Uygulaması",
-            "scope": "Evde Sağlık Uygulaması",
-            "description": "Sağlık Gelsin için güven sinyalleri, hizmet netliği ve ulaşılabilir iletişim üzerine kurulu görsel yönlendirmeyi geliştirdim.",
+            "title": "Sa�Ylık Gelsin Sales Deck",
+            "summary": "Evde Sa�Ylık Uygulaması",
+            "scope": "Evde Sa�Ylık Uygulaması",
+            "description": "Sa�Ylık Gelsin için güven sinyalleri, hizmet netli�Yi ve ula�Yılabilir ileti�Yim üzerine kurulu görsel yönlendirmeyi geli�Ytirdim.",
             "services": [
-              "Marka Kimliği",
+              "Marka Kimli�Yi",
               "Görsel Dil",
               "Sunum Yönlendirme"
             ],
             "industry": [
-              "Evde Sağlık",
-              "Sağlık İletişimi",
+              "Evde Sa�Ylık",
+              "Sa�Ylık İleti�Yimi",
               "Marka Sistemi"
             ]
           },
           "saglik-gelsin-home-healthcare-app": {
-            "title": "Sağlık Gelsin Ürün Tasarımı",
-            "summary": "Evde Sağlık Uygulaması",
-            "scope": "Evde Sağlık Uygulaması",
-            "description": "Sağlık Gelsin için hemşire, fizyoterapist ve bakım hizmeti talep etmeyi daha net, güvenilir ve kolay hale getiren ürün yönünü tasarladım.",
+            "title": "Sa�Ylık Gelsin �orün Tasarımı",
+            "summary": "Evde Sa�Ylık Uygulaması",
+            "scope": "Evde Sa�Ylık Uygulaması",
+            "description": "Sa�Ylık Gelsin için hem�Yire, fizyoterapist ve bakım hizmeti talep etmeyi daha net, güvenilir ve kolay hale getiren ürün yönünü tasarladım.",
             "services": [
-              "Ürün Tasarımı",
+              "�orün Tasarımı",
               "UX Stratejisi",
               "Tasarım Sistemleri"
             ],
             "industry": [
-              "Evde Sağlık",
+              "Evde Sa�Ylık",
               "Health Tech",
               "Hizmet Pazaryeri"
             ]
           },
           "saunakit-brand-identity": {
-            "title": "Saunakit Marka Kimliği",
+            "title": "Saunakit Marka Kimli�Yi",
             "summary": "Portatif Sauna",
             "scope": "Portatif Sauna",
-            "description": "Saunakit için net ürün konumlandırması, temiz bir görsel sistem ve fiziksel ürün iletişiminde tutarlılık sağlayan marka ve ambalaj yönünü oluşturdum.",
+            "description": "Saunakit için net ürün konumlandırması, temiz bir görsel sistem ve fiziksel ürün ileti�Yiminde tutarlılık sa�Ylayan marka ve ambalaj yönünü olu�Yturdum.",
             "services": [
-              "Marka Kimliği",
+              "Marka Kimli�Yi",
               "Görsel Dil",
               "Ambalaj Yönlendirme"
             ],
             "industry": [
               "Wellness",
               "Portatif Sauna",
-              "Fiziksel Ürün"
+              "Fiziksel �orün"
             ]
           },
           "mambocino-coffee-branding": {
-            "title": "Mambocino Marka Kimliği",
+            "title": "Mambocino Marka Kimli�Yi",
             "summary": "Kahve Markası",
             "scope": "Kahve Markası",
-            "description": "Mambocino markasını isimlendirme, ambalaj ve raf hazırı görsel sistem odağında şekillendirdim.",
+            "description": "Mambocino markasını isimlendirme, ambalaj ve raf hazırı görsel sistem oda�Yında �Yekillendirdim.",
             "services": [
-              "Marka Kimliği",
+              "Marka Kimli�Yi",
               "Görsel Dil",
               "Ambalaj Yönlendirme"
             ],
@@ -1869,11 +1893,11 @@
             "title": "Samurai Bros Ambalaj Tasarımı",
             "summary": "Cold Brew Kahve",
             "scope": "Cold Brew Kahve",
-            "description": "Samurai Bros için güçlü kontrast, net ürün hiyerarşisi ve şişe odaklı sunumla hem rafta hem yakın plan ürün görsellerinde iyi okunan bir ambalaj sistemi tasarladım.",
+            "description": "Samurai Bros için güçlü kontrast, net ürün hiyerar�Yisi ve �Yi�Ye odaklı sunumla hem rafta hem yakın plan ürün görsellerinde iyi okunan bir ambalaj sistemi tasarladım.",
             "services": [
-              "Marka Kimliği",
+              "Marka Kimli�Yi",
               "Ambalaj Yönlendirme",
-              "Ürün Görselleri"
+              "�orün Görselleri"
             ],
             "industry": [
               "Kahve",
@@ -1882,19 +1906,19 @@
             ]
           },
           "sales-training-game": {
-            "title": "Satış Eğitim Oyunu",
+            "title": "Satı�Y E�Yitim Oyunu",
             "summary": "Sales Training Game",
             "scope": "Sales Training Game",
-            "description": "Öğrenme senaryoları için motion yönlendirme, UX ritmi ve hafif oyunlaştırma kalıplarına sahip interaktif bir satış eğitimi oyunu konsepti tasarladım.",
+            "description": "�-�Yrenme senaryoları için motion yönlendirme, UX ritmi ve hafif oyunla�Ytırma kalıplarına sahip interaktif bir satı�Y e�Yitimi oyunu konsepti tasarladım.",
             "services": [
               "Motion Design",
-              "Etkileşim Tasarımı",
+              "Etkile�Yim Tasarımı",
               "Prototip Motion"
             ],
             "industry": [
-              "Satış Eğitimi",
+              "Satı�Y E�Yitimi",
               "EdTech",
-              "İnteraktif Öğrenme"
+              "İnteraktif �-�Yrenme"
             ]
           },
           "hant-motion-design": {
@@ -1902,11 +1926,11 @@
             "meta": "Motion Design",
             "summary": "AI seyahat tanıtım filmi",
             "scope": "Lansman videosu ve product motion",
-            "service": "Motion Design, ürün hikayeleştirme",
-            "description": "Hant için 50 saniyelik bir tanıtım filmi hazırladım; AI destekli seyahat planlama, rota oluşturma ve mobil UX anlarını daha hızlı, net ve premium hissettiren bir ürün hikayesine dönüştürdüm.",
+            "service": "Motion Design, ürün hikayele�Ytirme",
+            "description": "Hant için 50 saniyelik bir tanıtım filmi hazırladım; AI destekli seyahat planlama, rota olu�Yturma ve mobil UX anlarını daha hızlı, net ve premium hissettiren bir ürün hikayesine dönü�Ytürdüm.",
             "services": [
               "Motion Design",
-              "Ürün Hikayeleştirme",
+              "�orün Hikayele�Ytirme",
               "Prototip Motion",
               "Video Editing"
             ],
@@ -1980,8 +2004,8 @@
             "requestSuccess": "Deine Anfrage wurde erfolgreich gesendet."
           },
           "projectDetail": {
-            "backToWork": "Zurück zur Übersicht",
-            "expandVisual": "Vergrößern",
+            "backToWork": "Zurück zur �obersicht",
+            "expandVisual": "Vergrö�Yern",
             "services": "Leistungen",
             "techStack": "Tech Stack",
             "industry": "Branche",
@@ -2139,12 +2163,12 @@
             ]
           },
           "saglik-gelsin-sales-deck": {
-            "title": "Sağlık Gelsin Sales Deck",
+            "title": "Sa�Ylık Gelsin Sales Deck",
             "meta": "Markenidentität",
             "summary": "Häusliche Gesundheits-App",
             "scope": "App für Pflege- und Physiotherapie-Buchungen",
             "service": "Logo & visuelle Identität",
-            "description": "Ich entwickelte die visuelle Richtung für Sağlık Gelsin rund um Vertrauen, Serviceklarheit und zugängliche Kommunikation für häusliche Gesundheitsversorgung.",
+            "description": "Ich entwickelte die visuelle Richtung für Sa�Ylık Gelsin rund um Vertrauen, Serviceklarheit und zugängliche Kommunikation für häusliche Gesundheitsversorgung.",
             "services": [
               "Markenidentität",
               "Visuelle Sprache",
@@ -2162,12 +2186,12 @@
             ]
           },
           "saglik-gelsin-home-healthcare-app": {
-            "title": "Sağlık Gelsin Produktdesign",
+            "title": "Sa�Ylık Gelsin Produktdesign",
             "meta": "Produktdesign",
             "summary": "Häusliche Gesundheits-App",
             "scope": "Home-Healthcare-App",
             "service": "Produktdesign",
-            "description": "Ich gestaltete die Produktrichtung für Sağlık Gelsin, eine App, mit der Menschen Pflegekräfte, Physiotherapeuten und Betreuungsleistungen klarer und vertrauensvoller anfragen können.",
+            "description": "Ich gestaltete die Produktrichtung für Sa�Ylık Gelsin, eine App, mit der Menschen Pflegekräfte, Physiotherapeuten und Betreuungsleistungen klarer und vertrauensvoller anfragen können.",
             "services": [
               "Produktdesign",
               "UX-Strategie",
@@ -2518,12 +2542,12 @@
             ]
           },
           "saglik-gelsin-sales-deck": {
-            "title": "Sağlık Gelsin Sales Deck",
+            "title": "Sa�Ylık Gelsin Sales Deck",
             "meta": "Identidad de Marca",
             "summary": "App de salud a domicilio",
             "scope": "App para solicitar enfermería y fisioterapia",
             "service": "Logo e identidad visual",
-            "description": "Desarrollé la dirección visual de Sağlık Gelsin alrededor de señales de confianza, claridad de servicio y comunicación accesible para salud a domicilio.",
+            "description": "Desarrollé la dirección visual de Sa�Ylık Gelsin alrededor de señales de confianza, claridad de servicio y comunicación accesible para salud a domicilio.",
             "services": [
               "Identidad de Marca",
               "Lenguaje Visual",
@@ -2541,12 +2565,12 @@
             ]
           },
           "saglik-gelsin-home-healthcare-app": {
-            "title": "Sağlık Gelsin Diseño de Producto",
+            "title": "Sa�Ylık Gelsin Diseño de Producto",
             "meta": "Diseño de Producto",
             "summary": "App de salud a domicilio",
             "scope": "App de salud a domicilio",
             "service": "Diseño de Producto",
-            "description": "Diseñé la dirección de producto de Sağlık Gelsin, una app para solicitar enfermeros, fisioterapeutas y servicios de cuidado con flujos más claros y señales de confianza más fuertes.",
+            "description": "Diseñé la dirección de producto de Sa�Ylık Gelsin, una app para solicitar enfermeros, fisioterapeutas y servicios de cuidado con flujos más claros y señales de confianza más fuertes.",
             "services": [
               "Diseño de Producto",
               "Estrategia UX",
