@@ -1,11 +1,15 @@
-import { createReadStream, existsSync, statSync } from "node:fs";
+import { createReadStream, existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { createServer } from "node:http";
 import { dirname, extname, join, resolve, sep } from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 const root = dirname(fileURLToPath(import.meta.url));
 const port = Number(process.env.PORT || 5173);
+const contentBlobPath = "cms/content.json";
+
+loadLocalEnv();
+normalizeBlobEnv();
 
 const types = {
   ".avif": "image/avif",
@@ -59,6 +63,80 @@ const securityHeaders = {
   "Referrer-Policy": "strict-origin-when-cross-origin",
   "Permissions-Policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()"
 };
+
+function loadLocalEnv() {
+  const envPath = join(root, ".env.local");
+  if (!existsSync(envPath)) return;
+
+  const lines = readFileSync(envPath, "utf8").split(/\r?\n/);
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith("#")) continue;
+
+    const separator = trimmed.indexOf("=");
+    if (separator <= 0) continue;
+
+    const key = trimmed.slice(0, separator).trim();
+    let value = trimmed.slice(separator + 1).trim();
+    if (
+      (value.startsWith('"') && value.endsWith('"')) ||
+      (value.startsWith("'") && value.endsWith("'"))
+    ) {
+      value = value.slice(1, -1);
+    }
+
+    if (!process.env[key]) {
+      process.env[key] = value;
+    }
+  }
+}
+
+function getBlobToken() {
+  return process.env.BLOB_READ_WRITE_TOKEN || "";
+}
+
+function normalizeBlobEnv() {
+  if (process.env.BLOB_READ_WRITE_TOKEN && process.env.VERCEL_OIDC_TOKEN && !process.env.BLOB_STORE_ID) {
+    delete process.env.VERCEL_OIDC_TOKEN;
+  }
+}
+
+async function getBlobClient() {
+  if (!getBlobToken()) return null;
+  try {
+    return await import("@vercel/blob");
+  } catch (error) {
+    const cachedModule = findCachedBlobModule();
+    if (!cachedModule) throw error;
+    return import(pathToFileURL(cachedModule).href);
+  }
+}
+
+function findCachedBlobModule() {
+  const localAppData = process.env.LOCALAPPDATA || (
+    process.env.USERPROFILE ? join(process.env.USERPROFILE, "AppData", "Local") : ""
+  );
+  if (!localAppData) return "";
+
+  const npxCache = join(localAppData, "npm-cache", "_npx");
+  if (!existsSync(npxCache)) return "";
+
+  for (const cacheEntry of readdirSync(npxCache, { withFileTypes: true })) {
+    if (!cacheEntry.isDirectory()) continue;
+    const modulePath = join(
+      npxCache,
+      cacheEntry.name,
+      "node_modules",
+      "@vercel",
+      "blob",
+      "dist",
+      "index.js"
+    );
+    if (existsSync(modulePath)) return modulePath;
+  }
+
+  return "";
+}
 
 function readRequestBody(request, maxBytes = maxUploadBytes) {
   return new Promise((resolve, reject) => {
@@ -135,11 +213,61 @@ function sendJson(response, status, payload) {
 
 async function handleContentRead(response) {
   try {
-    const content = JSON.parse(await readFile(contentPath, "utf8"));
-    sendJson(response, 200, content);
+    const blobContent = await readBlobContent();
+    if (blobContent) {
+      await cacheContentLocally(blobContent);
+      sendJson(response, 200, blobContent);
+      return;
+    }
+
+    sendJson(response, 200, await readLocalContent());
   } catch (error) {
     sendJson(response, 500, { ok: false, error: error.message });
   }
+}
+
+async function readLocalContent() {
+  return JSON.parse(await readFile(contentPath, "utf8"));
+}
+
+async function readBlobContent() {
+  const client = await getBlobClient();
+  if (!client) return null;
+
+  const token = getBlobToken();
+  const { blobs } = await client.list({ token, prefix: contentBlobPath, limit: 10 });
+  const blob = blobs.find((item) => item.pathname === contentBlobPath);
+  if (!blob) return null;
+
+  const separator = blob.url.includes("?") ? "&" : "?";
+  const blobResponse = await fetch(`${blob.url}${separator}v=${Date.now()}`, {
+    cache: "no-store"
+  });
+
+  if (!blobResponse.ok) {
+    throw new Error("Could not read live CMS content.");
+  }
+
+  return blobResponse.json();
+}
+
+async function cacheContentLocally(content) {
+  await mkdir(dirname(contentPath), { recursive: true });
+  await writeFile(contentPath, `${JSON.stringify(content, null, 2)}\n`, "utf8");
+}
+
+async function saveBlobContent(content) {
+  const client = await getBlobClient();
+  if (!client) return null;
+
+  return client.put(contentBlobPath, `${JSON.stringify(content, null, 2)}\n`, {
+    token: getBlobToken(),
+    access: "public",
+    addRandomSuffix: false,
+    allowOverwrite: true,
+    cacheControlMaxAge: 60,
+    contentType: "application/json"
+  });
 }
 
 function handleDevSession(response) {
@@ -195,9 +323,13 @@ function handleContentSave(request, response) {
   request.on("end", async () => {
     try {
       const content = JSON.parse(body);
-      await mkdir(dirname(contentPath), { recursive: true });
-      await writeFile(contentPath, `${JSON.stringify(content, null, 2)}\n`, "utf8");
-      sendJson(response, 200, { ok: true });
+      const blob = await saveBlobContent(content);
+      await cacheContentLocally(content);
+      sendJson(response, 200, {
+        ok: true,
+        source: blob ? "blob" : "local",
+        pathname: blob?.pathname || null
+      });
     } catch (error) {
       sendJson(response, 400, { ok: false, error: error.message });
     }

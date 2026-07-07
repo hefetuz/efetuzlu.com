@@ -204,7 +204,12 @@ function renderContactLinks(content) {
   ].filter(([, , url]) => Boolean(url));
 
   targets.forEach((target, targetIndex) => {
+    const linkSize = 44;
+    const linkGap = 6;
+    const linkPadding = 8;
+    const openWidth = (links.length * linkSize) + (Math.max(0, links.length - 1) * linkGap) + (linkPadding * 2);
     target.style.setProperty("--contact-link-count", links.length);
+    target.style.setProperty("--mobile-contact-open-width", `${openWidth}px`);
     target.innerHTML = links.map(([label, icon, url], index) => `
       <a class="mobile-contact-link t-tt-wrap" href="${escapeAttr(url)}" ${icon === "mail" ? "" : 'target="_blank" rel="noopener noreferrer"'} aria-label="${escapeAttr(label)}" aria-describedby="tt-contact-${escapeAttr(icon)}-${targetIndex}" style="--contact-index: ${index};">
         <span class="social-icon social-icon-${escapeAttr(icon)}" aria-hidden="true">

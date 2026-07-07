@@ -106,7 +106,7 @@
         "product"
       ],
       "meta": "Product Design",
-      "date": "2024 - Present",
+      "date": "2024 - 2026",
       "summary": "AI Travel App",
       "scope": "AI Travel App",
       "service": "Product Design",
@@ -349,9 +349,7 @@
         "Design Systems"
       ],
       "techStack": [
-        "Figma",
-        "FigJam",
-        "Prototype Motion"
+        "Figma"
       ],
       "industry": [
         "AI Travel",
@@ -456,9 +454,7 @@
         "Design Systems"
       ],
       "techStack": [
-        "Figma",
-        "FigJam",
-        "Prototype Motion"
+        "Figma"
       ],
       "industry": [
         "Health Tech",
@@ -475,7 +471,7 @@
         "product"
       ],
       "meta": "Product Design",
-      "date": "2024",
+      "date": "2026",
       "summary": "Home Healthcare App",
       "scope": "Home Healthcare App",
       "service": "Product Design",
@@ -486,38 +482,50 @@
         {
           "type": "image",
           "src": "assets/cms/7b2b77e1-54f4-4462-a623-2ef5ad26945f-1783275970600.png",
+          "poster": "",
           "optimizedSrc": "assets/cms/7b2b77e1-54f4-4462-a623-2ef5ad26945f-1783275970600-cover-1783275971393.webp",
           "previewSrc": "assets/cms/7b2b77e1-54f4-4462-a623-2ef5ad26945f-1783275970600-preview-1783275971454.webp",
-          "poster": "",
           "alt": "Sağlık Gelsin Product Design",
-          "caption": "Home Healthcare App"
+          "caption": "Home Healthcare App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
         },
         {
           "type": "image",
           "src": "assets/cms/bd01ea66-0697-4143-afef-f527ec020ec4-1783275971527.png",
+          "poster": "",
           "optimizedSrc": "assets/cms/bd01ea66-0697-4143-afef-f527ec020ec4-1783275971527-cover-1783275971960.webp",
           "previewSrc": "assets/cms/bd01ea66-0697-4143-afef-f527ec020ec4-1783275971527-preview-1783275971979.webp",
-          "poster": "",
           "alt": "Sağlık Gelsin Product Design",
-          "caption": "Home Healthcare App"
+          "caption": "Home Healthcare App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
         },
         {
           "type": "image",
           "src": "assets/cms/bfe66bff-4d79-4141-a9a8-dc44dd743e3e-1783275972047.png",
+          "poster": "",
           "optimizedSrc": "assets/cms/bfe66bff-4d79-4141-a9a8-dc44dd743e3e-1783275972047-cover-1783275973182.webp",
           "previewSrc": "assets/cms/bfe66bff-4d79-4141-a9a8-dc44dd743e3e-1783275972047-preview-1783275973209.webp",
-          "poster": "",
           "alt": "Sağlık Gelsin Product Design",
-          "caption": "Home Healthcare App"
+          "caption": "Home Healthcare App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
         },
         {
           "type": "image",
           "src": "assets/cms/e0bc542d-c732-4900-8945-65951b31b067-1783275973243.png",
+          "poster": "",
           "optimizedSrc": "assets/cms/e0bc542d-c732-4900-8945-65951b31b067-1783275973243-cover-1783275974362.webp",
           "previewSrc": "assets/cms/e0bc542d-c732-4900-8945-65951b31b067-1783275973243-preview-1783275974392.webp",
-          "poster": "",
           "alt": "Sağlık Gelsin Product Design",
-          "caption": "Home Healthcare App"
+          "caption": "Home Healthcare App",
+          "width": "",
+          "height": "",
+          "aspectRatio": ""
         }
       ],
       "services": [
@@ -526,9 +534,7 @@
         "Design Systems"
       ],
       "techStack": [
-        "Figma",
-        "FigJam",
-        "Prototype Motion"
+        "Figma"
       ],
       "industry": [
         "Home Healthcare",
@@ -692,9 +698,7 @@
         "Design Systems"
       ],
       "techStack": [
-        "Figma",
-        "FigJam",
-        "Prototype Motion"
+        "Figma"
       ],
       "industry": [
         "Parenting",
@@ -702,6 +706,86 @@
         "Child Care"
       ],
       "coverOptimized": "assets/optimized/en-ka-ymetlim-web-app-1782747905607-cover.webp"
+    },
+    {
+      "title": "Saunakit",
+      "slug": "saunakit",
+      "category": "brand",
+      "categories": [
+        "web",
+        "brand"
+      ],
+      "meta": "Physical Product Brand",
+      "date": "2026",
+      "summary": "Portable Sauna",
+      "scope": "Portable Sauna Product",
+      "service": "Logo & Visual Identity, Packaging Direction",
+      "goal": "The objective was to position a portable sauna as a premium but easy-to-understand wellness product.",
+      "description": "I created brand and packaging direction for Saunakit, focusing on clear product positioning, a clean visual system and consistent physical product communication.",
+      "image": "assets/cms/saunakit-configurator-desktop-20260706.png",
+      "interactiveEmbed": {
+        "title": "SaunaKit 3D Configurator",
+        "kicker": "Interactive prototype",
+        "description": "A live 3D configurator for exploring model type, dimensions, finishes and quote behavior without loading the heavy experience into the portfolio page first.",
+        "sidebarDescription": "Open the live 3D sauna configurator as a separate lightweight prototype.",
+        "note": "The 3D configurator starts only when you launch it, so the case study stays lightweight.",
+        "src": "/labs/saunakit-configurator/",
+        "launchLabel": "Launch configurator",
+        "openLabel": "Open configurator",
+        "aspectRatio": 1.6
+      },
+      "media": [
+        {
+          "type": "video",
+          "src": "assets/cms/saunakit-configurator-demo-20260706.mp4",
+          "poster": "assets/optimized/saunakit-configurator-demo-20260706-poster.webp",
+          "optimizedSrc": "assets/optimized/saunakit-configurator-demo-20260706-cover.webm",
+          "previewSrc": "assets/optimized/saunakit-configurator-demo-20260706-preview.webm",
+          "alt": "SaunaKit 3D configurator product demo",
+          "caption": "Interactive 3D configurator walkthrough",
+          "width": "1920",
+          "height": "1080",
+          "aspectRatio": "1.7778"
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/saunakit-configurator-desktop-20260706.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/saunakit-configurator-desktop-20260706-cover.webp",
+          "previewSrc": "assets/optimized/saunakit-configurator-desktop-20260706-preview.webp",
+          "alt": "SaunaKit 3D configurator desktop view",
+          "caption": "Desktop configurator interface",
+          "width": "1534",
+          "height": "887",
+          "aspectRatio": "1.7294"
+        },
+        {
+          "type": "image",
+          "src": "assets/cms/saunakit-configurator-panel-20260706.png",
+          "poster": "",
+          "optimizedSrc": "assets/optimized/saunakit-configurator-panel-20260706-cover.webp",
+          "previewSrc": "assets/optimized/saunakit-configurator-panel-20260706-preview.webp",
+          "alt": "SaunaKit configurator settings panel",
+          "caption": "Responsive settings panel",
+          "width": "405",
+          "height": "434",
+          "aspectRatio": "0.9332"
+        }
+      ],
+      "services": [
+        "Brand Identity",
+        "Visual Language",
+        "Packaging Direction"
+      ],
+      "techStack": [
+        "Figma"
+      ],
+      "industry": [
+        "Wellness",
+        "Portable Sauna",
+        "Physical Product"
+      ],
+      "coverOptimized": "assets/optimized/saunakit-configurator-demo-20260706-cover.webm"
     },
     {
       "title": "Hant Motion Design",
@@ -741,9 +825,7 @@
       ],
       "techStack": [
         "Figma",
-        "After Effects",
-        "Premiere Pro",
-        "Motion"
+        "After Effects"
       ],
       "industry": [
         "AI Travel",
@@ -760,7 +842,7 @@
         "motion"
       ],
       "meta": "Motion & Game UX",
-      "date": "2024",
+      "date": "2025",
       "summary": "Sales Training Game",
       "scope": "Interactive Training Experience",
       "service": "Motion Design, Interaction Design",
@@ -788,8 +870,7 @@
       ],
       "techStack": [
         "Figma",
-        "After Effects",
-        "Motion"
+        "After Effects"
       ],
       "industry": [
         "Sales Training",
@@ -807,7 +888,7 @@
         "brand"
       ],
       "meta": "Motion Design",
-      "date": "2024 - 2026",
+      "date": "2026",
       "summary": "AI Travel Presentation",
       "scope": "AI Travel Presentation",
       "service": "Motion Design",
@@ -944,8 +1025,7 @@
       ],
       "techStack": [
         "Figma",
-        "After Effects",
-        "Prototype Motion"
+        "After Effects"
       ],
       "industry": [
         "AI Travel",
@@ -962,7 +1042,7 @@
         "web"
       ],
       "meta": "Web Design",
-      "date": "2024 - Present",
+      "date": "2025",
       "summary": "AI Travel App",
       "scope": "AI Travel App",
       "service": "Web Design",
@@ -1044,7 +1124,7 @@
         "brand"
       ],
       "meta": "Brand Identity",
-      "date": "2024",
+      "date": "2026",
       "summary": "Home Healthcare App",
       "scope": "Nurse & Physiotherapist Booking App",
       "service": "Logo & Visual Identity",
@@ -1131,9 +1211,7 @@
         "Packaging Direction"
       ],
       "techStack": [
-        "Figma",
-        "Adobe Illustrator",
-        "Adobe Photoshop"
+        "Figma"
       ],
       "industry": [
         "Home Healthcare",
@@ -1143,87 +1221,6 @@
       "coverOptimized": "assets/optimized/use-case-1782755156596-cover.webm"
     },
     {
-      "title": "Saunakit",
-      "slug": "saunakit",
-      "category": "brand",
-      "categories": [
-        "brand"
-      ],
-      "meta": "Physical Product Brand",
-      "date": "2024",
-      "summary": "Portable Sauna",
-      "scope": "Portable Sauna Product",
-      "service": "Logo & Visual Identity, Packaging Direction",
-      "goal": "The objective was to position a portable sauna as a premium but easy-to-understand wellness product.",
-      "description": "I created brand and packaging direction for Saunakit, focusing on clear product positioning, a clean visual system and consistent physical product communication.",
-      "image": "assets/cms/saunakit-configurator-desktop-20260706.png",
-      "interactiveEmbed": {
-        "title": "SaunaKit 3D Configurator",
-        "kicker": "Interactive prototype",
-        "description": "A live 3D configurator for exploring model type, dimensions, finishes and quote behavior without loading the heavy experience into the portfolio page first.",
-        "sidebarDescription": "Open the live 3D sauna configurator as a separate lightweight prototype.",
-        "note": "The 3D configurator starts only when you launch it, so the case study stays lightweight.",
-        "src": "/labs/saunakit-configurator/",
-        "launchLabel": "Launch configurator",
-        "openLabel": "Open configurator",
-        "aspectRatio": 1.6
-      },
-      "media": [
-        {
-          "type": "video",
-          "src": "assets/cms/saunakit-configurator-demo-20260706.mp4",
-          "poster": "assets/optimized/saunakit-configurator-demo-20260706-poster.webp",
-          "optimizedSrc": "assets/optimized/saunakit-configurator-demo-20260706-cover.webm",
-          "previewSrc": "assets/optimized/saunakit-configurator-demo-20260706-preview.webm",
-          "alt": "SaunaKit 3D configurator product demo",
-          "caption": "Interactive 3D configurator walkthrough",
-          "width": "1920",
-          "height": "1080",
-          "aspectRatio": "1.7778"
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/saunakit-configurator-desktop-20260706.png",
-          "poster": "",
-          "optimizedSrc": "assets/optimized/saunakit-configurator-desktop-20260706-cover.webp",
-          "previewSrc": "assets/optimized/saunakit-configurator-desktop-20260706-preview.webp",
-          "alt": "SaunaKit 3D configurator desktop view",
-          "caption": "Desktop configurator interface",
-          "width": "1534",
-          "height": "887",
-          "aspectRatio": "1.7294"
-        },
-        {
-          "type": "image",
-          "src": "assets/cms/saunakit-configurator-panel-20260706.png",
-          "poster": "",
-          "optimizedSrc": "assets/optimized/saunakit-configurator-panel-20260706-cover.webp",
-          "previewSrc": "assets/optimized/saunakit-configurator-panel-20260706-preview.webp",
-          "alt": "SaunaKit configurator settings panel",
-          "caption": "Responsive settings panel",
-          "width": "405",
-          "height": "434",
-          "aspectRatio": "0.9332"
-        }
-      ],
-      "services": [
-        "Brand Identity",
-        "Visual Language",
-        "Packaging Direction"
-      ],
-      "techStack": [
-        "Figma",
-        "Adobe Illustrator",
-        "Adobe Photoshop"
-      ],
-      "industry": [
-        "Wellness",
-        "Portable Sauna",
-        "Physical Product"
-      ],
-      "coverOptimized": "assets/optimized/saunakit-configurator-demo-20260706-cover.webm"
-    },
-    {
       "title": "Mambocino",
       "slug": "mambocino-coffee-branding",
       "category": "brand",
@@ -1231,7 +1228,7 @@
         "brand"
       ],
       "meta": "Physical Product Brand",
-      "date": "2024",
+      "date": "2025",
       "summary": "Coffee Brand",
       "scope": "Coffee Product",
       "service": "Brand Identity, Visual Language, Packaging Direction",
@@ -1354,7 +1351,6 @@
         "Packaging Direction"
       ],
       "techStack": [
-        "Figma",
         "Adobe Illustrator",
         "Adobe Photoshop"
       ],
@@ -1373,7 +1369,7 @@
         "brand"
       ],
       "meta": "Brand Identity",
-      "date": "2023 - 2024",
+      "date": "2024",
       "summary": "Ebeveynlik App",
       "scope": "Parent Health & Child Care App",
       "service": "Logo & Visual Identity",
@@ -1460,7 +1456,6 @@
         "Packaging Direction"
       ],
       "techStack": [
-        "Figma",
         "Adobe Illustrator",
         "Adobe Photoshop"
       ],
@@ -1554,7 +1549,6 @@
         "Product Visuals"
       ],
       "techStack": [
-        "Figma",
         "Adobe Illustrator",
         "Adobe Photoshop"
       ],
